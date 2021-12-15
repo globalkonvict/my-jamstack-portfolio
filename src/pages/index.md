@@ -18,6 +18,7 @@ authorData:
       delay: 1000
   name: Sarthak
   introduction: Hi there! I'm Sarthak
+  image: /img/sarthak.png
 mainpitch:
   title: Why Kaldi
   description: >
