@@ -4,6 +4,17 @@ title: Great coffee with a conscience
 image: /img/trees-g70f96a3e5_1920.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
+authorData:
+  typingText:
+    - iAm: Web Developer
+      delay: 1000
+    - iAm: Software Developer
+      delay: 1000
+    - iAm: Engineer
+      delay: 1000
+    - iAm: Hacker
+      delay: 1000
+  name: Sarthak
 mainpitch:
   title: Why Kaldi
   description: >
