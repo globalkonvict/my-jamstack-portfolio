@@ -6,15 +6,18 @@ heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 authorData:
   typingText:
-    - iAm: Web Developer
+    - iAm: I am a Web Developer
       delay: 1000
-    - iAm: Software Developer
+    - iAm: I am a Software Developer
       delay: 1000
-    - iAm: Engineer
+    - iAm: I am an Engineer
       delay: 1000
-    - iAm: Hacker
+    - iAm: I am a Hacker
+      delay: 1000
+    - iAm: I am a seeker
       delay: 1000
   name: Sarthak
+  introduction: Hi there! I'm Sarthak
 mainpitch:
   title: Why Kaldi
   description: >
