@@ -19,6 +19,30 @@ authorData:
   name: Sarthak
   introduction: Hi there! I'm Sarthak
   image: /img/sarthak.png
+skills:
+  list:
+    - classNames: devicon-arduino-plain-wordmark colored
+      skillName: Arduino
+  title: Skills
+  subtitle: Some of the skills I have worked on
+projects:
+  list:
+    - title: Imget
+      description: |-
+        A CLI tool that downloads images using user provided keyword.
+
+        **Requirement**
+
+        * Node
+        * NPM
+      image: /img/imget.png
+      links:
+        - text: Github
+          url: https://github.com/globalkonvict/ImGet
+        - text: Npm
+          url: https://www.npmjs.com/package/imget
+  title: Projects
+  subtitle: Some of the projects I've worked on
 mainpitch:
   title: Why Kaldi
   description: >
