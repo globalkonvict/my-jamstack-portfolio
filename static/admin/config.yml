@@ -51,6 +51,96 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
+              label: "Author Data",
+              name: authorData,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: "Introduction", name: introduction, widget: string },
+                  {
+                    label: "Typing Text",
+                    name: typingText,
+                    widget: list,
+                    fields:
+                      [
+                        { label: "I am text", name: iAm, widget: string },
+                        {
+                          label: "Delay (ms)",
+                          name: delay,
+                          widget: number,
+                          value_type: "int",
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Skills,
+              name: skills,
+              widget: object,
+              fields:
+                [
+                  { label: "Title", name: "title", widget: string },
+                  { label: "Subtitle", name: subtitle, widget: string },
+                  {
+                    label: "Skills",
+                    name: list,
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Class Name",
+                          name: classNames,
+                          widget: string,
+                        },
+                        {
+                          label: "Skill Name",
+                          name: skillName,
+                          widget: string,
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Projects,
+              name: projects,
+              widget: object,
+              fields:
+                [
+                  { label: "Title", name: "title", widget: string },
+                  { label: "Subtitle", name: subtitle, widget: string },
+                  {
+                    label: "Projects List",
+                    name: list,
+                    widget: list,
+                    fields:
+                      [
+                        { label: "Title", name: "title", widget: string },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: markdown,
+                        },
+                        { label: Image, name: image, widget: image },
+                        {
+                          label: Links,
+                          name: links,
+                          widget: list,
+                          max: 3,
+                          add_to_top: true,
+                          fields:
+                            [
+                              { label: "Text", name: "text", widget: "string" },
+                              { label: "URL", name: "url", widget: "string" },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
               label: Mainpitch,
               name: mainpitch,
               widget: object,

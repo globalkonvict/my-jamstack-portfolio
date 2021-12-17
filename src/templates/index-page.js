@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import Skills from "../components/Skills";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -17,12 +18,20 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  authorData,
+  skills
 }) => {
   const heroImage = getImage(image) || image;
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <FullWidthImage
+        img={heroImage}
+        title={title}
+        subheading={subheading}
+        authorData={authorData}
+      />
+      <Skills skills={skills} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -84,14 +93,20 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  authorData: PropTypes.object,
+};
+
+IndexPageTemplate.defaultProps = {
+  authorData: { name: "", typingText: [] },
 };
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
   return (
     <Layout>
       <IndexPageTemplate
+        skills={frontmatter.skills}
+        authorData={frontmatter.authorData}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}

@@ -19,69 +19,6 @@ authorData:
   name: Sarthak
   introduction: Hi there! I'm Sarthak
   image: /img/sarthak.png
-skills:
-  - classNames: devicon-javascript-plain colored
-    skillName: JavaScript
-  - classNames: devicon-react-original-wordmark colored
-    skillName: React
-  - classNames: devicon-nodejs-plain colored
-    skillName: NodeJs
-  - classNames: devicon-html5-plain-wordmark colored
-    skillName: HTML
-  - classNames: devicon-css3-plain-wordmark colored
-    skillName: CSS
-  - classNames: devicon-tailwindcss-original-wordmark colored
-    skillName: Tailwind CSS
-  - classNames: devicon-arduino-plain-wordmark colored
-    skillName: Arduino
-  - classNames: devicon-bash-plain colored
-    skillName: Bash
-  - classNames: devicon-bitbucket-original-wordmark colored
-    skillName: BitBucket
-  - classNames: devicon-bootstrap-plain-wordmark colored
-    skillName: Bootstrap
-  - classNames: devicon-bulma-plain colored
-    skillName: Bulma CSS
-  - classNames: devicon-c-plain-wordmark colored
-    skillName: C
-  - classNames: devicon-express-original-wordmark colored
-    skillName: ExpressJs
-  - classNames: devicon-figma-plain colored
-    skillName: Figma
-  - classNames: devicon-firebase-plain-wordmark colored
-    skillName: Firebase
-  - classNames: devicon-gatsby-plain colored
-    skillName: Gatsby
-  - classNames: devicon-git-plain-wordmark colored
-    skillName: Git
-  - classNames: devicon-graphql-plain-wordmark colored
-    skillName: GraphQL
-  - classNames: devicon-heroku-plain-wordmark colored
-    skillName: Heroku
-  - classNames: devicon-jamstack-original colored
-    skillName: JamStack
-  - classNames: devicon-less-plain-wordmark colored
-    skillName: Less
-  - classNames: devicon-linux-plain colored
-    skillName: Linux
-  - classNames: devicon-materialui-plain colored
-    skillName: MaterialUI
-  - classNames: devicon-markdown-original colored
-    skillName: Markdown
-  - classNames: devicon-mongodb-plain-wordmark colored
-    skillName: MongoDB
-  - classNames: devicon-npm-original-wordmark colored
-    skillName: NPM
-  - classNames: devicon-redux-original colored
-    skillName: Redux
-  - classNames: devicon-sass-original colored
-    skillName: SASS
-  - classNames: devicon-ubuntu-plain-wordmark colored
-    skillName: Ubuntu
-  - classNames: devicon-vscode-plain-wordmark colored
-    skillName: VScode
-  - classNames: devicon-yarn-plain colored
-    skillName: Yarn
 mainpitch:
   title: Why Kaldi
   description: >

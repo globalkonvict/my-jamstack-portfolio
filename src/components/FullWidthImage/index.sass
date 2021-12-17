@@ -1,0 +1,31 @@
+@import '../../styles/colors.sass'
+
+.hero-container
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 100% 100%, 87% 95%, 76% 100%, 51% 96%, 25% 100%, 15% 95%, 0 100%)
+    min-height: calc(100vh - 52px)
+
+.hero-description
+    text-align: left
+    align-text: left
+
+.logo-text
+    font-family: 'Fira Code', monospace
+    font-size: 1.5rem
+    font-weight: 700
+    color: $primary !important
+
+.overlay
+    position: absolute
+    background: linear-gradient(90deg, #c20000, #d23e00, #df6100, #ea8200, #f1a200, #f5c100, #f6e000, #f4ff24)
+    opacity: 0.7
+    width: 100vw
+    height: calc(100vh - 52px)
+
+.profile-img
+    width: 350px
+    height: 350px
+    border-radius: 35% 65% 70% 30% / 49% 37% 63% 51%
+    margin-bottom: 3rem
+    margin-top: 1rem
+    border: 15px solid $primary
+    box-shadow: 0 0 0 0.5rem $primary

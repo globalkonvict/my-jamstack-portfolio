@@ -1,20 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Typical from "react-typical";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
+import "./index.sass";
 
 export default function FullWidthImage(props) {
   const {
-    height = 400,
+    height = "calc(100vh - 52px)",
     img,
     title,
     subheading,
+    authorData,
     imgPosition = "top left",
   } = props;
-
+  const { introduction, image, typingText } = authorData;
+  console.log(authorData);
   return (
     <React.Fragment>
       <div
-        className="margin-top-0"
+        className="margin-top-0 hero-container"
         style={{
           display: "grid",
           alignItems: "center",
@@ -55,8 +60,10 @@ export default function FullWidthImage(props) {
             formats={["auto", "webp", "avif"]}
           />
         )}
+        <div className="overlay" />
         {(title || subheading) && (
           <div
+            className="hero-description"
             style={{
               // By using the same grid area for both, they are stacked on top of each other
               gridArea: "1/1",
@@ -67,9 +74,16 @@ export default function FullWidthImage(props) {
             }}
           >
             {/* Any content here will be centered in the component */}
-            {title && (
+            <GatsbyImage
+              image={getImage(image)}
+              objectFit={"cover"}
+              className="profile-img"
+              alt=""
+              formats={["auto", "webp", "avif"]}
+            />
+            {introduction && (
               <h1
-                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen fira-font"
                 style={{
                   boxShadow:
                     "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
@@ -79,12 +93,12 @@ export default function FullWidthImage(props) {
                   padding: "0.25em",
                 }}
               >
-                {title}
+                {introduction}
               </h1>
             )}
-            {subheading && (
-              <h3
-                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            {typingText && (
+              <span
+                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen fira-font"
                 style={{
                   boxShadow:
                     "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
@@ -95,8 +109,16 @@ export default function FullWidthImage(props) {
                   marginTop: "0.5rem",
                 }}
               >
-                {subheading}
-              </h3>
+                <Typical
+                  steps={typingText
+                    .map((item) => {
+                      return [item.iAm, item.delay];
+                    })
+                    .flat()}
+                  loop={Infinity}
+                  wrapper="p"
+                />
+              </span>
             )}
           </div>
         )}
