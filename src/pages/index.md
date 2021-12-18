@@ -24,6 +24,10 @@ skills:
     - classNames: devicon-arduino-plain-wordmark colored
       skillName: Arduino
       type: tools
+    - classNames: .react
+      skillName: ReactJs
+      type: frame
+      image: /img/react.svg
   title: Skills
   subtitle: Some of the skills I have worked on
 projects:
