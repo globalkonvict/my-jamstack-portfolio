@@ -1,7 +1,6 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: /img/trees-g70f96a3e5_1920.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 authorData:
@@ -19,6 +18,7 @@ authorData:
   name: Sarthak
   introduction: Hi there! I'm Sarthak
   image: /img/sarthak.png
+  background: /img/trees-g70f96a3e5_1920.jpg
 skills:
   list:
     - classNames: devicon-arduino-plain-wordmark colored

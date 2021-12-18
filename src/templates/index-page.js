@@ -4,67 +4,44 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
   authorData,
-  skills
+  skills,
+  projects,
 }) => {
   const heroImage = getImage(image) || image;
-
   return (
     <div>
       <FullWidthImage
-        img={heroImage}
+        img={authorData.background}
         title={title}
         subheading={subheading}
         authorData={authorData}
       />
-      <Skills skills={skills} />
+      <Skills
+        skills={skills.list}
+        title={skills.title}
+        subtitle={skills.subtitle}
+      />
+      <Projects title={projects.title} projects={projects.list} subtitle={projects.subtitle} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
+                      Latest Articles
                     </h3>
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
@@ -102,9 +79,11 @@ IndexPageTemplate.defaultProps = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+  console.log(frontmatter);
   return (
     <Layout>
       <IndexPageTemplate
+        projects={frontmatter.projects}
         skills={frontmatter.skills}
         authorData={frontmatter.authorData}
         image={frontmatter.image}
@@ -157,6 +136,47 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        skills {
+          title
+          subtitle
+          list {
+            type
+            image {
+              publicURL
+            }
+            classNames
+            skillName
+          }
+        }
+        projects {
+          title
+          subtitle
+          list {
+            title
+            image {
+              childImageSharp {
+                gatsbyImageData( quality: 64, layout: CONSTRAINED)
+              }
+            }
+            links {
+              url
+              text
+            }
+            description
+          }
+        }
+        authorData {
+          introduction
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 350, quality: 64, layout: CONSTRAINED)
+            }
+          }
+          typingText {
+            delay
+            iAm
+          }
         }
       }
     }

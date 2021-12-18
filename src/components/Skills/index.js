@@ -1,7 +1,12 @@
-import React from "react";
+import classNames from "classnames";
+import React, { useState } from "react";
 import "./index.sass";
 
 function Skills({ skills = [], title, subtitle }) {
+  const [tabs, setTabs] = useState("all");
+  const onTabChange = (tab) => {
+    setTabs(tab);
+  };
   return (
     <section className="section section__skills">
       <div className="container">
@@ -13,16 +18,50 @@ function Skills({ skills = [], title, subtitle }) {
                   {title || "Skills"}
                 </h2>
                 <p className="subtitle is-size-5 has-text-centered">
-                 {subtitle || "Some of the skills I have worked on"}
+                  {subtitle || "Some of the skills I have worked on"}
                 </p>
+                <div class="tabs is-fullwidth">
+                  <ul>
+                    <li
+                      className={classNames({ "is-active": tabs === "all" })}
+                      onClick={() => onTabChange("all")}
+                    >
+                      <a>All</a>
+                    </li>
+                    <li
+                      className={classNames({ "is-active": tabs === "lang" })}
+                      onClick={() => onTabChange("lang")}
+                    >
+                      <a>Language</a>
+                    </li>
+                    <li
+                      className={classNames({ "is-active": tabs === "frame" })}
+                      onClick={() => onTabChange("frame")}
+                    >
+                      <a>Framework</a>
+                    </li>
+                    <li
+                      className={classNames({ "is-active": tabs === "tools" })}
+                      onClick={() => onTabChange("tools")}
+                    >
+                      <a>Tools</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div className="skills__content columns is-multiline is-mobile">
                 {skills.map((icon) => {
-                  return (
-                    <div className="column" key={icon.classNames}>
-                      <i className={`${icon.classNames} skills__icons`}></i>
-                    </div>
-                  );
+                  if (tabs === "all" || icon.type === tabs) {
+                    return (
+                      <div className="column" key={icon.classNames}>
+                        {icon?.image?.publicURL ? (
+                          <img className="skills__icons" src={icon?.image?.publicURL} />
+                        ) : (
+                          <i className={`${icon.classNames} skills__icons`}></i>
+                        )}
+                      </div>
+                    );
+                  }
                 })}
               </div>
             </div>

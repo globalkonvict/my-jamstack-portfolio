@@ -46,16 +46,13 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Author Data",
               name: authorData,
               widget: object,
               fields:
                 [
+                  { label: Background, name: background, widget: image },
                   { label: Image, name: image, widget: image },
                   { label: "Introduction", name: introduction, widget: string },
                   {
@@ -89,6 +86,13 @@ collections:
                     widget: list,
                     fields:
                       [
+                        {
+                          label: Image,
+                          name: "image",
+                          widget: image,
+                          required: false,
+                          default: null,
+                        },
                         {
                           label: "Class Name",
                           name: classNames,
