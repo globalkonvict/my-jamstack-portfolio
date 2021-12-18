@@ -14,7 +14,7 @@ authorData:
       delay: 1000
     - iAm: I am a Hacker
       delay: 1000
-    - iAm: I am a seeker
+    - iAm: I am a Seeker
       delay: 1000
   name: Sarthak
   introduction: Hi there! I'm Sarthak
