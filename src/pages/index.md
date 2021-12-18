@@ -23,6 +23,7 @@ skills:
   list:
     - classNames: devicon-arduino-plain-wordmark colored
       skillName: Arduino
+      type: tools
   title: Skills
   subtitle: Some of the skills I have worked on
 projects:
