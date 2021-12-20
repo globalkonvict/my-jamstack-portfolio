@@ -1,24 +1,4 @@
 ---
-templateKey: index-page
-title: Great coffee with a conscience
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
-authorData:
-  typingText:
-    - iAm: I am a Web Developer
-      delay: 1000
-    - iAm: I am a Software Developer
-      delay: 1000
-    - iAm: I am an Engineer
-      delay: 1000
-    - iAm: I am a Hacker
-      delay: 1000
-    - iAm: I am a Seeker
-      delay: 1000
-  name: Sarthak
-  introduction: Hi there! I'm Sarthak
-  image: /img/sarthak.png
-  background: /img/trees-g70f96a3e5_1920.jpg
 skills:
   list:
     - classNames: devicon-arduino-plain-wordmark colored
@@ -30,24 +10,10 @@ skills:
       image: /img/react.svg
   title: Skills
   subtitle: Some of the skills I have worked on
-projects:
-  list:
-    - title: Imget
-      description: |-
-        A CLI tool that downloads images using user provided keyword.
-
-        **Requirement**
-
-        * Node
-        * NPM
-      image: /img/imget.png
-      links:
-        - text: Github
-          url: https://github.com/globalkonvict/ImGet
-        - text: Npm
-          url: https://www.npmjs.com/package/imget
-  title: Projects
-  subtitle: Some of the projects I've worked on
+  extra: "'"
+heading: Great coffee with a conscience
+subheading: Support sustainable farming while enjoying a cup
+templateKey: index-page
 mainpitch:
   title: Why Kaldi
   description: >
@@ -55,10 +21,6 @@ mainpitch:
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -94,6 +56,23 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+authorData:
+  typingText:
+    - iAm: I am a Web Developer
+      delay: 1000
+    - iAm: I am a Software Developer
+      delay: 1000
+    - iAm: I am an Engineer
+      delay: 1000
+    - iAm: I am a Hacker
+      delay: 1000
+    - iAm: I am a Seeker
+      delay: 1000
+  name: Sarthak
+  introduction: Hi there! I'm Sarthak
+  image: /img/sarthak.png
+  background: /img/trees-g70f96a3e5_1920.jpg
+title: Great coffee with a conscience
 main:
   heading: Great coffee with no compromises
   description: >
@@ -110,4 +89,26 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+projects:
+  list:
+    - title: Imget
+      description: |-
+        A CLI tool that downloads images using user provided keyword.
+
+        **Requirement**
+
+        * Node
+        * NPM
+      image: /img/imget.png
+      links:
+        - text: Github
+          url: https://github.com/globalkonvict/ImGet
+        - text: Npm
+          url: https://www.npmjs.com/package/imget
+  title: Projects
+  subtitle: Some of the projects I've worked on
+description: Kaldi is the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 ---
