@@ -1,16 +1,4 @@
 ---
-skills:
-  list:
-    - classNames: devicon-arduino-plain-wordmark colored
-      skillName: Arduino
-      type: tools
-    - classNames: .react
-      skillName: ReactJs
-      type: frame
-      image: /img/react.svg
-  title: Skills
-  subtitle: Some of the skills I have worked on
-  extra: "'"
 templateKey: index-page
 authorData:
   typingText:
@@ -28,10 +16,22 @@ authorData:
   introduction: Hi there! I'm Sarthak
   image: /img/sarthak.png
   background: /img/trees-g70f96a3e5_1920.jpg
-  about: I am a Full-Stack Web Developer, focusing mostly on frontend development.
-    Working with JavaScript, React to build cutting edge frontend applications,
-    NodeJs to build robust backend applications, and React Native to create
-    awesome cross-platform mobile apps.
+  about: I am a [Full-Stack Web Developer], focusing mostly on frontend
+    development. Working with [JavaScript], [React] to build cutting edge
+    frontend applications, [NodeJs] to build robust backend applications, and
+    [React Native] to create awesome cross-platform mobile apps.
+skills:
+  list:
+    - classNames: devicon-arduino-plain-wordmark colored
+      skillName: Arduino
+      type: tools
+    - classNames: .react
+      skillName: ReactJs
+      type: frame
+      image: /img/react.svg
+  title: Skills
+  subtitle: Some of the skills I have worked on
+  extra: "'"
 projects:
   list:
     - title: Imget
