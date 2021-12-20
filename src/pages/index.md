@@ -28,6 +28,10 @@ authorData:
   introduction: Hi there! I'm Sarthak
   image: /img/sarthak.png
   background: /img/trees-g70f96a3e5_1920.jpg
+  about: I am a Full-Stack Web Developer, focusing mostly on frontend development.
+    Working with JavaScript, React to build cutting edge frontend applications,
+    NodeJs to build robust backend applications, and React Native to create
+    awesome cross-platform mobile apps.
 projects:
   list:
     - title: Imget
