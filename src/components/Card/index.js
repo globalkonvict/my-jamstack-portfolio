@@ -3,6 +3,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { getImage } from "gatsby-plugin-image";
 import ReactMarkdown from "react-markdown";
 
+import "./index.sass";
+
 function Card({ title, description, image, links }) {
   return (
     <div className="card">

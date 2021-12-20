@@ -1,8 +1,9 @@
 import classNames from "classnames";
 import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import "./index.sass";
 
-function Skills({ skills = [], title, subtitle }) {
+function Skills({ skills = [], title, subtitle, extra = "" }) {
   const [tabs, setTabs] = useState("all");
   const onTabChange = (tab) => {
     setTabs(tab);
@@ -23,25 +24,37 @@ function Skills({ skills = [], title, subtitle }) {
                 <div class="tabs is-fullwidth">
                   <ul>
                     <li
-                      className={classNames({ "is-active": tabs === "all" })}
+                      className={classNames(
+                        { "is-active": tabs === "all" },
+                        "tabs__item"
+                      )}
                       onClick={() => onTabChange("all")}
                     >
                       <a>All</a>
                     </li>
                     <li
-                      className={classNames({ "is-active": tabs === "lang" })}
+                      className={classNames(
+                        { "is-active": tabs === "lang" },
+                        "tabs__item"
+                      )}
                       onClick={() => onTabChange("lang")}
                     >
                       <a>Language</a>
                     </li>
                     <li
-                      className={classNames({ "is-active": tabs === "frame" })}
+                      className={classNames(
+                        { "is-active": tabs === "frame" },
+                        "tabs__item"
+                      )}
                       onClick={() => onTabChange("frame")}
                     >
                       <a>Framework</a>
                     </li>
                     <li
-                      className={classNames({ "is-active": tabs === "tools" })}
+                      className={classNames(
+                        { "is-active": tabs === "tools" },
+                        "tabs__item"
+                      )}
                       onClick={() => onTabChange("tools")}
                     >
                       <a>Tools</a>
@@ -49,20 +62,32 @@ function Skills({ skills = [], title, subtitle }) {
                   </ul>
                 </div>
               </div>
-              <div className="skills__content columns is-multiline is-mobile">
+              <div className="skills__content columns is-multiline is-mobile is-centered">
                 {skills.map((icon) => {
                   if (tabs === "all" || icon.type === tabs) {
                     return (
-                      <div className="column" key={icon.classNames}>
+                      <div
+                        className="column is-centered has-text-centered"
+                        key={icon.classNames}
+                      >
                         {icon?.image?.publicURL ? (
-                          <img className="skills__icons" src={icon?.image?.publicURL} />
+                          <img
+                            className="skills__icons"
+                            src={icon?.image?.publicURL}
+                          />
                         ) : (
                           <i className={`${icon.classNames} skills__icons`}></i>
                         )}
+                        <p className="skills__icons-text font-mono">
+                          {icon.skillName}
+                        </p>
                       </div>
                     );
                   }
                 })}
+              </div>
+              <div className="skills__footer">
+                <ReactMarkdown>{extra ? extra : ""}</ReactMarkdown>
               </div>
             </div>
           </div>

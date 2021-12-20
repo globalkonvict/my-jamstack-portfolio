@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "GlobalKonvict",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "I am a Full-Stack Web Developer, focusing mostly on frontend development. Working with JavaScript, React to build cutting edge frontend applications, NodeJs to build robust backend applications, and React Native to create awesome cross-platform mobile apps.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -76,7 +76,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
-        develop: true, // Activates purging in npm run develop
+        develop: false, // Activates purging in npm run develop
         purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins

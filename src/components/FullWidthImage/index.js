@@ -8,72 +8,16 @@ import "./index.sass";
 export default function FullWidthImage(props) {
   const {
     height = "calc(100vh - 52px)",
-    img,
-    title,
-    subheading,
-    authorData,
     imgPosition = "top left",
+    authorData,
   } = props;
-  const { introduction, image, typingText } = authorData;
+  const { introduction, image, typingText, background, about } = authorData;
   console.log(authorData);
   return (
-    <React.Fragment>
-      <div
-        className="margin-top-0 hero-container"
-        style={{
-          display: "grid",
-          alignItems: "center",
-        }}
-      >
-        {img?.url ? (
-          <img
-            src={img}
-            objectFit={"cover"}
-            objectPosition={imgPosition}
-            style={{
-              gridArea: "1/1",
-              // You can set a maximum height for the image, if you wish.
-              height: height,
-              width: "100%",
-            }}
-            // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
-            // This is a presentational image, so the alt should be an empty string
-            alt=""
-            formats={["auto", "webp", "avif"]}
-          />
-        ) : (
-          <GatsbyImage
-            image={img}
-            objectFit={"cover"}
-            objectPosition={imgPosition}
-            style={{
-              gridArea: "1/1",
-              // You can set a maximum height for the image, if you wish.
-              maxHeight: height,
-            }}
-            layout="fullWidth"
-            // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
-            // This is a presentational image, so the alt should be an empty string
-            alt=""
-            formats={["auto", "webp", "avif"]}
-          />
-        )}
-        <div className="overlay" />
-        {(title || subheading) && (
-          <div
-            className="hero-description"
-            style={{
-              // By using the same grid area for both, they are stacked on top of each other
-              gridArea: "1/1",
-              position: "relative",
-              // This centers the other elements inside the hero component
-              placeItems: "center",
-              display: "grid",
-            }}
-          >
-            {/* Any content here will be centered in the component */}
+    <div className="hero-container">
+      <div className="container">
+        <div className=" columns is-vcentered is-centered hero-columns">
+          <div className="column is-one-third author-image">
             <GatsbyImage
               image={getImage(image)}
               objectFit={"cover"}
@@ -81,49 +25,42 @@ export default function FullWidthImage(props) {
               alt=""
               formats={["auto", "webp", "avif"]}
             />
-            {introduction && (
-              <h1
-                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen fira-font"
-                style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
-                  lineHeight: "1",
-                  padding: "0.25em",
-                }}
-              >
-                {introduction}
-              </h1>
-            )}
-            {typingText && (
-              <span
-                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen fira-font"
-                style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
-                  lineHeight: "1",
-                  padding: "0.25rem",
-                  marginTop: "0.5rem",
-                }}
-              >
-                <Typical
-                  steps={typingText
-                    .map((item) => {
-                      return [item.iAm, item.delay];
-                    })
-                    .flat()}
-                  loop={Infinity}
-                  wrapper="p"
-                />
-              </span>
+          </div>
+          <div className="column  hero-text-container">
+            {(introduction || image) && (
+              <div className="hero-description">
+                {introduction && (
+                  <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen fira-font heading-main">
+                    {introduction}
+                  </h1>
+                )}
+                {typingText && (
+                  <span className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen fira-font heading-main">
+                    <Typical
+                      steps={typingText
+                        .map((item) => {
+                          return [item.iAm, item.delay];
+                        })
+                        .flat()}
+                      loop={Infinity}
+                      wrapper="p"
+                    />
+                  </span>
+                )}
+                <p
+                  className="about-me"
+                  dangerouslySetInnerHTML={{
+                    __html: about
+                      .replaceAll("[", '<span class="highlight">')
+                      .replaceAll("]", "</span>"),
+                  }}
+                ></p>
+              </div>
             )}
           </div>
-        )}
+        </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 
