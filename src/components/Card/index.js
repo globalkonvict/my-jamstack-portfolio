@@ -32,6 +32,7 @@ function Card({ title, description, image, links }) {
               href={link.url}
               target="_blank"
               rel="noreferrer"
+              key={link.text}
             >
               {link.text}
             </a>

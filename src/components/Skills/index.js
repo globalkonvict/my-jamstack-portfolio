@@ -1,8 +1,9 @@
 import classNames from "classnames";
 import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
+import MarkdownContent from "../Content";
 import "./index.sass";
 
+/* eslint-disable */
 function Skills({ skills = [], title, subtitle, extra = "" }) {
   const [tabs, setTabs] = useState("all");
   const onTabChange = (tab) => {
@@ -16,12 +17,12 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
             <div className="skills">
               <div className="skills__heading">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-centered">
-                  {title || "Skills"}
+                  {title}
                 </h2>
                 <p className="subtitle is-size-5 has-text-centered">
-                  {subtitle || "Some of the skills I have worked on"}
+                  {subtitle}
                 </p>
-                <div class="tabs is-fullwidth">
+                <div className="tabs is-fullwidth">
                   <ul>
                     <li
                       className={classNames(
@@ -29,8 +30,9 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                         "tabs__item"
                       )}
                       onClick={() => onTabChange("all")}
+                      onKeyDown={() => onTabChange("all")}
                     >
-                      <a>All</a>
+                      All
                     </li>
                     <li
                       className={classNames(
@@ -38,8 +40,9 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                         "tabs__item"
                       )}
                       onClick={() => onTabChange("lang")}
+                      onKeyDown={() => onTabChange("lang")}
                     >
-                      <a>Language</a>
+                      Language
                     </li>
                     <li
                       className={classNames(
@@ -47,8 +50,9 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                         "tabs__item"
                       )}
                       onClick={() => onTabChange("frame")}
+                      onKeyDown={() => onTabChange("frame")}
                     >
-                      <a>Framework</a>
+                      Framework
                     </li>
                     <li
                       className={classNames(
@@ -56,8 +60,9 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                         "tabs__item"
                       )}
                       onClick={() => onTabChange("tools")}
+                      onKeyDown={() => onTabChange("tools")}
                     >
-                      <a>Tools</a>
+                      Tools
                     </li>
                   </ul>
                 </div>
@@ -87,7 +92,7 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                 })}
               </div>
               <div className="skills__footer">
-                <ReactMarkdown>{extra ? extra : ""}</ReactMarkdown>
+                <MarkdownContent content={extra ?? ""} />
               </div>
             </div>
           </div>

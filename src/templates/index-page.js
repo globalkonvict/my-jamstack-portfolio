@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
 import Skills from "../components/Skills";
@@ -8,9 +8,15 @@ import Projects from "../components/Projects";
 import LatestStories from "../components/LatestStories";
 import FullWidthImage from "../components/FullWidthImage";
 
-export const IndexPageTemplate = ({ authorData, skills, projects }) => {
+/**
+ * @description This is index page template, partially separated from main layout. This allows using partial templates for CMS Previews.
+ * @param {Object} param0 Props used to display page data
+ * @returns JSX.Element
+ */
+
+const IndexPageTemplate = ({ authorData, skills, projects }) => {
   return (
-    <div>
+    <>
       <FullWidthImage authorData={authorData} />
       <Skills
         skills={skills.list}
@@ -24,12 +30,14 @@ export const IndexPageTemplate = ({ authorData, skills, projects }) => {
         subtitle={projects.subtitle}
       />
       <LatestStories />
-    </div>
+    </>
   );
 };
 
 IndexPageTemplate.propTypes = {
   authorData: PropTypes.object,
+  skills: PropTypes.object,
+  projects: PropTypes.object,
 };
 
 IndexPageTemplate.defaultProps = {
@@ -48,6 +56,8 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
+
+IndexPage.Template = IndexPageTemplate;
 
 IndexPage.propTypes = {
   data: PropTypes.shape({

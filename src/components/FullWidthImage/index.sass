@@ -1,4 +1,5 @@
-@import '../../styles/colors.sass'
+@use "../../styles/theme"
+@use "../../styles/utils"
 
 .hero-container
     clip-path: polygon(0 0, 100% 0, 100% 35%, 100% 100%, 87% 95%, 76% 100%, 51% 96%, 25% 100%, 15% 95%, 0 100%)
@@ -20,17 +21,10 @@
     margin: 0 auto
 
 .logo-text
-    font-family: 'Fira Code', monospace
+    @include utils.firaFont
     font-size: 1.5rem
     font-weight: 700
-    color: $primary !important
-
-.overlay
-    position: absolute
-    background: linear-gradient(90deg, #c20000, #d23e00, #df6100, #ea8200, #f1a200, #f5c100, #f6e000, #f4ff24)
-    opacity: 0.7
-    width: 100vw
-    height: calc(100vh - 52px)
+    color: theme.$primary !important
 
 .profile-img
     width: 350px
@@ -38,16 +32,14 @@
     border-radius: 35% 65% 70% 30% / 49% 37% 63% 51%
     margin-bottom: 3rem
     margin-top: 1rem
-    border: 15px solid $primary
-    box-shadow: 0 0 0 0.5rem $primary
-
-.fira-font
-    font-family: 'Fira Code', monospace
+    border: 15px solid theme.$primary
+    box-shadow: 0 0 0 0.5rem theme.$primary
 
 .heading-main
-    background-color: $primary
-    color: $white
-    lineHeight: 1
+    @include utils.firaFont
+    background-color: theme.$primary
+    color: theme.$white
+    line-height: 1
     padding: 0.25em
     margin-bottom: 0.25em
 
@@ -56,18 +48,18 @@
     justify-content: center
 
 .about-me
-    font-family: 'Fira Code', monospace
+    @include utils.firaFont
     font-size: 1.15rem
-    background-color: $primary
-    color: $white
+    background-color: theme.$primary
+    color: theme.$white
     lineHeight: 1
     padding: 0.75em
     font-weight: 500
     text-align: justify
 
 .highlight
-    background: $accent
-    color: $white
+    background: theme.$accent-a
+    color: theme.$white
     padding: 0.25em
     font-weight: 700
     border-radius: 0.25em

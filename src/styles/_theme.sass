@@ -1,0 +1,36 @@
+@use 'sass:color'
+
+// This file has theme specific variables and Mixins
+
+// Color Variables
+//    -- Main colors
+$primary: #0A81FF
+$primary-invert: color.invert($primary)
+$secondary: #FF1053
+$secondary-invert: color.invert($secondary)
+$background: #E2E9D8
+$background-invert: color.invert($background)
+//   -- Accent colors (for buttons, highlighting, etc)
+$accent-a: #37BEAE
+$accent-b: #E3D985
+$accent-c: #E15554
+$accent-a-dark: color.scale($accent-a, $lightness: -30%)
+$accent-b-dark: color.scale($accent-b, $lightness: -30%)
+$accent-c-dark: color.scale($accent-c, $lightness: -30%)
+//   -- State colors (for showing state like error, success, etc)
+$success: #48e640
+$info: #006CE0
+$warning: #FFBD35
+$error: #FF1F1F
+//   -- Basic Colors
+$white: #EBF6FF
+$black: #000500
+$black-light: #3A3C40
+$gray: #6C8A9D
+$gray-light: #CED8DE
+//   -- Typography
+$type-dark: $black
+$type-light: $black-light
+$type-lighter: $gray
+
+// Mixins

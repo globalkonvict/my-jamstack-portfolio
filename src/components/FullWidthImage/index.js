@@ -6,13 +6,8 @@ import { getImage } from "gatsby-plugin-image";
 import "./index.sass";
 
 export default function FullWidthImage(props) {
-  const {
-    height = "calc(100vh - 52px)",
-    imgPosition = "top left",
-    authorData,
-  } = props;
-  const { introduction, image, typingText, background, about } = authorData;
-  console.log(authorData);
+  const { authorData } = props;
+  const { introduction, image, typingText, about } = authorData;
   return (
     <div className="hero-container">
       <div className="container">
@@ -65,8 +60,5 @@ export default function FullWidthImage(props) {
 }
 
 FullWidthImage.propTypes = {
-  img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  height: PropTypes.number,
-  subheading: PropTypes.string,
+  authorData: PropTypes.object,
 };

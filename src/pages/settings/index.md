@@ -1,4 +1,5 @@
 ---
+templateKey: 'settings'
 social:
   stackoverflow: https://stackoverflow.com/users/8621208/sarthak-dwivedi
   instagram: https://www.instagram.com/globalkonvict/

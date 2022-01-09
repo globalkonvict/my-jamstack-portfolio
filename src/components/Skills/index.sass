@@ -1,6 +1,5 @@
-@import '../../styles/colors.sass'
-@import '../../styles/utils.sass'
-
+@use "../../styles/theme"
+@use "../../styles/utils"
 
 .skills__content
     padding: 0 1.5rem
@@ -17,4 +16,24 @@
 .skills__icons-text
     font-size: 0.75rem
     font-weight: 700
-    color: $primary !important
+    color: theme.$primary !important
+
+.tabs__item
+    text-decoration: none
+    position: relative
+    padding-bottom: 4px
+    text-align: center
+
+.is-active.tabs__item
+    color: theme.$primary !important
+    &:after
+        position: absolute
+        content: ''
+        height: 4px
+        bottom: -4px
+        margin: 0 auto
+        left: 0
+        right: 0
+        width: 50%
+        background: theme.$primary
+        transition: .5s

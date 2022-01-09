@@ -36,6 +36,55 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/settings/index.md"
+        label: "Settings"
+        name: "settings"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "settings",
+            }
+          - {
+              label: "Social",
+              name: "social",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "StackOverflow",
+                    name: "stackoverflow",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "GitHub",
+                    name: "github",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "LinkedIn",
+                    name: "linkedin",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "Twitter",
+                    name: "twitter",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "Instagram",
+                    name: "instagram",
+                    widget: "string",
+                    required: false,
+                  },
+                ],
+            }
+
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"

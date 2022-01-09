@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card";
-import './index.sass'
+import "./index.sass";
 
 function Projects({ title, subtitle, projects = [] }) {
   return (
@@ -20,7 +20,10 @@ function Projects({ title, subtitle, projects = [] }) {
               <div className="projects__content columns is-multiline is-centered">
                 {projects.map((project) => {
                   return (
-                    <div className="column is-4 is-12-mobile" key={projects.classNames}>
+                    <div
+                      className="column is-4 is-12-mobile"
+                      key={project.title}
+                    >
                       <Card
                         title={project.title}
                         image={project.image}
