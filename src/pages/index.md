@@ -31,7 +31,7 @@ skills:
       image: /img/react.svg
   title: Skills
   subtitle: Some of the skills I have worked on
-  extra: "    "
+  extra: "`hdfghjdjfgjhzgfjsgfjgsjf jjsf`"
 projects:
   list:
     - title: Imget
