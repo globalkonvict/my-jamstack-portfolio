@@ -1,8 +1,14 @@
+@use 'sass:color'
 @use "../../styles/theme"
 @use "../../styles/helper"
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap')
 @import "~bulma/sass/utilities/initial-variables"
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap')
+
+$primary: #0A81FF
+$primary-invert: color.invert($primary)
+$secondary: #FF1053
+$secondary-invert: color.invert($secondary)
 
 .navbar .navbar-menu
     box-shadow: none !important
@@ -46,8 +52,6 @@ $menu-item-active-color: theme.$primary-invert
 $menu-item-active-background-color: theme.$primary-invert
 $menu-list-border-left: 1px solid theme.$primary-invert
 $menu-label-color: $white-ter
-// Tabs overrides
-$tabs-border-bottom-color: transparent
 
 .menu-label
     font-size: 1em !important
@@ -92,3 +96,18 @@ $tabs-border-bottom-color: transparent
 +mobile
 .blog-list-item header
     display: block
+
+.button.is-primary
+    background-color: theme.$primary
+    color: $white-ter
+    border-color: theme.$primary
+    &:hover
+        background-color: theme.$secondary
+        color: $white-ter
+        border-color: theme.$secondary
+
+.button.is-primary.is-outlined
+    &:hover
+        background-color: theme.$primary
+        color: $white-ter
+        border-color: theme.$primary

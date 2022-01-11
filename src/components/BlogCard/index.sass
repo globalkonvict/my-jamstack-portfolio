@@ -1,0 +1,45 @@
+@use "../../styles/theme"
+
+.blog-card
+    .title
+        margin-bottom: 0.5rem
+    .divider
+        margin: 1rem 0
+    .excerpt
+        text-align: justify
+
+.blog-image
+    height: 250px
+    width: 100%
+    margin-left: 0 !important
+    margin-right: 0 !important
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        border-radius: 1rem
+
+.excerpt-column
+    justify-content: flex-start
+    align-items: flex-start
+
+.blog-meta
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    .meta-info
+        margin-right: 1rem,
+
+.tag-text
+    background: theme.$secondary
+    color: theme.$white
+    padding: 2px 4px
+    margin-right: 0.5rem
+    &:hover
+        background: theme.$primary
+        color: theme.$white
+
+.blog-card-columns
+    display: flex
+    flex-direction: column

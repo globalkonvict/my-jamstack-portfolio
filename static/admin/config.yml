@@ -135,6 +135,7 @@ collections:
                     name: extra,
                     widget: markdown,
                     default: null,
+                    required: false,
                   },
                   {
                     label: "Skills",

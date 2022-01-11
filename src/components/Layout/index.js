@@ -1,6 +1,7 @@
 import * as React from "react";
 import { withPrefix } from "gatsby";
 import { Helmet } from "react-helmet";
+import 'synthwave-vscode/synthwave84.css';
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
