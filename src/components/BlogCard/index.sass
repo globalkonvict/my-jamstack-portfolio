@@ -1,8 +1,9 @@
 @use "../../styles/theme"
 
 .blog-card
+    background: theme.$background-alt
     .title
-        margin-bottom: 0.5rem
+        margin: 0
     .divider
         margin: 1rem 0
     .excerpt
@@ -28,14 +29,19 @@
     display: flex
     justify-content: flex-start
     align-items: center
+    flex-wrap: wrap
     .meta-info
         margin-right: 1rem,
+        margin-top: 1rem
+    .icon
+        margin-top: 1rem
 
 .tag-text
     background: theme.$secondary
     color: theme.$white
     padding: 2px 4px
     margin-right: 0.5rem
+    margin-top: 1rem
     &:hover
         background: theme.$primary
         color: theme.$white

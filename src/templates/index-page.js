@@ -15,6 +15,7 @@ import FullWidthImage from "../components/FullWidthImage";
  */
 
 const IndexPageTemplate = ({ authorData, skills, projects }) => {
+  console.log(authorData);
   return (
     <>
       <FullWidthImage authorData={authorData} />

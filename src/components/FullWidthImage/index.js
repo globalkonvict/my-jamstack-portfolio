@@ -5,11 +5,17 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { getImage } from "gatsby-plugin-image";
 import "./index.sass";
 
-export default function FullWidthImage(props) {
-  const { authorData } = props;
-  const { introduction, image, typingText, about } = authorData;
+export default function FullWidthImage({ authorData }) {
+  const { introduction, image, typingText, about, background } = authorData;
   return (
     <div className="hero-container">
+      <GatsbyImage
+        image={getImage(background)}
+        objectFit={"cover"}
+        className="background-img"
+        alt=""
+        formats={["auto", "webp", "avif"]}
+      />
       <div className="container">
         <div className=" columns is-vcentered is-centered hero-columns">
           <div className="column is-one-third author-image">

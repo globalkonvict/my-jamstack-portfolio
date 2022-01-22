@@ -13,6 +13,33 @@ $secondary-invert: color.invert($secondary)
 .navbar .navbar-menu
     box-shadow: none !important
 
+nav
+    background-color: theme.$background-nav
+
+.blog-post.content
+    max-width: 1152px !important
+    h1
+        font-family: 'Fira Code', monospace
+        font-size: 2.5rem
+        font-weight: 700
+        line-height: 1.2
+        color: theme.$type-dark
+        margin: 0 auto
+        margin-bottom: 0 !important
+        margin-top: 1rem
+        line-height: 1.5em
+        span
+            background-image: linear-gradient(to right, theme.$info 0%, theme.$warning 100%)
+            background-repeat: repeat-x
+            background-position: 0 100%
+            background-size: 100% 12px
+            transition: background 0.5s
+            &:hover
+                color: theme.$white
+                background-size: 100% 100%
+                text-shadow: 0 0 8px theme.$accent-b
+                cursor: pointer
+
 .content .taglist
     list-style: none
     margin-bottom: 0
@@ -23,6 +50,7 @@ $secondary-invert: color.invert($secondary)
     flex-wrap: wrap
     justify-content: left
     align-items: center
+    padding-bottom: 1rem
 li
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
@@ -111,3 +139,6 @@ $menu-label-color: $white-ter
         background-color: theme.$primary
         color: $white-ter
         border-color: theme.$primary
+
+.layout
+    background-color: theme.$background

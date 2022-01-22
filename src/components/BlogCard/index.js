@@ -10,7 +10,9 @@ const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
   return (
     <div className="blog-card card">
       <div className="card-content">
-        <h3 className="title is-size-4">{title}</h3>
+        <Link to={slug}>
+          <h3 className="title is-size-4">{title}</h3>
+        </Link>
         <div className="blog-meta ">
           <GoCalendar className="icon is-primary" />
           <span className="is-size-7 meta-info">{date}</span>

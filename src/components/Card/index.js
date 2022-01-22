@@ -7,7 +7,7 @@ import "./index.sass";
 
 function Card({ title, description, image, links }) {
   return (
-    <div className="card">
+    <div className="card project-card">
       <header className="card-header">
         <p className="card-header-title">{title}</p>
       </header>
