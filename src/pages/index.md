@@ -27,8 +27,56 @@ skills:
       type: tools
     - classNames: .react
       skillName: ReactJs
-      type: frame
-      image: /img/react.svg
+      type: framework
+      image: /img/react.png
+    - image: /img/vscode.png
+      skillName: Vs Code
+      type: tools
+      classNames: .vscode
+    - image: /img/atomic.png
+      classNames: react-native
+      skillName: React Native
+      type: framework
+    - classNames: .js
+      skillName: JavaScript
+      image: /img/javascript.png
+      type: language
+    - image: /img/node-js.png
+      classNames: nodejs
+      skillName: Node.Js
+      type: language
+    - image: /img/typescript.png
+      skillName: TypeScript
+      classNames: type-script
+      type: language
+    - image: /img/css3.png
+      classNames: .css
+      skillName: CSS
+      type: language
+    - classNames: .html
+      skillName: HTML
+      image: /img/html.png
+      type: language
+    - image: /img/gatsby.png
+      classNames: gatsby
+      skillName: Gatsby.Js
+      type: framework
+    - image: /img/rust.png
+      type: language
+      classNames: rust
+      skillName: Rust
+    - image: /img/c.png
+      type: language
+      classNames: clang
+      skillName: C
+    - image: /img/express.png
+      classNames: express
+      skillName: Express
+      type: framework
+    - image: /img/sass.png
+      classNames: sass
+      skillName: Sass
+      type: framework
   title: Skills
   subtitle: Some of the skills I have worked on
   extra: ""
