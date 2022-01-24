@@ -22,9 +22,10 @@ authorData:
     [React Native] to create awesome cross-platform mobile apps.
 skills:
   list:
-    - classNames: devicon-arduino-plain-wordmark colored
+    - classNames: arduino
       skillName: Arduino
       type: tools
+      image: /img/arduino.png
     - classNames: .react
       skillName: ReactJs
       type: framework
