@@ -62,6 +62,10 @@ skills:
       classNames: sass
       skillName: Sass
       type: framework
+    - classNames: less-icon
+      skillName: Less
+      image: /img/less-icon.png
+      type: framework
     - image: /img/rust.png
       type: language
       classNames: rust
