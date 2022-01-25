@@ -12,7 +12,7 @@ class BlogRollTemplate extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-4" key={post.id}>
               <BlogCard
                 title={post.frontmatter.title}
                 excerpt={post.excerpt}
@@ -48,7 +48,7 @@ export default function BlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 350)
+                excerpt(pruneLength: 150)
                 id
                 fields {
                   slug

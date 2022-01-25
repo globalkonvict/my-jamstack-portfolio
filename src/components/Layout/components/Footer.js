@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="footer has-background-black has-text-white-ter">
       <div className="content has-text-centered">
-        <p className="is-size-1 footer-logo">GlobalKonvict</p>
+        <p className="is-size-1 is-size-3-mobile footer-logo">GlobalKonvict</p>
       </div>
       <div className="content has-text-centered has-background-black has-text-white-ter">
         <div className="container has-background-black has-text-white-ter">

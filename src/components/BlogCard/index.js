@@ -18,7 +18,11 @@ const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
           <span className="is-size-7 meta-info">{date}</span>
           <AiOutlineTags className="icon is-primary" />
           {tags.map((tag) => (
-            <Link className="tag-text is-size-7" to={`/tags/${tag}`}>
+            <Link
+              className="tag-text is-size-7"
+              to={`/tags/${tag}`}
+              key={`/tags/${tag}`}
+            >
               {tag}
             </Link>
           ))}

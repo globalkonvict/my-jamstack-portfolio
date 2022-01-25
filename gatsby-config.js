@@ -37,7 +37,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [320, 750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
@@ -65,7 +82,7 @@ module.exports = {
             resolve: `gatsby-remark-vscode`,
             options: {
               theme: "SynthWave '84",
-              extensions: ['synthwave-vscode']
+              extensions: ["synthwave-vscode"],
             },
           },
         ],

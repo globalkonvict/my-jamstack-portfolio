@@ -1,5 +1,7 @@
-import classNames from "classnames";
 import React, { useState } from "react";
+import classNames from "classnames";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import MarkdownContent from "../Content";
 import "./index.sass";
 
@@ -36,23 +38,23 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                     </li>
                     <li
                       className={classNames(
-                        { "is-active": tabs === "lang" },
+                        { "is-active": tabs === "language" },
                         "tabs__item"
                       )}
-                      onClick={() => onTabChange("lang")}
-                      onKeyDown={() => onTabChange("lang")}
+                      onClick={() => onTabChange("language")}
+                      onKeyDown={() => onTabChange("language")}
                     >
-                      Language
+                      Languages
                     </li>
                     <li
                       className={classNames(
-                        { "is-active": tabs === "frame" },
+                        { "is-active": tabs === "framework" },
                         "tabs__item"
                       )}
-                      onClick={() => onTabChange("frame")}
-                      onKeyDown={() => onTabChange("frame")}
+                      onClick={() => onTabChange("framework")}
+                      onKeyDown={() => onTabChange("framework")}
                     >
-                      Framework
+                      Frameworks
                     </li>
                     <li
                       className={classNames(
@@ -72,13 +74,15 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                   if (tabs === "all" || icon.type === tabs) {
                     return (
                       <div
-                        className="column is-centered has-text-centered"
+                        className="column is-centered is-2-tablet is-4-mobile has-text-centered"
                         key={icon.classNames}
                       >
-                        {icon?.image?.publicURL ? (
-                          <img
+                        {icon?.image ? (
+                          <GatsbyImage
+                            image={getImage(icon?.image)}
+                            objectFit="contain"
                             className="skills__icons"
-                            src={icon?.image?.publicURL}
+                            formats={["auto", "webp", "avif"]}
                           />
                         ) : (
                           <i className={`${icon.classNames} skills__icons`}></i>
@@ -91,9 +95,11 @@ function Skills({ skills = [], title, subtitle, extra = "" }) {
                   }
                 })}
               </div>
-              <div className="skills__footer">
-                <MarkdownContent content={extra ?? ""} />
-              </div>
+              {extra ? (
+                <div className="skills__footer">
+                  <MarkdownContent content={extra ?? ""} />
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

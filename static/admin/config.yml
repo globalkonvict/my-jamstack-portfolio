@@ -160,6 +160,12 @@ collections:
                           required: false,
                           default: null,
                         },
+                        {
+                          label: "Type",
+                          name: "type",
+                          widget: "select",
+                          options: ["tools", "language", "framework"],
+                        },
                       ],
                   },
                 ],

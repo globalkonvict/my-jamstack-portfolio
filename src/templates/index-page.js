@@ -15,7 +15,6 @@ import FullWidthImage from "../components/FullWidthImage";
  */
 
 const IndexPageTemplate = ({ authorData, skills, projects }) => {
-  console.log(authorData);
   return (
     <>
       <FullWidthImage authorData={authorData} />
@@ -77,12 +76,21 @@ export const pageQuery = graphql`
         authorData {
           background {
             childImageSharp {
-              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              gatsbyImageData(
+                quality: 100
+                layout: FULL_WIDTH
+                placeholder: DOMINANT_COLOR
+              )
             }
           }
           image {
             childImageSharp {
-              gatsbyImageData(width: 350, quality: 64, layout: CONSTRAINED)
+              gatsbyImageData(
+                width: 350
+                quality: 100
+                layout: CONSTRAINED
+                placeholder: BLURRED
+              )
             }
           }
           introduction
@@ -100,6 +108,13 @@ export const pageQuery = graphql`
             type
             image {
               publicURL
+              childImageSharp {
+                gatsbyImageData(
+                  quality: 64
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                )
+              }
             }
             classNames
             skillName
@@ -112,7 +127,11 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(quality: 64, layout: CONSTRAINED)
+                gatsbyImageData(
+                  quality: 64
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                )
               }
             }
             links {
