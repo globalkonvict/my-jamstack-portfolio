@@ -74,7 +74,7 @@ skills:
       type: language
       classNames: clang
       skillName: C
-    - image: /img/bulma-css-icon.svg
+    - image: /img/bulma-css-icon.png
       classNames: bulma-css-icon
       skillName: Bulma CSS
       type: framework
