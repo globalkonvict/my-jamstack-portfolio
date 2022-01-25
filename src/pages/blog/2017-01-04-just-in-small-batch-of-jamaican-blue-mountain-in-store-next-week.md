@@ -1,34 +1,193 @@
 ---
-templateKey: 'blog-post'
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
-date: 2017-01-04T15:04:10.000Z
+templateKey: blog-post
+title: "CSS Pseudo-classes: Element states"
+date: 2022-01-25T07:23:40.430Z
+description: >
+  So far, we have already had a look at links and form pseudo-classes. In this
+  article, we'll dive into element states. Element states reflect on a specific
+  condition an element could have. This can, for instance, be first-of-type or
+  the last-child.
 featuredpost: true
-description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+featuredimage: /img/css-back.png
 tags:
-  - jamaica
-  - green beans
-  - flavor
-  - tasting
+  - css
+  - programming
+  - tips
+  - tutorial
 ---
+So far, we have already had a look at links and form pseudo-classes. In this article, we'll dive into element states.
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+Element states reflect on a specific condition an element could have. This can, for instance, be `first-of-type` or the `last-child`.
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
+I've split this up into a series of four, where this is the third part about form pseudo-states.
 
-## A little history
+The other parts:
 
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
+* [Link pseudo-states](https://daily-dev-tips.com/posts/css-pseudo-classes-links/)
+* [Form pseudo-states](https://daily-dev-tips.com/posts/css-pseudo-classes-forms/)
+* *Element state selectors* (this one 💖)
+* Other pseudo states (coming soon)
 
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
+## [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#element-state-selectors)Element state selectors
 
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
+Element state selectors are pseudo-classes I've used a lot in my articles.\
+They are a great way to select a particular matching element and apply specific styling.
 
-## What you need to know before trying
+We get the following options:
 
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
+* `:first-child`
+* `:last-child`
+* `:only-child`
+* `:first-of-type`
+* `:last-of-type`
+* `:nth-child`
+* `:nth-of-type`
+* `:only-of-type`
+* `:empty`
 
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
+### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#-raw-firstchild-endraw-raw-lastchild-endraw-amp-raw-onlychild-endraw-)`:first-child`, `:last-child`, & `:only-child`
 
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+These are great if you want to apply specific styling to the first or last elements.
+
+They are often used to offset margin on a list, for instance.
+
+Let's try out something simple and change the colors of the first and last elements.
+
+```css
+li:first-child {
+  color: hotPink;
+}
+li:last-child {
+  color: teal;
+}
+```
+
+And for the only-child, we can use the following selector.
+
+```css
+li:only-child {
+  color: crimson;
+}
+```
+
+Be careful when using these as they fire in order.\
+If you have all three, the only-=child technically also is valid for the first & last-child selector!
+
+You can see what happens in this CodePen.
+
+### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#-raw-firstoftype-endraw-amp-raw-lastoftype-endraw-)`:first-of-type` & `:last-of-type`
+
+These are very close to the above, but with one distinct difference.
+
+For instance, `first-child` needs the element to be the first element in the selector.\
+As `first-of-type` it styles the first occurrence of that element.
+
+The easiest way to showcase this is by having an HTML structure where we want the first `strong` element to be thicker than the rest.
+
+```html
+<div>
+  <p>Line one</p>
+  <strong>Important line</strong>
+  <p>Line two</p>
+  <strong>Slightly less important line</strong>
+  <p>Line three</p>
+</div>
+```
+
+```css
+div > strong:first-child {
+  color: hotPink;
+}
+div > strong:first-of-type {
+  color: purple;
+  font-size: 1.5rem;
+}
+```
+
+You'll be able to see the first strong being purple and not pink because that won't fire!
+
+> Note: You can even try and remove the `first-of-type` line.
+
+And the same can be done with `last-of-type`.
+
+```css
+div > strong:last-child {
+  color: gold;
+}
+div > strong:last-of-type {
+  color: crimson;
+}
+```
+
+You can see what happens in the CodePen below.
+
+### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#-raw-nthchild-endraw-amp-raw-nthoftype-endraw-)`nth-child` & `nth-of-type`
+
+These two are fantastic, and I use these quite often.\
+If even dedicated a complete article on [CSS `nth-child` selectors](https://daily-dev-tips.com/posts/css-nth-child-selector-basics/).
+
+They can be used the select the `x`th item.
+
+For instance you can to style the second item:
+
+```css
+li:nth-child(2) {
+  background: gold;
+}
+```
+
+The cool part with this selector is that it doesn't just have one static value. You can use values like:
+
+* `odd`/`even`: Select odd or even numbers
+* `2n+2`: Select every 2nd item
+
+> Note: [CSS-tricks has this cool nth-tester tool](https://css-tricks.com/examples/nth-child-tester/)
+
+Let's try them out:
+
+```css
+li:nth-child(2) {
+  color: hotPink;
+}
+li:nth-child(odd) {
+  color: hotPink;
+}
+li:nth-child(2n + 2) {
+  color: hotPink;
+}
+```
+
+And again, we can use the `nth-of-type` selector to target types instead of actual first items.\
+This can be super useful for images, for instance, if you want them left/right based on their occurrence.
+
+### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#-raw-onlyoftype-endraw-)`only-of-type`
+
+This is quite a funny one. It fires if the selector is only one of a type.
+
+Where the `only-child` can only have one child, this one can say if an element only has 1 of this child.
+
+```css
+strong:only-of-type {
+  color: hotPink;
+}
+```
+
+Which will result in the following:
+
+### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#-raw-empty-endraw-)`:empty`
+
+The last one is the empty selector. It can be used to indicate empty elements.
+
+Some people even use this as a way to find misplaced elements.
+
+You can also use this when using WYSIWYG editors that add empty `p` tags.
+
+```css
+:empty {
+  display: none;
+}
+```
+
+### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#thank-you-for-reading-and-lets-connect)Thank you for reading, and let's connect!
+
+Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)
