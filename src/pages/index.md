@@ -22,21 +22,17 @@ authorData:
     [React Native] to create awesome cross-platform mobile apps.
 skills:
   list:
-    - classNames: arduino
-      skillName: Arduino
-      type: tools
-      image: /img/arduino.png
     - classNames: .react
       skillName: ReactJs
       type: framework
       image: /img/react.png
-    - image: /img/vscode.png
-      skillName: Vs Code
-      type: tools
-      classNames: .vscode
     - image: /img/atomic.png
       classNames: react-native
       skillName: React Native
+      type: framework
+    - image: /img/gatsby.png
+      classNames: gatsby
+      skillName: Gatsby.Js
       type: framework
     - classNames: .js
       skillName: JavaScript
@@ -50,6 +46,10 @@ skills:
       skillName: TypeScript
       classNames: type-script
       type: language
+    - image: /img/express.png
+      classNames: express
+      skillName: Express
+      type: framework
     - image: /img/css3.png
       classNames: .css
       skillName: CSS
@@ -58,9 +58,9 @@ skills:
       skillName: HTML
       image: /img/html.png
       type: language
-    - image: /img/gatsby.png
-      classNames: gatsby
-      skillName: Gatsby.Js
+    - image: /img/sass.png
+      classNames: sass
+      skillName: Sass
       type: framework
     - image: /img/rust.png
       type: language
@@ -70,14 +70,14 @@ skills:
       type: language
       classNames: clang
       skillName: C
-    - image: /img/express.png
-      classNames: express
-      skillName: Express
-      type: framework
-    - image: /img/sass.png
-      classNames: sass
-      skillName: Sass
-      type: framework
+    - classNames: arduino
+      skillName: Arduino
+      type: tools
+      image: /img/arduino.png
+    - image: /img/vscode.png
+      skillName: Vs Code
+      type: tools
+      classNames: .vscode
   title: Skills
   subtitle: Some of the skills I have worked on
   extra: ""
