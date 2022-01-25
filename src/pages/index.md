@@ -70,14 +70,6 @@ skills:
       type: language
       classNames: clang
       skillName: C
-    - classNames: arduino
-      skillName: Arduino
-      type: tools
-      image: /img/arduino.png
-    - image: /img/vscode.png
-      skillName: Vs Code
-      type: tools
-      classNames: .vscode
     - image: /img/bulma-css-icon.svg
       classNames: bulma-css-icon
       skillName: Bulma CSS
@@ -94,6 +86,14 @@ skills:
       classNames: antd-icon
       skillName: Ant Design
       type: framework
+    - classNames: arduino
+      skillName: Arduino
+      type: tools
+      image: /img/arduino.png
+    - image: /img/vscode.png
+      skillName: Vs Code
+      type: tools
+      classNames: .vscode
   title: Skills
   subtitle: Some of the skills I have worked on
   extra: ""
