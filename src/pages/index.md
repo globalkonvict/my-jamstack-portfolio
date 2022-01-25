@@ -78,6 +78,22 @@ skills:
       skillName: Vs Code
       type: tools
       classNames: .vscode
+    - image: /img/bulma-css-icon.svg
+      classNames: bulma-css-icon
+      skillName: Bulma CSS
+      type: framework
+    - image: /img/bootstrapscss-icon.png
+      classNames: bootsraps-icon
+      skillName: Bootstrap CSS
+      type: framework
+    - image: /img/material-ui.png
+      classNames: mui-icon
+      skillName: MaterialUI (React)
+      type: framework
+    - image: /img/antd-icon.png
+      classNames: antd-icon
+      skillName: Ant Design
+      type: framework
   title: Skills
   subtitle: Some of the skills I have worked on
   extra: ""
