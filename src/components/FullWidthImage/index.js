@@ -7,7 +7,7 @@ import "./index.sass";
 export default function FullWidthImage({ authorData }) {
   const { introduction, image, typingText, about, background } = authorData;
   return (
-    <section>
+    <section className="hero-section">
       <div className="hero-container">
         <GatsbyImage
           image={getImage(background)}
@@ -39,12 +39,12 @@ export default function FullWidthImage({ authorData }) {
               {(introduction || image) && (
                 <div className="hero-description">
                   {introduction && (
-                    <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen fira-font heading-main">
+                    <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen heading-main">
                       {introduction}
                     </h1>
                   )}
                   {typingText && (
-                    <span className="has-text-weight-bold is-size-5-mobile is-size-3-tablet  fira-font heading-main">
+                    <span className="has-text-weight-bold is-size-5-mobile is-size-3-tablet heading-main">
                       <Typical
                         steps={typingText
                           .map((item) => {
@@ -57,10 +57,13 @@ export default function FullWidthImage({ authorData }) {
                     </span>
                   )}
                   <p
-                    className="about-me is-size-6-mobile is-size-4-tablet fira-font"
+                    className="about-me is-size-6-mobile is-size-4-tablet has-text-weight-light"
                     dangerouslySetInnerHTML={{
                       __html: about
-                        .replaceAll("[", '<span class="highlight">')
+                        .replaceAll(
+                          "[",
+                          '<span class="highlight has-text-weight-bold">'
+                        )
                         .replaceAll("]", "</span>"),
                     }}
                   ></p>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Helmet from "react-helmet";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./index.sass";
 
 const FullWidthNavigationMenu = () => {
@@ -24,11 +23,13 @@ const FullWidthNavigationMenu = () => {
         onKeyPress={toggleNav}
         tabIndex={0}
       >
-        {navActive === "nav-active" ? (
-          <FontAwesomeIcon icon={faTimes} />
-        ) : (
-          <FontAwesomeIcon icon={faBars} />
-        )}
+        <span className="icon">
+          {navActive === "nav-active" ? (
+            <FaTimes className="menu-icon-toggle" />
+          ) : (
+            <FaBars className="menu-icon-toggle" />
+          )}
+        </span>
       </div>
       <div className="nav">
         <div className="nav__content">

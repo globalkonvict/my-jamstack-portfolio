@@ -1,5 +1,4 @@
 @use "../../styles/theme"
-@use "../../styles/utils"
 
 .skills__content
     padding: 0 1.5rem
@@ -12,6 +11,9 @@
 .skills__icons
     font-size: 100px
     width: 100px
+    filter: drop-shadow(0 0px 20px rgba(8, 111, 184, 0.767))
+    &:hover
+        filter: drop-shadow(0 0px 20px rgba(240, 46, 170, 0.7))
     img
         width: 100%
         height: auto
@@ -22,25 +24,33 @@
     font-size: 0.75rem
     color: theme.$accent-a-dark !important
 
+.tabs.is-fullwidth
+    margin-top: 2rem
+
 .tabs__item
     text-decoration: none
     position: relative
-    padding-bottom: 4px
+    padding-bottom: 8px
     text-align: center
 
 .tabs__item.is-active
     color: theme.$primary !important
+    position: relative
     &:after
         position: absolute
         content: ''
-        height: 4px
-        bottom: -4px
+        height: 3px
+        bottom: 0
         margin: 0 auto
         left: 0
         right: 0
-        width: 50%
+        width: 40%
         background: theme.$primary
-        transition: .5s
+        transition: all 1s ease
 
 .tabs ul
     border-color: transparent
+
+.skills-tooltip
+    width: 100%
+    height: 100%

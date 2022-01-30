@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
-import Layout from "../components/Layout";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import LatestStories from "../components/LatestStories";
@@ -47,13 +46,11 @@ IndexPageTemplate.defaultProps = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   return (
-    <Layout>
-      <IndexPageTemplate
-        projects={frontmatter.projects}
-        skills={frontmatter.skills}
-        authorData={frontmatter.authorData}
-      />
-    </Layout>
+    <IndexPageTemplate
+      projects={frontmatter.projects}
+      skills={frontmatter.skills}
+      authorData={frontmatter.authorData}
+    />
   );
 };
 
@@ -77,7 +74,7 @@ export const pageQuery = graphql`
           background {
             childImageSharp {
               gatsbyImageData(
-                quality: 100
+                quality: 50
                 layout: FULL_WIDTH
                 placeholder: DOMINANT_COLOR
               )
@@ -87,7 +84,7 @@ export const pageQuery = graphql`
             childImageSharp {
               gatsbyImageData(
                 width: 350
-                quality: 100
+                quality: 40
                 layout: CONSTRAINED
                 placeholder: BLURRED
               )
@@ -110,7 +107,7 @@ export const pageQuery = graphql`
               publicURL
               childImageSharp {
                 gatsbyImageData(
-                  quality: 64
+                  quality: 30
                   layout: CONSTRAINED
                   placeholder: BLURRED
                 )

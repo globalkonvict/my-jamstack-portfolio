@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import { GoCalendar } from "react-icons/go";
 import { AiOutlineTags } from "react-icons/ai";
-import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
 // eslint-disable-next-line
@@ -73,25 +72,23 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        date={post.frontmatter.date}
-      />
-    </Layout>
+    <BlogPostTemplate
+      content={post.html}
+      contentComponent={HTMLContent}
+      description={post.frontmatter.description}
+      helmet={
+        <Helmet titleTemplate="%s | Blog">
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta
+            name="description"
+            content={`${post.frontmatter.description}`}
+          />
+        </Helmet>
+      }
+      tags={post.frontmatter.tags}
+      title={post.frontmatter.title}
+      date={post.frontmatter.date}
+    />
   );
 };
 

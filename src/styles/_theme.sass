@@ -26,15 +26,20 @@ $warning: #FFBD35
 $error: #FF1F1F
 //   -- Basic Colors
 $white: #EBF6FF
-$black: #000500
-$black-light: #3A3C40
-$gray: #6C8A9D
-$gray-light: #CED8DE
+$black: #2c2c2c
+$black-light: #2e3033e8
+$grey: #6C8A9D
+$grey-dark: color.scale($grey, $lightness: -20%)
+$grey-light: #CED8DE
 //   -- Typography
 $type-dark: $black
 $type-light: $black-light
-$type-lighter: $gray
+$type-lighter: $grey
 
 // Gradient
-
 $hero-gradient: linear-gradient(120deg, #9145b6, #8a4abb, #7657c6, #4e68d2, #0078d9, #0086d6, #0091ca, #009aba, #00a0ab, #00a49f, #35a698, #3fa796)
+$sharp-gradient: linear-gradient(240deg,hsl(260deg 99% 57%) 0%,hsl(264deg 99% 55%) 3%,hsl(269deg 99% 54%) 6%,hsl(273deg 99% 53%) 9%,hsl(277deg 100% 52%) 13%,hsl(282deg 100% 51%) 17%,hsl(286deg 100% 50%) 22%,hsl(314deg 100% 50%) 27%,hsl(342deg 99% 51%) 34%,hsl(11deg 99% 52%) 40%,hsl(39deg 99% 53%) 48%,hsl(67deg 98% 53%) 54%,hsl(95deg 98% 54%) 60%,hsl(112deg 98% 49%) 66%,hsl(130deg 99% 44%) 71%,hsl(147deg 99% 39%) 75%,hsl(165deg 100% 34%) 79%,hsl(182deg 100% 29%) 82%,hsl(200deg 100% 24%) 85%,hsl(227deg 95% 30%) 88%,hsl(253deg 90% 35%) 91%,hsl(280deg 86% 41%) 93%,hsl(306deg 80% 46%) 96%,hsl(333deg 76% 52%) 98%,hsl(0deg 71% 57%) 100%)
+$sharp-gredient-b: linear-gradient(250deg,hsl(260deg 94% 30%) 0%,hsl(249deg 90% 33%) 13%,hsl(238deg 88% 35%) 22%,hsl(228deg 84% 37%) 28%,hsl(217deg 81% 39%) 33%,hsl(207deg 78% 42%) 37%,hsl(196deg 75% 44%) 40%,hsl(179deg 79% 42%) 43%,hsl(162deg 82% 41%) 45%,hsl(145deg 85% 39%) 47%,hsl(129deg 88% 37%) 48%,hsl(112deg 92% 35%) 50%,hsl(95deg 95% 34%) 51%,hsl(70deg 95% 35%) 53%,hsl(46deg 97% 35%) 54%,hsl(21deg 97% 36%) 56%,hsl(357deg 97% 37%) 57%,hsl(332deg 98% 38%) 59%,hsl(308deg 98% 39%) 61%,hsl(317deg 96% 41%) 64%,hsl(325deg 94% 43%) 68%,hsl(334deg 92% 45%) 72%,hsl(343deg 91% 46%) 78%,hsl(351deg 89% 48%) 86%,hsl(0deg 87% 50%) 100%)
+
+// Borders
+$fancy-border-radius: 44% 56% 46% 54% / 48% 59% 41% 52%

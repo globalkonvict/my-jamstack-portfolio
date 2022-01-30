@@ -1,7 +1,6 @@
 @use "../../styles/theme"
-@use "../../styles/utils"
 
-$fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
+$fancy-border: theme.$fancy-border-radius
 
 .hero-container
     min-height: calc(100vh - 30px)
@@ -9,6 +8,8 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
     background: theme.$hero-gradient
     text-align: left
     margin: 16px 8px
+    margin-bottom: 32px
+    box-shadow: 0 0 0 40px theme.$accent-a-dark
     .container
         height: calc(100vh - 52px)
         .hero-columns
@@ -27,7 +28,6 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
     margin: 0 auto
 
 .logo-text
-    @include utils.firaFont
     font-size: 1.5rem
     font-weight: 700
     color: theme.$primary !important
@@ -35,23 +35,21 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
 .profile-img
     width: 350px
     height: 350px
-    box-shadow: 0 0 0 3rem rgba(theme.$black, 0.02)
     position: absolute
     top: 50%
     right: 50%
     transform: translate(52%,-48%)
     z-index: 100
     border-radius: $fancy-border
-    background: theme.$hero-gradient
+    background: theme.$black
 
 .heading-main
-    @include utils.firaFont
-    background-color: theme.$primary
+    background-color: theme.$black
     color: theme.$white
-    line-height: 1
     padding: 0.25em
     margin-bottom: 0.25em
-    filter: none !important
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 60px 60px -7px
+    clip-path: polygon(0 0, 87% 0, 100% 5%, 100% 100%, 15% 99%, 0 94%, 0 19%)
 
 .author-image
     display: flex
@@ -60,28 +58,37 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
     position: relative
     @media (max-width: 768px)
         height: 370px
+    @media (max-width: 425px)
+        transform: scale(0.8)
+    @media (max-width: 375px)
+        transform: scale(0.7)
+    @media (max-width: 320px)
+        transform: scale(0.6)
+        margin-left: -10%
 
 .about-me
-    @include utils.firaFont
     font-size: 1.15rem
-    background-color: theme.$primary
+    background-color: theme.$black
     color: theme.$white
-    line-height: 1.6
+    line-height: 2
     padding: 0.75em
     font-weight: 500
     text-align: justify
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px
+    clip-path: polygon(0 0, 87% 0, 100% 5%, 100% 100%, 15% 99%, 0 94%, 0 19%)
 
 .highlight
-    background: theme.$accent-a
+    background: theme.$accent-b-dark
     color: theme.$white
-    padding: 0.25em
+    padding: 0 0.25em
     font-weight: 700
-    border-radius: 0.25em
-    margin: 0.25rem
     cursor: pointer
-    filter: none !important
+    border-radius: 30% 8px
+    box-shadow: rgba(93, 230, 80, 0.575) 0px 10px 10px -7px
     &:hover
-        background: theme.$accent-c
+        background: theme.$accent-b
+        color: theme.$accent-c
+        text-decoration: underline
 
 .background-img
     position: absolute
@@ -118,7 +125,7 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
     left: 0
     width: 100%
     height: 100%
-    background: #4abc5d
+    background-image: theme.$sharp-gradient
     opacity: 0.3
     transform: skew(30deg) translateX(85%)
     transition: all 0.6s ease
@@ -131,7 +138,7 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
     left: 0
     width: 100%
     height: 100%
-    background: #9145b6
+    background: theme.$sharp-gradient
     opacity: 0.3
     transform: skew(-30deg) translateX(85%)
     transition: all 0.6s ease
@@ -142,6 +149,19 @@ $fancy-border: 44% 56% 46% 54% / 48% 59% 41% 52%
 
 .hero-container:hover:after
     transform: skew(-30deg) translateX(20%)
+
+.hero-container::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: theme.$sharp-gradient
+    opacity: 0.3
+    transform: skew(30deg) translateX(85%)
+    transition: all 0.6s ease
+    z-index: -1
 
 .outer-circle
     position: relative

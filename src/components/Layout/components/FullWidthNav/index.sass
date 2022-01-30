@@ -1,15 +1,18 @@
-$background--color: #1e2023
-$icon--color: #1e2023
-$font--color: #ffffff
-$font--color--active: #000000
-$font--primary: 'Fira Sans', sans-serif
-$transition--length: .8
+@use "../../../../styles/theme"
 
-body
-    background-color: $background--color
-    font-family: $font--primary
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
+$background--color: theme.$background
+$icon--color: theme.$black
+$font--color: theme.$white
+$font--color--active: theme.$black
+$transition--length: .8
+$color-white: theme.$white
+$color-black: theme.$black
+$color-primary: theme.$primary
+$color-primary-light: theme.$accent-a
+$color-primary-dark: theme.$accent-a-dark
+$color-grey-dark-2: theme.$grey-light
+$color-grey-dark-3: theme.$grey-dark
+$nav-button-radius: 36% 64% 45% 55% / 68% 28% 72% 32%
 
 //default state
 .menu-icon
@@ -28,15 +31,22 @@ body
     justify-content: center
     align-items: center
     box-shadow: 0 1rem 3rem rgba($icon--color, .3)
+    &:hover
+        background-color: theme.$accent-b
+        box-shadow: 0 1rem 3rem rgba($icon--color, .3)
+        animation: wobble 2s linear infinite
     @media screen and (max-width: 425px)
-        $size: 25px
-        height: $size
-        width: $size
+        height: 25px
+        width: 25px
         padding: 30px
-    svg
-        font-size: $size
-        color: $icon--color
-        transition: background-color .5s ease
+    .icon
+        margin-right: 0 !important
+        .menu-icon-toggle
+            font-size: $size
+            color: $icon--color
+
+.menu-icon:hover > .icon > .menu-icon-toggle
+    color: $font--color
 
 .nav
     $width: 100vw
@@ -119,14 +129,6 @@ body.nav-active
                 &:nth-child(0n + #{$i})
                     transition-delay: calc($transition--length * $i / 8) + .5 + s
 
-$color-white: #fff
-$color-black: #000
-$color-primary: #90CAF9
-$color-primary-light: #03A9F4
-$color-primary-dark: #03A9F4
-$color-grey-dark-2: #E0E0E0
-$color-grey-dark-3: #B0BEC5
-
 .nav
     &__item
         margin: 1rem
@@ -157,3 +159,17 @@ $color-grey-dark-3: #B0BEC5
                 background-position: 100%
                 color: $color-white
                 transform: translateX(1rem)
+
+// Keyframes
+
+@keyframes wobble
+    0%
+        border-radius: $nav-button-radius
+    25%
+        border-radius: 54% 46% 50% 50% / 68% 20% 80% 32%
+    50%
+        border-radius: 18% 82% 30% 70% / 38% 58% 42% 62%
+    75%
+        border-radius: 81% 19% 65% 35% / 60% 41% 59% 40%
+    100%
+        border-radius: 23% 77% 24% 76% / 46% 56% 44% 54%
