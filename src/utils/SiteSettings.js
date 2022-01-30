@@ -1,12 +1,10 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby';
 
 const useSiteSettings = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query SITE_SETTINGS_QUERY {
-        allMarkdownRemark(
-          filter: { frontmatter: { templateKey: { eq: "settings" } } }
-        ) {
+        allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "settings" } } }) {
           nodes {
             frontmatter {
               social {
@@ -20,7 +18,7 @@ const useSiteSettings = () => {
           }
         }
       }
-    `
+    `,
   );
   return allMarkdownRemark.nodes;
 };

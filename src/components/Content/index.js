@@ -1,18 +1,14 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import ReactMarkdown from "react-markdown";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 
 export const HTMLContent = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
 );
 
-export const MarkdownContent = ({ content }) => (
-  <ReactMarkdown>{content}</ReactMarkdown>
-);
+export const MarkdownContent = ({ content }) => <ReactMarkdown>{content}</ReactMarkdown>;
 
-const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
-);
+const Content = ({ content, className }) => <div className={className}>{content}</div>;
 
 Content.propTypes = {
   content: PropTypes.node,

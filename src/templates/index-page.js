@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
-import PropTypes from "prop-types";
+import React from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
-import LatestStories from "../components/LatestStories";
-import FullWidthImage from "../components/FullWidthImage";
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import LatestStories from '../components/LatestStories';
+import FullWidthImage from '../components/FullWidthImage';
 
 /**
  * @description This is index page template, partially separated from main layout. This allows using partial templates for CMS Previews.
@@ -17,17 +17,8 @@ const IndexPageTemplate = ({ authorData, skills, projects }) => {
   return (
     <>
       <FullWidthImage authorData={authorData} />
-      <Skills
-        skills={skills.list}
-        title={skills.title}
-        subtitle={skills.subtitle}
-        extra={skills.extra}
-      />
-      <Projects
-        title={projects.title}
-        projects={projects.list}
-        subtitle={projects.subtitle}
-      />
+      <Skills skills={skills.list} title={skills.title} subtitle={skills.subtitle} extra={skills.extra} />
+      <Projects title={projects.title} projects={projects.list} subtitle={projects.subtitle} />
       <LatestStories />
     </>
   );
@@ -40,7 +31,7 @@ IndexPageTemplate.propTypes = {
 };
 
 IndexPageTemplate.defaultProps = {
-  authorData: { name: "", typingText: [] },
+  authorData: { name: '', typingText: [] },
 };
 
 const IndexPage = ({ data }) => {
@@ -73,21 +64,12 @@ export const pageQuery = graphql`
         authorData {
           background {
             childImageSharp {
-              gatsbyImageData(
-                quality: 50
-                layout: FULL_WIDTH
-                placeholder: DOMINANT_COLOR
-              )
+              gatsbyImageData(quality: 50, layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
           image {
             childImageSharp {
-              gatsbyImageData(
-                width: 350
-                quality: 40
-                layout: CONSTRAINED
-                placeholder: BLURRED
-              )
+              gatsbyImageData(width: 350, quality: 40, layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
           introduction
@@ -106,11 +88,7 @@ export const pageQuery = graphql`
             image {
               publicURL
               childImageSharp {
-                gatsbyImageData(
-                  quality: 30
-                  layout: CONSTRAINED
-                  placeholder: BLURRED
-                )
+                gatsbyImageData(quality: 30, layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
             classNames
@@ -124,11 +102,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(
-                  quality: 64
-                  layout: CONSTRAINED
-                  placeholder: BLURRED
-                )
+                gatsbyImageData(quality: 64, layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
             links {

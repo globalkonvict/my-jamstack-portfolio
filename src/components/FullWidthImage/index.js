@@ -1,26 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Typical from "react-typical";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import "./index.sass";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Typical from 'react-typical';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import './index.sass';
 
 export default function FullWidthImage({ authorData }) {
   const { introduction, image, typingText, about, background } = authorData;
   return (
-    <section className="hero-section">
-      <div className="hero-container">
+    <section className='hero-section'>
+      <div className='hero-container'>
         <GatsbyImage
           image={getImage(background)}
-          objectFit={"cover"}
-          className="background-img"
-          alt=""
-          formats={["auto", "webp", "avif"]}
+          objectFit={'cover'}
+          className='background-img'
+          alt=''
+          formats={['auto', 'webp', 'avif']}
         />
-        <div className="container">
-          <div className=" columns is-vcentered is-centered hero-columns">
-            <div className="column is-one-third-widescreen is-12-mobile author-image">
-              <div className="outer-circle">
-                <div className="inner-circle"></div>
+        <div className='container'>
+          <div className=' columns is-vcentered is-centered hero-columns'>
+            <div className='column is-one-third-widescreen is-12-mobile author-image'>
+              <div className='outer-circle'>
+                <div className='inner-circle'></div>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,43 +28,40 @@ export default function FullWidthImage({ authorData }) {
               </div>
               <GatsbyImage
                 image={getImage(image)}
-                objectFit={"cover"}
-                className="profile-img"
-                formats={["auto", "webp", "avif"]}
-                id="profile-img-id"
-                imgClassName="profile-img-class"
+                objectFit={'cover'}
+                className='profile-img'
+                formats={['auto', 'webp', 'avif']}
+                id='profile-img-id'
+                imgClassName='profile-img-class'
               />
             </div>
-            <div className="column hero-text-container">
+            <div className='column hero-text-container'>
               {(introduction || image) && (
-                <div className="hero-description">
+                <div className='hero-description'>
                   {introduction && (
-                    <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen heading-main">
+                    <h1 className='has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen heading-main'>
                       {introduction}
                     </h1>
                   )}
                   {typingText && (
-                    <span className="has-text-weight-bold is-size-5-mobile is-size-3-tablet heading-main">
+                    <span className='has-text-weight-bold is-size-5-mobile is-size-3-tablet heading-main'>
                       <Typical
                         steps={typingText
-                          .map((item) => {
+                          .map(item => {
                             return [item.iAm, item.delay];
                           })
                           .flat()}
                         loop={Infinity}
-                        wrapper="p"
+                        wrapper='p'
                       />
                     </span>
                   )}
                   <p
-                    className="about-me is-size-6-mobile is-size-4-tablet has-text-weight-light"
+                    className='about-me is-size-6-mobile is-size-4-tablet has-text-weight-light'
                     dangerouslySetInnerHTML={{
                       __html: about
-                        .replaceAll(
-                          "[",
-                          '<span class="highlight has-text-weight-bold">'
-                        )
-                        .replaceAll("]", "</span>"),
+                        .replaceAll('[', '<span class="highlight has-text-weight-bold">')
+                        .replaceAll(']', '</span>'),
                     }}
                   ></p>
                 </div>

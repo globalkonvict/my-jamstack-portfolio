@@ -1,24 +1,19 @@
-import React from "react";
-import { Link } from "gatsby";
-import BlogRoll from "../BlogRoll";
+import React from 'react';
+import { Link } from 'gatsby';
+import BlogRoll from '../BlogRoll';
 
 function LatestStories() {
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-12">
-            <div className="content">
-              <div className="column is-12">
-                <h3 className="has-text-weight-semibold is-size-3">
-                  Latest Articles
-                </h3>
+    <section className='section section--gradient'>
+      <div className='container'>
+        <div className='columns'>
+          <div className='column is-12'>
+            <div className='content'>
+              <div className='column is-12'>
+                <h3 className='has-text-weight-semibold is-size-3'>Latest Articles</h3>
                 <BlogRoll />
-                <div className="column is-12 has-text-centered">
-                  <Link
-                    className="button is-rounded is-primary  is-medium"
-                    to="/blog"
-                  >
+                <div className='column is-12 has-text-centered'>
+                  <Link className='button is-rounded is-primary  is-medium' to='/blog'>
                     Read more
                   </Link>
                 </div>

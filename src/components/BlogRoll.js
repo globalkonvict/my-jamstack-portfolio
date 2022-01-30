@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql, StaticQuery } from "gatsby";
-import BlogCard from "./BlogCard";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql, StaticQuery } from 'gatsby';
+import BlogCard from './BlogCard';
 
 class BlogRollTemplate extends React.Component {
   render() {
@@ -9,10 +9,10 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline">
+      <div className='columns is-multiline'>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
+            <div className='is-parent column is-4' key={post.id}>
               <BlogCard
                 title={post.frontmatter.title}
                 excerpt={post.excerpt}
