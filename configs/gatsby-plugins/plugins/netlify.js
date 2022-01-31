@@ -14,4 +14,4 @@ const netlifyConfig = {
   },
 };
 
-export default netlifyConfig;
+module.exports = netlifyConfig;

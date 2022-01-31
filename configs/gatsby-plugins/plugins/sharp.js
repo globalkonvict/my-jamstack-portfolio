@@ -6,7 +6,7 @@ const configSharp = {
   resolve: `gatsby-plugin-sharp`,
   options: {
     defaults: {
-      formats: [`auto`, `avif`, `webp`, 'png', 'jpeg'],
+      formats: [`auto`, `avif`, `webp`, 'png'],
       placeholder: `dominantColor`,
       quality: 50,
       breakpoints: [320, 750, 1080, 1366, 1920],
@@ -15,4 +15,4 @@ const configSharp = {
   },
 };
 
-export default configSharp;
+module.exports = configSharp;

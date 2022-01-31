@@ -11,4 +11,4 @@ const sass = {
   },
 };
 
-export default sass;
+module.exports = sass;

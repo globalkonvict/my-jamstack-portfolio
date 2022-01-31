@@ -45,4 +45,4 @@ const remarkConfig = {
   },
 };
 
-export default remarkConfig;
+module.exports = remarkConfig;

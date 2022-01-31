@@ -15,4 +15,4 @@ const purgeCssConfig = {
   },
 };
 
-export default purgeCssConfig;
+module.exports = purgeCssConfig;

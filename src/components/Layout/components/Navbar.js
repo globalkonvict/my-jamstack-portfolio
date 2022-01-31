@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import React, { useState } from 'react';
+import { useLocation } from 'react-use';
 import FullWidthNavigationMenu from './FullWidthNav';
 
-const Navbar = () => {
+const Navbar = props => {
   const [navActive, setNavActive] = useState('');
-
+  const { pathname } = useLocation();
   const toggleHamburger = () => {
     setNavActive(navActive === '' ? 'is-active' : '');
   };
 
-  if (window.location.pathname === '/') {
-    return <FullWidthNavigationMenu />;
-  }
-
-  return (
+  return pathname === '/' ? (
+    <FullWidthNavigationMenu />
+  ) : (
     <nav className='navbar is-transparent' role='navigation' aria-label='main-navigation'>
       <div className='container'>
         <div className='navbar-brand'>

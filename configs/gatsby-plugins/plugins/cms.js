@@ -4,11 +4,11 @@
  * @link https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/
  */
 
-const netlifyCMS = {
+const netlifyCMS = ({ dir }) => ({
   resolve: 'gatsby-plugin-netlify-cms',
   options: {
-    modulePath: `${__dirname}/src/cms/cms.js`,
+    modulePath: `${dir}/src/cms/cms.js`,
   },
-};
+});
 
-export default netlifyCMS;
+module.exports = netlifyCMS;

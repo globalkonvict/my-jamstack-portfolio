@@ -10,4 +10,4 @@ const nprogress = {
   },
 };
 
-export default nprogress;
+module.exports = nprogress;
