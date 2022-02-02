@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
     <section className='section'>
       {helmet || ''}
       <div className='container card content blog-post'>
-        <div className='columns'>
+        <div className='columns is-mobile'>
           <div className='column is-10 is-offset-1'>
             <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               <span>{title}</span>

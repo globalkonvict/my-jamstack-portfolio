@@ -10,6 +10,7 @@ const siteMetadata = {
   title: 'Global Konvict',
   author: 'Sarthak Dwivedi',
   description: description.trim(),
+  siteUrl: 'https://globalkonvict.com',
 };
 
 module.exports = siteMetadata;

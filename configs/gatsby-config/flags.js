@@ -158,4 +158,8 @@ const allFlags = [
 
 module.exports = {
   FAST_DEV: true,
+  PARALLEL_QUERY_RUNNING: true,
+  PARALLEL_SOURCING: true,
+  PRESERVE_WEBPACK_CACHE: true,
+  DEV_WEBPACK_CACHE: true,
 };

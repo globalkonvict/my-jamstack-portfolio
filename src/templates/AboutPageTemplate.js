@@ -1,4 +1,4 @@
-import Content from '../components/Content';
+import Content from '@components/Content';
 
 const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;

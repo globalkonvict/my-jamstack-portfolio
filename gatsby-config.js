@@ -2,6 +2,9 @@ const plugins = require(`${__dirname}/configs/gatsby-plugins/`)({ dir: __dirname
 const siteMetadata = require(`${__dirname}/configs/gatsby-config/siteMetadata`);
 const flags = require(`${__dirname}/configs/gatsby-config/flags.js`);
 
+// Make available all the environment variables in the process.env object
+require('dotenv').config();
+
 /**
  * @description This exports all your gatsby configuration
  * @summary It has been modularized. Since a large gatsby plugin array makes it hard to work with when there are many plugins

@@ -7,6 +7,8 @@ const purgeCssConfig = require('./plugins/purge-css');
 const remarkConfig = require('./plugins/remark');
 const sass = require('./plugins/sass');
 const sharp = require('./plugins/sharp');
+const gAnalytics = require('./plugins/analytics');
+const tagManager = require('./plugins/tag-manager');
 
 /**
  * @description Adds all gatsby plugin by importing them, for plugins with no options are used directly as name string.
@@ -25,6 +27,8 @@ const plugins = [
   nprogress,
   filesystem,
   sharp,
+  gAnalytics,
+  tagManager,
   remarkConfig,
   netlifyCMS,
   purgeCssConfig,

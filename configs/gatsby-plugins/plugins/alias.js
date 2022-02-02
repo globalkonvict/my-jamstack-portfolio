@@ -4,7 +4,7 @@
  * @link https://www.gatsbyjs.com/plugins/gatsby-plugin-alias-imports/
  */
 const alias = {
-  resolve: `gatsby-plugin-alias-imports`,
+  resolve: 'gatsby-plugin-alias-imports',
   options: {
     alias: {
       '@src': 'src',

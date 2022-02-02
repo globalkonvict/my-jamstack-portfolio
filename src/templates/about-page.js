@@ -1,15 +1,10 @@
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
 import { HTMLContent } from '../components/Content';
 import AboutPageTemplate from './AboutPageTemplate';
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  return (
-    <Layout>
-      <AboutPageTemplate contentComponent={HTMLContent} title={post.frontmatter.title} content={post.html} />
-    </Layout>
-  );
+  return <AboutPageTemplate contentComponent={HTMLContent} title={post.frontmatter.title} content={post.html} />;
 };
 
 export default AboutPage;
