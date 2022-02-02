@@ -27,7 +27,7 @@ const plugins = [
   sharp,
   remarkConfig,
   netlifyCMS,
-  purgeCssConfig,
+  // purgeCssConfig,
   netlifyPlugin,
 ];
 
