@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
@@ -41,7 +41,7 @@ function Card({ title, description, image, links }) {
           'project-card__image__hover': hovering,
         })}
       />
-      <div className='project-card__content' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <div role='presentation' className='project-card__content' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
         <div className='columns is-multiline is-mobile'>
           <div className='column is-11 is-offset-1'>
             <p className='is-size-1 is-bold project-card__title'>{title}</p>

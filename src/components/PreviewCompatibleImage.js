@@ -1,4 +1,3 @@
-import * as React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
@@ -8,9 +7,7 @@ const PreviewCompatibleImage = ({ imageInfo, styles = {}, className = '' }) => {
   const { alt = '', childImageSharp, image } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {
-    return (
-      <GatsbyImage image={image.childImageSharp.gatsbyImageData} style={imageStyle} alt={alt} className={className} />
-    );
+    return <GatsbyImage image={image.childImageSharp.gatsbyImageData} style={imageStyle} alt={alt} className={className} />;
   } else if (!!childImageSharp) {
     return <GatsbyImage image={childImageSharp.gatsbyImageData} style={imageStyle} alt={alt} className={className} />;
     // for Netlify CMS

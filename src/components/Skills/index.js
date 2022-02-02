@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import MarkdownContent from '../Content';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -24,6 +24,7 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                 <div className='tabs is-fullwidth'>
                   <ul>
                     <li
+                      role='presentation'
                       className={classNames({ 'is-active': tabs === 'all' }, 'tabs__item')}
                       onClick={() => onTabChange('all')}
                       onKeyDown={() => onTabChange('all')}
@@ -31,6 +32,7 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                       All
                     </li>
                     <li
+                      role='presentation'
                       className={classNames({ 'is-active': tabs === 'language' }, 'tabs__item')}
                       onClick={() => onTabChange('language')}
                       onKeyDown={() => onTabChange('language')}
@@ -38,6 +40,7 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                       Languages
                     </li>
                     <li
+                      role='presentation'
                       className={classNames({ 'is-active': tabs === 'framework' }, 'tabs__item')}
                       onClick={() => onTabChange('framework')}
                       onKeyDown={() => onTabChange('framework')}
@@ -45,6 +48,7 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                       Frameworks
                     </li>
                     <li
+                      role='presentation'
                       className={classNames({ 'is-active': tabs === 'tools' }, 'tabs__item')}
                       onClick={() => onTabChange('tools')}
                       onKeyDown={() => onTabChange('tools')}
@@ -63,12 +67,7 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                       data-tooltip={icon.skillName}
                     >
                       {icon?.image ? (
-                        <GatsbyImage
-                          image={getImage(icon?.image)}
-                          objectFit='contain'
-                          className='skills__icons'
-                          formats={['auto', 'webp', 'avif']}
-                        />
+                        <GatsbyImage image={getImage(icon?.image)} objectFit='contain' className='skills__icons' formats={['auto', 'webp', 'avif']} />
                       ) : (
                         <i className={`${icon.classNames} skills__icons`} />
                       )}

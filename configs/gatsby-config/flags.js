@@ -156,4 +156,6 @@ const allFlags = [
   },
 ];
 
-module.exports = allFlags;
+module.exports = {
+  FAST_DEV: true,
+};

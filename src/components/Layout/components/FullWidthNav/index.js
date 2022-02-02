@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -18,11 +18,7 @@ const FullWidthNavigationMenu = () => {
       </Helmet>
       <div role='button' className='menu-icon' onClick={toggleNav} onKeyPress={toggleNav} tabIndex={0}>
         <span className='icon'>
-          {navActive === 'nav-active' ? (
-            <FaTimes className='menu-icon-toggle' />
-          ) : (
-            <FaBars className='menu-icon-toggle' />
-          )}
+          {navActive === 'nav-active' ? <FaTimes className='menu-icon-toggle' /> : <FaBars className='menu-icon-toggle' />}
         </span>
       </div>
       <div className='nav'>

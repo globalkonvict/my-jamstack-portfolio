@@ -62,7 +62,6 @@
   },
   "devDependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
-    "gatsby-plugin-stylelint": "^3.2.0",
     "prettier": "^2.0.5",
     "webpack": "^5.67.0"
   },

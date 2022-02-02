@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'gatsby';
 import { GoCalendar } from 'react-icons/go';
 import { AiOutlineTags } from 'react-icons/ai';

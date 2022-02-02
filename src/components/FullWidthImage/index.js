@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Typical from 'react-typical';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -9,13 +8,7 @@ export default function FullWidthImage({ authorData }) {
   return (
     <section className='hero-section'>
       <div className='hero-container'>
-        <GatsbyImage
-          image={getImage(background)}
-          objectFit={'cover'}
-          className='background-img'
-          alt=''
-          formats={['auto', 'webp', 'avif']}
-        />
+        <GatsbyImage image={getImage(background)} objectFit={'cover'} className='background-img' alt='' formats={['auto', 'webp', 'avif']} />
         <div className='container'>
           <div className=' columns is-vcentered is-centered hero-columns'>
             <div className='column is-one-third-widescreen is-12-mobile author-image'>
@@ -39,9 +32,7 @@ export default function FullWidthImage({ authorData }) {
               {(introduction || image) && (
                 <div className='hero-description'>
                   {introduction && (
-                    <h1 className='has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen heading-main'>
-                      {introduction}
-                    </h1>
+                    <h1 className='has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen heading-main'>{introduction}</h1>
                   )}
                   {typingText && (
                     <span className='has-text-weight-bold is-size-5-mobile is-size-3-tablet heading-main'>
@@ -59,9 +50,7 @@ export default function FullWidthImage({ authorData }) {
                   <p
                     className='about-me is-size-6-mobile is-size-4-tablet has-text-weight-light'
                     dangerouslySetInnerHTML={{
-                      __html: about
-                        .replaceAll('[', '<span class="highlight has-text-weight-bold">')
-                        .replaceAll(']', '</span>'),
+                      __html: about.replaceAll('[', '<span class="highlight has-text-weight-bold">').replaceAll(']', '</span>'),
                     }}
                   ></p>
                 </div>

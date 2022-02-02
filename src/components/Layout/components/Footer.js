@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Link } from 'gatsby';
 
 import useSiteSettings from '../../../utils/SiteSettings';

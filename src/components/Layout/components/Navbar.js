@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-use';
 import FullWidthNavigationMenu from './FullWidthNav';
 
