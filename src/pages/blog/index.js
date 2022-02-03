@@ -1,6 +1,9 @@
+import * as React from 'react';
+
+import Layout from '../../components/Layout';
 import BlogRoll from '../../components/BlogRoll';
 
-const BlogPage = () => {
+const BlogIndexPage = () => {
   return (
     <>
       <div
@@ -31,3 +34,5 @@ const BlogPage = () => {
     </>
   );
 };
+
+export default BlogIndexPage;
