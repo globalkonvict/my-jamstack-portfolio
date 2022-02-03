@@ -59,27 +59,27 @@ const Footer = () => {
             </div>
             <div className='column is-4 social'>
               {social.github && (
-                <a title='github' href={social.github}>
+                <a title='github' href={social.github} target='_blank'>
                   <img src={github} alt='Github' />
                 </a>
               )}
               {social.stackoverflow && (
-                <a title='stackoverflow' href={social.stackoverflow}>
+                <a title='stackoverflow' href={social.stackoverflow} target='_blank'>
                   <img src={stackoverflow} alt='Stackoverflow' />
                 </a>
               )}
               {social.linkedin && (
-                <a title='linkedin' href={social.linkedin}>
+                <a title='linkedin' href={social.linkedin} target='_blank'>
                   <img src={linkedin} alt='Linkedin' />
                 </a>
               )}
               {social.twitter && (
-                <a title='twitter' href={social.twitter}>
+                <a title='twitter' href={social.twitter} target='_blank'>
                   <img className='fas fa-lg' src={twitter} alt='Twitter' />
                 </a>
               )}
               {social.instagram && (
-                <a title='instagram' href={social.instagram}>
+                <a title='instagram' href={social.instagram} target='_blank'>
                   <img src={instagram} alt='Instagram' />
                 </a>
               )}

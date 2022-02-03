@@ -29,25 +29,9 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
   - name: 'pages'
     label: 'Pages'
+    editor:
+      preview: false
     files:
-      - file: 'src/pages/settings/index.md'
-        label: 'Settings'
-        name: 'settings'
-        fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'settings' }
-          - {
-              label: 'Social',
-              name: 'social',
-              widget: 'object',
-              fields:
-                [
-                  { label: 'StackOverflow', name: 'stackoverflow', widget: 'string', required: false },
-                  { label: 'GitHub', name: 'github', widget: 'string', required: false },
-                  { label: 'LinkedIn', name: 'linkedin', widget: 'string', required: false },
-                  { label: 'Twitter', name: 'twitter', widget: 'string', required: false },
-                  { label: 'Instagram', name: 'instagram', widget: 'string', required: false },
-                ],
-            }
       - file: 'src/pages/index.md'
         label: 'Landing Page'
         name: 'index'
@@ -116,7 +100,7 @@ collections:
                           label: Links,
                           name: links,
                           widget: list,
-                          max: 3,
+                          max: 5,
                           add_to_top: true,
                           fields: [{ label: 'Text', name: 'text', widget: 'string' }, { label: 'URL', name: 'url', widget: 'string' }],
                         },
@@ -133,6 +117,8 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'settings'
     label: 'Settings'
+    editor:
+      preview: false
     files:
       - file: 'src/pages/settings/index.md'
         label: 'Settings'

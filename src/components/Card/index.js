@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import Modal from 'react-modal';
 import classNames from 'classnames';
-import { Link } from 'gatsby';
+import { FaTimes } from 'react-icons/fa';
 import { getImage } from 'gatsby-plugin-image';
 import { CgMoreVerticalO } from 'react-icons/cg';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import ReactMarkdown from 'react-markdown';
-import Modal from 'react-modal';
+import { MarkdownContent } from '@components/Content';
 
 import './index.sass';
 
@@ -17,6 +17,12 @@ const modalStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    maxWidth: '90%',
+    width: '600px',
+    boxShadow: '0 0 30px rgb(0 0 0 / 30%)',
+    border: 0,
+    borderRadius: '10px',
+    padding: 0,
   },
 };
 
@@ -29,9 +35,40 @@ function Card({ title, description, image, links }) {
   const onMouseLeave = e => {
     setHovering(false);
   };
+
+  const renderLinks = (offset = false) => (
+    <div className={classNames('column is-11', { 'is-offset-1': offset })}>
+      <div className='tags-container columns is-multiline is-mobile'>
+        {links.map(link => {
+          return (
+            <a className='tag is-medium tech-tag is-primary' href={link.url} key={link.text} target='_blank'>
+              {link.text}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  );
   return (
     <div className='card project-card'>
-      <Modal isOpen={modalIsOpen} style={modalStyles} contentLabel='Example Modal'></Modal>
+      <Modal isOpen={modalIsOpen} style={modalStyles} onRequestClose={() => setIsOpen(false)}>
+        <div className='box p-4'>
+          <div className='columns is-mobile'>
+            <div className='column is-10'>
+              <h3 className='title is-3'>{title}</h3>
+            </div>
+            <div className='column is-2'>
+              <span className='icon is-large close-icon-modal'>
+                <FaTimes onClick={() => setIsOpen(false)} />
+              </span>
+            </div>
+          </div>
+          <hr className='project-modal-heading-separator' />
+          <MarkdownContent content={description} />
+          <hr className='mb-3' />
+          {links && renderLinks()}
+        </div>
+      </Modal>
       <GatsbyImage
         image={getImage(image)}
         objectFit={'cover'}
@@ -46,20 +83,9 @@ function Card({ title, description, image, links }) {
           <div className='column is-11 is-offset-1'>
             <p className='is-size-1 is-bold project-card__title'>{title}</p>
           </div>
+          {links && renderLinks(true)}
           <div className='column is-11 is-offset-1'>
-            <div className='tags-container columns is-multiline is-mobile'>
-              {links.map(link => {
-                return (
-                  <Link className='tag is-medium tech-tag is-primary' to={link.url} key={link.text}>
-                    {link.className && <i className={classNames('is-size-4', link.className)}></i>}
-                    {link.text}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-          <div className='column is-11 is-offset-1'>
-            <button className='button is-rounded is-danger more-btn'>
+            <button className='button is-rounded is-danger more-btn' onClick={() => setIsOpen(true)}>
               <span className='icon is-small'>
                 <CgMoreVerticalO className='project-card__btn' />
               </span>
