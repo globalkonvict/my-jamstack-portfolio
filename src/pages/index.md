@@ -46,7 +46,7 @@ skills:
       skillName: TypeScript
       classNames: type-script
       type: language
-    - image: /img/express.png
+    - image: /img/express-js-icon.png
       classNames: express
       skillName: Express
       type: framework
