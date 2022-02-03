@@ -115,8 +115,10 @@ projects:
       links:
         - text: Github
           url: https://github.com/globalkonvict/ImGet
+          className: devicon-github-original-wordmark
         - text: Npm
           url: https://www.npmjs.com/package/imget
+          className: devicon-npm-original-wordmark colored
   title: Projects
   subtitle: Some of the projects I've worked on
 ---
