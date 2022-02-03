@@ -180,6 +180,52 @@ projects:
       description: Simple Game of tic-tac-toe, Developed in React Native. Does not
         rely on any UI library and is fully responsive on all screen sizes.
       image: /img/tictactoe.jpg
+    - title: IoT Irrigation System
+      description: >-
+        This was my colleage project, I created an irrigation system to water
+        off plants when soil got dried off. That's the simple definition of what
+        it does. overall I have created 2 versions of this project, 1st used
+        Espruino bootloader 2nd was using arduino bootloader. 
+
+
+        From two versions of these...
+
+
+        **v1 TECH STACK**
+
+
+        * Espruino
+
+        * ESP8266
+
+        * RELAY
+
+        * JavaScript
+
+
+        **v2 TECH STACK**
+
+
+        * Arduino
+
+        * ESP8266
+
+        * RELAY
+
+        * C++
+
+
+        BOTH versions used arduino clouid to log data.
+      image: /img/irrigation-system.jpeg
+      links:
+        - url: https://en.wikipedia.org/wiki/Internet_of_things
+          text: IoT
+        - url: https://en.wikipedia.org/wiki/ESP8266
+          text: ESP8266
+        - text: Arduino
+          url: https://www.arduino.cc/
+        - url: https://www.espruino.com/
+          text: Espruino
   title: Projects
   subtitle: Some of the projects I've worked on
 ---
