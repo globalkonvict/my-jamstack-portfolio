@@ -1,8 +1,9 @@
 import Modal from 'react-modal';
 import { withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import { Scrollbars } from 'react-custom-scrollbars-2';
+import Footer from '@layout/components/Footer';
+import Navbar from '@layout/components/Navbar';
 import useSiteMetadata from '@utils/SiteMetadata';
 import 'synthwave-vscode/synthwave84.css';
 import './index.sass';
@@ -25,6 +26,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property='og:title' content={title} />
         <meta property='og:url' content='/' />
         <meta property='og:image' content={`${withPrefix('/')}img/og-image.jpg`} />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Helmet>
       <Navbar />
       <>{children}</>
