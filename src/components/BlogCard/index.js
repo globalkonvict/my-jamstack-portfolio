@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
 import { GoCalendar } from 'react-icons/go';
 import { AiOutlineTags } from 'react-icons/ai';
+import PreviewCompatibleImage from '@components/PreviewCompatibleImage';
 
-import PreviewCompatibleImage from '../PreviewCompatibleImage';
 import './index.sass';
 
 const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
@@ -13,9 +13,13 @@ const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
           <h3 className='title is-size-4'>{title}</h3>
         </Link>
         <div className='blog-meta '>
-          <GoCalendar className='icon is-primary' />
+          <span className='icon  has-text-info'>
+            <GoCalendar />
+          </span>
           <span className='is-size-7 meta-info'>{date}</span>
-          <AiOutlineTags className='icon is-primary' />
+          <span className='icon  has-text-info'>
+            <AiOutlineTags />
+          </span>
           {tags.map(tag => (
             <Link className='tag-text is-size-7' to={`/tags/${tag}`} key={`/tags/${tag}`}>
               {tag}

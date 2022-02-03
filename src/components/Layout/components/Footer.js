@@ -59,29 +59,28 @@ const Footer = () => {
             </div>
             <div className='column is-4 social'>
               {social.github && (
-                <a title='facebook' href={social.github}>
-                  <img src={github} alt='Facebook' style={{ width: '1em', height: '1em' }} />
+                <a title='github' href={social.github}>
+                  <img src={github} alt='Github' />
                 </a>
               )}
               {social.stackoverflow && (
-                <a title='facebook' href={social.stackoverflow}>
-                  <img src={stackoverflow} alt='Facebook' style={{ width: '1em', height: '1em' }} />
+                <a title='stackoverflow' href={social.stackoverflow}>
+                  <img src={stackoverflow} alt='Stackoverflow' />
                 </a>
               )}
               {social.linkedin && (
-                <a title='facebook' href={social.linkedin}>
-                  <img src={linkedin} alt='Facebook' style={{ width: '1em', height: '1em' }} />
+                <a title='linkedin' href={social.linkedin}>
+                  <img src={linkedin} alt='Linkedin' />
                 </a>
               )}
               {social.twitter && (
                 <a title='twitter' href={social.twitter}>
-                  <img className='fas fa-lg' src={twitter} alt='Twitter' style={{ width: '1em', height: '1em' }} />
+                  <img className='fas fa-lg' src={twitter} alt='Twitter' />
                 </a>
               )}
-
               {social.instagram && (
                 <a title='instagram' href={social.instagram}>
-                  <img src={instagram} alt='Instagram' style={{ width: '1em', height: '1em' }} />
+                  <img src={instagram} alt='Instagram' />
                 </a>
               )}
             </div>
