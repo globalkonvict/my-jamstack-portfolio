@@ -119,6 +119,67 @@ projects:
         - text: Npm
           url: https://www.npmjs.com/package/imget
           className: devicon-npm-original-wordmark colored
+    - title: Contact Keeper
+      description: >-
+        This is a full-stack app that can be used to manage user contacts, it
+        implements user login and managing of contacts per user basis.
+
+
+        **STACK**
+
+
+        * MongoDB Atlas
+
+        * React
+
+        * ExpressJS
+
+        * NodeJS
+
+
+        Made using React, MongoDB, Node and Express. Its a Full-Stack App based on MERN stack.
+      image: /img/contact-keeper-desktop.png
+      links:
+        - text: GitHub
+          url: https://github.com/globalkonvict/contact-keeper
+        - text: Live App
+          url: https://contactskeepr.herokuapp.com/login
+    - title: " OKASHI"
+      image: /img/okashi.png
+      description: >-
+        ***Okashi*** is a Joke App, It fetches jokes from internet and displays
+        them on the App in an elegant way. App Employs web-scrapping on
+        client-side to avoid intermediate server for hosting API. All the jokes
+        are fetched from App on Demand.
+
+
+        This gives a good example of developing a Server-Less API Which can cut down cost. Although employing client-side API communication may expose the developer API, although it can be avoided by taking further actions.
+
+
+        **Stack**
+
+
+        * React
+
+        * React-Native
+
+        * JavaScript
+
+        * Some External Libraries
+      links:
+        - text: GitHub
+          url: https://github.com/globalkonvict/OKASHI
+        - text: React Native
+          url: https://reactnative.dev/
+    - title: Tic-Tac-Toe
+      links:
+        - text: GitHub
+          url: https://github.com/globalkonvict/Tic-Tac-Toe
+        - url: https://reactnative.dev/
+          text: React Native
+      description: Simple Game of tic-tac-toe, Developed in React Native. Does not
+        rely on any UI library and is fully responsive on all screen sizes.
+      image: /img/tictactoe.jpg
   title: Projects
   subtitle: Some of the projects I've worked on
 ---
