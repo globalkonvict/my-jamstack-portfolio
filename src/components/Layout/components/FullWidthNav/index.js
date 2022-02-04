@@ -34,11 +34,11 @@ const FullWidthNavigationMenu = () => {
                 Blog
               </Link>
             </li>
-            <li className='nav__item'>
+            {/* <li className='nav__item'>
               <Link to='/services' className='nav__link'>
                 Services
               </Link>
-            </li>
+            </li> */}
             <li className='nav__item'>
               <Link to='/about' className='nav__link'>
                 About

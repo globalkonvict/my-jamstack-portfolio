@@ -2,9 +2,8 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import classNames from 'classnames';
 import { FaTimes } from 'react-icons/fa';
-import { getImage } from 'gatsby-plugin-image';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { CgMoreVerticalO } from 'react-icons/cg';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { MarkdownContent } from '@components/Content';
 
 import './index.sass';
@@ -27,14 +26,7 @@ const modalStyles = {
 };
 
 function Card({ title, description, image, links }) {
-  const [hovering, setHovering] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const onMouseEnter = e => {
-    setHovering(true);
-  };
-  const onMouseLeave = e => {
-    setHovering(false);
-  };
 
   const renderLinks = (offset = false) => (
     <div className={classNames('column is-11', { 'is-offset-1': offset })}>
@@ -74,11 +66,9 @@ function Card({ title, description, image, links }) {
         objectFit={'cover'}
         alt={title}
         formats={['auto', 'webp', 'avif']}
-        className={classNames('project-card__image', {
-          'project-card__image__hover': hovering,
-        })}
+        className={classNames('project-card__image')}
       />
-      <div role='presentation' className='project-card__content' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <div role='presentation' className='project-card__content'>
         <div className='columns is-multiline is-mobile'>
           <div className='column is-11 is-offset-1'>
             <p className='is-size-1 is-bold project-card__title'>{title}</p>

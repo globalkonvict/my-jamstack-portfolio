@@ -13,13 +13,15 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
       <div className='container card content blog-post'>
         <div className='columns is-mobile'>
           <div className='column is-10 is-offset-1'>
-            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
-              <span>{title}</span>
-            </h1>
+            <h1 className='title is-size-2 is-bold-light'>{title}</h1>
             <div className='blog-meta'>
-              <GoCalendar className='icon is-primary' />
+              <span className='icon  has-text-info'>
+                <GoCalendar />
+              </span>
               <span className='is-size-7 meta-info'>{date}</span>
-              <AiOutlineTags className='icon is-primary' />
+              <span className='icon  has-text-info'>
+                <AiOutlineTags />
+              </span>
               {tags.map(tag => (
                 <Link className='tag-text is-size-7' to={`/tags/${tag}`}>
                   {tag}
@@ -29,18 +31,6 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
             <hr className='divider' />
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className='taglist'>
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>

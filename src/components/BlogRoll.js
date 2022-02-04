@@ -27,7 +27,7 @@ class BlogRollTemplate extends React.Component {
   }
 }
 
-export default function BlogRoll() {
+export default function BlogRoll({ numnberOfPosts = Infinity }) {
   return (
     <StaticQuery
       query={graphql`
