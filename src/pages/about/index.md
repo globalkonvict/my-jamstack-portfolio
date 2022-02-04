@@ -1,19 +1,32 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+title: About Me
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Hi There, 
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+I am Sarthak I am an Engineer. I spent my time developing and creating useful softwares and when I am not I am reading or listening to an audiobook. I pay my attention to wide variety of topics which gives me a creative edge and ability to talk about alomost anything. My prefered area's of intrests are; Beauty, Peace, Technology, Science, Spirituality and Philosophy.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+I have a diploma and bachelor's in Electronics & Communications Engineering but choose to pursue the Computer Science & Information Technology route. Having information about Low level working of most major systems and electronics I try to tackle problems from various angles when developing softwares and solving problems.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+I am very obbessed with learning new information that can be integrated to my reservoir of things I know. To keep improving I learn constantly and follow the self-learner's route. This keep things intresting and allows me to experiment with my new found information. 
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+### Three things I do that helps me stay upto date are
+
+1. Self Learning (Reading Books, Aquiring Skills etc.)
+2. Understanding (Integrating the learned information so it can be used.)
+3. Execution (Practicing helps integrate the information into my being further.)
+
+### What made me go for software development?
+
+You only need a Personal Computer and you can create something marvelluous, that's a reason enough. Apart from that I love making and breaking things trying to put things together and taking them apart so I can create something new which takes up it's inspiration from other parts. 
+
+Looking back at my childhood I could see the pattern that was of someone who wanted to create or understand something. I remmember breaking my toys not out of anger but to learn how they worked inside, this gave me an insight into a proper career path and I ended up being a software developer.
+
+I consider myself a creative and very analytical person and enjoy the work I do. At each moment I am doing the best I can do and strive to improve further.
+
+### What I do When not working?
+
+When I am not working, I have several activities to choose from. I like to meditate, read a book or listen to an audiobook. I watch Anime, Movies, and Series. Going for a walk to get a fresh breath of air, and do other things like these.
+
+Thank You for Reading.
