@@ -1,8 +1,8 @@
-import { kebabCase } from 'lodash';
 import { Link } from 'gatsby';
 import { GoCalendar } from 'react-icons/go';
 import { AiOutlineTags } from 'react-icons/ai';
-import Content from '../components/Content';
+import Content from '@components/Content';
+import Sidebar from '@components/Sidebar';
 
 const BlogPostTemplate = ({ content, contentComponent, description, tags, title, helmet, date }) => {
   const PostContent = contentComponent || Content;
@@ -10,9 +10,9 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
   return (
     <section className='section'>
       {helmet || ''}
-      <div className='container card content blog-post'>
-        <div className='columns is-mobile'>
-          <div className='column is-10 is-offset-1'>
+      <div className='container content blog-post'>
+        <div className='columns is-mobile is-multiline'>
+          <div className='column card is-8-desktop is-12-mobile has-margin-top-24'>
             <h1 className='title is-size-2 is-bold-light'>{title}</h1>
             <div className='blog-meta'>
               <span className='icon  has-text-info'>
@@ -29,8 +29,10 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
               ))}
             </div>
             <hr className='divider' />
-            <p>{description}</p>
             <PostContent content={content} />
+          </div>
+          <div className='column is-3-desktop is-6-tablet is-offset-3-tablet is-offset-1-desktop is-12-mobile has-margin-top-24'>
+            <Sidebar />
           </div>
         </div>
       </div>

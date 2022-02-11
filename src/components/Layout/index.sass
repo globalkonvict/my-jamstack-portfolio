@@ -3,6 +3,8 @@
 @import "@styles/default"
 @import '@creativebulma/bulma-tooltip'
 @import 'bulma-timeline'
+@import 'bulma-divider'
+@import 'bulma-spacing'
 
 $primary: theme.$primary
 $primary-invert: theme.$primary-invert
@@ -43,7 +45,7 @@ footer.footer
         color: theme.$white
 .social
     padding: 2em
-.social a[title] img
+.social a[title] span
     padding: .5em
     border-radius: 21px
     background-color: $white-ter
@@ -51,17 +53,16 @@ footer.footer
     width: 42px
     height: 42px
     display: inline
-    text-align: center
     overflow: hidden
-
+    svg
+        margin-bottom: -6px !important
 .footer-logo
     font-family: 'Fira Code', monospace
     color: theme.$primary
     text-shadow: 0 0px 4px theme.$accent-a
 
-.content.container
-    max-width: 1140px !important
-
 .section > .blog-post > .columns.is-mobile > div.column > h1.title
     margin-bottom: 0 !important
     margin-top: 1rem
+.section > .blog-post > .columns.is-mobile > div.column:first-child
+    padding: 2rem

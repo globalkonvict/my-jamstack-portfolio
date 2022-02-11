@@ -1,16 +1,9 @@
 import { Link } from 'gatsby';
-
-import useSiteSettings from '../../../utils/SiteSettings';
-
-import stackoverflow from '../../../img/social/stackoverflow.svg';
-import instagram from '../../../img/social/instagram.svg';
-import linkedin from '../../../img/social/linkedin.svg';
-import twitter from '../../../img/social/twitter.svg';
-import github from '../../../img/social/github.svg';
+import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa';
+import useSiteSettings from '@utils/SiteSettings';
 
 const Footer = () => {
-  const [frontmatter] = useSiteSettings();
-  const { social } = frontmatter.frontmatter;
+  const { social } = useSiteSettings();
 
   return (
     <footer className='footer has-background-black has-text-white-ter'>
@@ -60,27 +53,37 @@ const Footer = () => {
             <div className='column is-4 social'>
               {social.github && (
                 <a title='github' href={social.github} target='_blank'>
-                  <img src={github} alt='Github' />
+                  <span className='icon'>
+                    <FaGithubSquare />
+                  </span>
                 </a>
               )}
               {social.stackoverflow && (
                 <a title='stackoverflow' href={social.stackoverflow} target='_blank'>
-                  <img src={stackoverflow} alt='Stackoverflow' />
+                  <span className='icon'>
+                    <FaStackOverflow />
+                  </span>
                 </a>
               )}
               {social.linkedin && (
                 <a title='linkedin' href={social.linkedin} target='_blank'>
-                  <img src={linkedin} alt='Linkedin' />
+                  <span className='icon'>
+                    <FaLinkedinIn />
+                  </span>
                 </a>
               )}
               {social.twitter && (
                 <a title='twitter' href={social.twitter} target='_blank'>
-                  <img className='fas fa-lg' src={twitter} alt='Twitter' />
+                  <span className='icon'>
+                    <FaTwitter />
+                  </span>
                 </a>
               )}
               {social.instagram && (
                 <a title='instagram' href={social.instagram} target='_blank'>
-                  <img src={instagram} alt='Instagram' />
+                  <span className='icon'>
+                    <FaInstagramSquare />
+                  </span>
                 </a>
               )}
             </div>

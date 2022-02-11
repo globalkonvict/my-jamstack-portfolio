@@ -33,7 +33,7 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                     </li>
                     <li
                       role='presentation'
-                      className={classNames({ 'is-active': tabs === 'language' }, 'tabs__item')}
+                      className={classNames({ 'is-active has-text-weight-bold': tabs === 'language' }, 'tabs__item')}
                       onClick={() => onTabChange('language')}
                       onKeyDown={() => onTabChange('language')}
                     >

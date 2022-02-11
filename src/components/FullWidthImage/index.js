@@ -12,13 +12,6 @@ export default function FullWidthImage({ authorData }) {
         <div className='container'>
           <div className=' columns is-vcentered is-centered hero-columns'>
             <div className='column is-one-third-widescreen is-12-mobile author-image'>
-              <div className='outer-circle'>
-                <div className='inner-circle'></div>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
               <GatsbyImage
                 image={getImage(image)}
                 objectFit={'cover'}
@@ -28,7 +21,7 @@ export default function FullWidthImage({ authorData }) {
                 imgClassName='profile-img-class'
               />
             </div>
-            <div className='column hero-text-container'>
+            <div className='column is-12-mobile hero-text-container'>
               {(introduction || image) && (
                 <div className='hero-description'>
                   {introduction && (

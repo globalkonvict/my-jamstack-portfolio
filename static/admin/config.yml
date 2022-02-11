@@ -128,6 +128,8 @@ collections:
         name: 'settings'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'settings' }
+          - { label: 'Author Name', name: 'authorName', widget: 'string' }
+          - { label: 'About Author', name: 'aboutAuthor', widget: 'text' }
           - {
               label: 'Social',
               name: 'social',

@@ -7,6 +7,8 @@ const useSiteSettings = () => {
         allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "settings" } } }) {
           nodes {
             frontmatter {
+              authorName
+              aboutAuthor
               social {
                 github
                 linkedin
@@ -20,7 +22,7 @@ const useSiteSettings = () => {
       }
     `,
   );
-  return allMarkdownRemark.nodes;
+  return allMarkdownRemark.nodes[0].frontmatter;
 };
 
 export default useSiteSettings;

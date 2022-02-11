@@ -8,7 +8,7 @@
 const purgeCssConfig = {
   resolve: `gatsby-plugin-purgecss`,
   options: {
-    develop: true,
+    develop: false,
     printRejected: true,
     ignore: [],
     purgeCSSOptions: {},
