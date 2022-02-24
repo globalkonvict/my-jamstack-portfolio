@@ -103,6 +103,124 @@ skills:
   extra: ""
 projects:
   list:
+    - title: " Amplio"
+      description: >-
+        **Tech Stack:** ReactJs, CSS, Bootstrap
+
+
+        **Responsibility:**
+
+
+        * I was on this project for 1 month only and was in the knowledge transfer phase but even so, did manage to take up 2 issues by insisting to my supervisor, that he assign me any issue he felt comfortable with and managed to contribute even before completing KT.
+
+        * Attending regular team/client meetings to understand requirements and project needs.
+
+        * Working with UI/UX and Backend Team to do my frontend job properly.
+
+        * Eventually, the project was put under hold, and I and the whole team were assigned to different projects.
+      links:
+        - text: Professional Project
+          url: "#"
+      image: /img/gears-g3d9906cf6_1280.png
+    - links:
+        - text: Professional Project
+          url: "#"
+      image: /img/gears-g3d9906cf6_1280.png
+      title: Pubble SDK
+      description: >-
+        Pubble SDK Real-Time Messaging SDK was created by my supervisor and
+        reporting manager at WebOsmotic. My responsibility and scope of work
+        here were testing, reviewing, and providing feedback. I also did
+        implement a few features in later months after becoming familiar with
+        the technologies.
+
+
+        **Tech Stack:** NodeJs, Socket.Io, Redis, Redis Sentinel, WebSockets, Javascript, OOP
+    - links:
+        - text: Professional Project
+          url: "#"
+      image: /img/gears-g3d9906cf6_1280.png
+      title: " Engagement Hero (Admin Panel & Android/iOS App)"
+      description: >-
+        Engagement Hero is a platform to help people get leads & close deals by
+        proving you with steps you need to execute to turn a lead into a
+        customer.
+
+
+        **Tech Stack:** ReactJS, React Native, JavaScript, Ant Design, Less, CRA (with craco, custom config), Firebase, Redux (Redux Toolkit)
+
+
+        **Responsibilities:**
+
+
+        * Creating Admin panel from scratch using React & Ant Design.
+
+        * Implementing & Writing Logic for management of users, leads, and integrating with firebase authentication.
+
+        * Worked with the developer responsible for a mobile app and contributed to the mobile app part occasionally. 
+
+        * Stack for Mobile App included React Native, Firebase & Redux Toolkit.
+    - links:
+        - text: Professional Project
+          url: "#"
+      image: /img/gears-g3d9906cf6_1280.png
+      title: Pubble Web
+      description: >-
+        This project required porting an entire admin/user portal made in
+        BacknoneJs to React.
+
+
+        **Technology Stack:** React, Ant Design, UmiJS, Dva, Redux, Umi Requests, Hooks, Typescript, Less
+
+
+        **Responsibilities:**
+
+
+        * Worked with team lead to break down bigger tasks into manageable work targets for each day.
+          Implementing & Writing business logic to accomplish assigned tasks, which included porting features from an already existing backboneJs App to React Js.
+        * Using Ant Design and Less for redesigning UI, replacing the already existing UI with an improved one.
+    - title: " Pubble SDK Statistics Admin Panel/Backend"
+      description: >-
+        **Technology Stack:**  
+
+
+        UmiJs, ReactJs, AntDesign, Redux(DVA), Axios, TypeScript, Less, ChartJs, InfluxDB, ExpressJs, NodeJs
+
+
+        **Responsibilities:**
+
+
+        * Created a dashboard for logging errors, numbers of connections, and disconnections, and similar statistics for Pubble Real-Time Messaging SDK, which was being developed by my supervisor.
+
+        * I was working & implementing a dashboard in UmiJs (https://umijs.org/). Using ChartJs to implement data visualization.
+
+        * I also worked on the backend part, which was used to log errors and store logs to influxDB. It provided Rest API to query the logs. On the frontend, I used to call backend API and display data on the frontend UI.
+
+        * Refactoring & Improvements made on the final month as per the feedback of the Senior Developer/Mentor.
+      image: /img/gears-g3d9906cf6_1280.png
+      links:
+        - text: Professional Project
+          url: "#"
+    - title: " BlitzChain (Product Website)"
+      description: >-
+        BlitzChain was an SDK to create real-time applications. I was involved
+        with creating the Product Detail, Pricing, Documentation, Support,
+        Login/SignUp, User Details Pages.
+
+
+        **Technology Stack:** React, JavaScript, Reactstrap, Redux, Axios, Sass, CRA
+
+
+        **Responsibilities:**
+
+
+        * Creating UI in React from a presentational website, while simultaneously improving the existing design.
+
+        * Implementing and writing business logic for making the app functional and adding authentication.
+      image: /img/gears-g3d9906cf6_1280.png
+      links:
+        - text: Professional Project
+          url: "#"
     - title: ObtainCare Admin/User Portal
       description: >-
         * Obtaincare is a service provider platform created using industry
