@@ -14,7 +14,7 @@ authorData:
       delay: 1000
   name: Sarthak
   introduction: Hi there! I'm Sarthak
-  image: /img/profile-small.jpg
+  image: /img/sitting-square.jpg
   background: /img/closeup-small.jpg
   about: I am a [Full-Stack Web Developer], focusing mostly on frontend
     development. Working with [JavaScript], [React] to build cutting edge
