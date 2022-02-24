@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  FAST_DEV: true,
-  PARALLEL_QUERY_RUNNING: true,
-  PARALLEL_SOURCING: true,
+  // FAST_DEV: true,
+  // PARALLEL_QUERY_RUNNING: true,
+  // PARALLEL_SOURCING: true,
 };

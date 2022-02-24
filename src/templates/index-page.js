@@ -17,12 +17,12 @@ export const pageQuery = graphql`
         authorData {
           background {
             childImageSharp {
-              gatsbyImageData(quality: 20, layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
+              gatsbyImageData(quality: 50, layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
           image {
             childImageSharp {
-              gatsbyImageData(width: 350, quality: 40, layout: CONSTRAINED, placeholder: BLURRED)
+              gatsbyImageData(width: 350, quality: 80, layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
           introduction

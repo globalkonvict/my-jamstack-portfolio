@@ -71,7 +71,7 @@ function Card({ title, description, image, links }) {
       <div role='presentation' className='project-card__content'>
         <div className='columns is-multiline is-mobile'>
           <div className='column is-11 is-offset-1'>
-            <p className='is-size-1 is-bold project-card__title'>{title}</p>
+            <p className='is-size-2 is-bold project-card__title'>{title}</p>
           </div>
           {links && renderLinks(true)}
           <div className='column is-11 is-offset-1'>
