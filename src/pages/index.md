@@ -103,6 +103,36 @@ skills:
   extra: ""
 projects:
   list:
+    - title: ObtainCare Admin/User Portal
+      description: >-
+        * Obtaincare is a service provider platform created using industry
+        leading tech & backed with vetted & validated data to bring care to
+        everyone.
+
+        * User Portal Application is used to manage users, reviews and feedbacks from user & healthcare provider
+
+
+        **Technology Stack:** ReactJs, MaterialUI, Redux, Axios, TypeScript, Sass, CRA
+
+
+        **Responsibilities:**
+
+
+        * Involved in the development of the complete project as an individual developer.
+
+        * My responsibilities included turning Figma layouts into presentational ReactJs web apps using MaterialUI & Sass(CSS).
+
+        * Implementing & Writing business logic to make the app functional. Managing State using redux, react typescript (for static types), Axios for API calls, adding authentication by integrating with obtaincare’s identity server.
+
+        * Creating Reusable, optimized, and sharable components.
+
+        * Refactoring & Improvements made on the final month as per the feedback of the Senior Developer/Mentor.
+      image: /img/gears-g3d9906cf6_1280.png
+      links:
+        - text: Professional Project
+          url: "#"
+        - url: https://www.obtaincare.com/
+          text: Obtaincare
     - title: Imget
       description: |-
         A CLI tool that downloads images using user provided keyword.
