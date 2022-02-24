@@ -15,7 +15,7 @@ authorData:
   name: Sarthak
   introduction: Hi there! I'm Sarthak
   image: /img/closeup-square-small.jpg
-  background: /img/closeup-small.jpg
+  background: /img/closeup.png
   about: I am a [Full-Stack Web Developer], focusing mostly on frontend
     development. Working with [JavaScript], [React] to build cutting edge
     frontend applications, [NodeJs] to build robust backend applications, and
