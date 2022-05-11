@@ -79,7 +79,9 @@ function Card({ title, description, image, links }) {
               <span className='icon is-small'>
                 <CgMoreVerticalO className='project-card__btn' />
               </span>
-              <span className='is-size-6'>More</span>
+              <span className='is-size-6' data-tooltip={'See more details'}>
+                More
+              </span>
             </button>
           </div>
         </div>

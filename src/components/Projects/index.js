@@ -1,6 +1,5 @@
 import Card from '../Card';
 import CustomScrollBar from '@components/CustomScrollBar';
-import { Scrollbars } from 'react-custom-scrollbars-2';
 import './index.sass';
 
 function Projects({ title, subtitle, projects = [] }) {
@@ -24,6 +23,7 @@ function Projects({ title, subtitle, projects = [] }) {
                 })}
               </div>
             </CustomScrollBar>
+            <p className='has-text-weight-light is-size-6 has-text-centered is-underlined mt-5'>Scroll horizontally to see all projects.</p>
           </div>
         </div>
       </div>

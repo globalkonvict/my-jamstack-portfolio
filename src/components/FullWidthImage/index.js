@@ -25,10 +25,12 @@ export default function FullWidthImage({ authorData }) {
               {(introduction || image) && (
                 <div className='hero-description'>
                   {introduction && (
-                    <h1 className='has-text-weight-bold is-size-5-mobile is-size-2-tablet is-size-1-widescreen heading-main'>{introduction}</h1>
+                    <h1 className='has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-2-desktop is-size-1-widescreen heading-main'>
+                      {introduction}
+                    </h1>
                   )}
                   {typingText && (
-                    <span className='has-text-weight-bold is-size-6-mobile is-size-3-tablet heading-main'>
+                    <span className='has-text-weight-bold is-size-5-mobile is-size-4-tablet is-size-3-widescreen heading-main'>
                       <Typical
                         steps={typingText
                           .map(item => {
@@ -41,7 +43,7 @@ export default function FullWidthImage({ authorData }) {
                     </span>
                   )}
                   <p
-                    className='about-me is-size-7-mobile is-size-4-tablet has-text-weight-light'
+                    className='about-me is-size-6-mobile is-size-5-tablet is-size-4-desktop has-text-weight-light'
                     dangerouslySetInnerHTML={{
                       __html: about.replaceAll('[', '<span class="highlight has-text-weight-bold">').replaceAll(']', '</span>'),
                     }}

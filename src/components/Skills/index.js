@@ -16,11 +16,11 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
     <section className='section section__skills'>
       <div className='container'>
         <div className='columns'>
-          <div className='column is-10 is-offset-1'>
+          <div className='column is-12'>
             <div className='skills'>
               <div className='skills__heading'>
                 <h2 className='title is-size-3 has-text-weight-bold is-bold-light has-text-centered'>{title}</h2>
-                <p className='has-text-weight-light is-size-5 has-text-centered'>{subtitle}</p>
+                <p className='has-text-weight-light is-size-5 has-text-centered'>{subtitle} </p>
                 <div className='tabs is-fullwidth'>
                   <ul>
                     <li
@@ -75,9 +75,10 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                   ) : null;
                 })}
               </div>
+              <p className='has-text-weight-light is-size-6 has-text-centered is-underlined'>Hovering on skill icon will show skill name.</p>
               {extra ? (
                 <div className='skills__footer'>
-                  <MarkdownContent content={extra ?? ''} />
+                  <MarkdownContent content={extra ?? null} />
                 </div>
               ) : null}
             </div>

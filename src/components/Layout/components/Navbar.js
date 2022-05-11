@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import { useState } from 'react';
 import { useLocation } from 'react-use';
-import FullWidthNavigationMenu from './FullWidthNav';
+import FullWidthNavigationMenu from '../FullWidthNav';
 
 const Navbar = props => {
   const [navActive, setNavActive] = useState('');

@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa';
 import useSiteSettings from '@utils/SiteSettings';
 
