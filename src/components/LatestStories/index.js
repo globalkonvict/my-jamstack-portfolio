@@ -1,9 +1,10 @@
 import { Link } from 'gatsby';
 import BlogRoll from '../BlogRoll';
+import './index.sass';
 
 function LatestStories() {
   return (
-    <section className='section section--gradient'>
+    <section className='section latest-stories section--gradient'>
       <div className='container'>
         <div className='columns'>
           <div className='column is-12'>

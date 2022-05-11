@@ -1,4 +1,6 @@
 import Card from '../Card';
+import CustomScrollBar from '@components/CustomScrollBar';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import './index.sass';
 
 function Projects({ title, subtitle, projects = [] }) {
@@ -11,15 +13,17 @@ function Projects({ title, subtitle, projects = [] }) {
               <h2 className='title is-size-3 has-text-weight-bold is-bold-light has-text-centered'>{title || 'projects'}</h2>
               <p className='has-text-weight-light is-size-5 has-text-centered'>{subtitle || 'Some of the projects I have worked on'}</p>
             </div>
-            <div className='projects__content columns is-multiline'>
-              {projects.map(project => {
-                return (
-                  <div className='column is-4 is-12-mobile' key={project.title}>
-                    <Card title={project.title} image={project.image} description={project.description} links={project.links} />
-                  </div>
-                );
-              })}
-            </div>
+            <CustomScrollBar orientation='horizontal'>
+              <div className='projects__content columns is-mobile'>
+                {projects.map(project => {
+                  return (
+                    <div className='column is-12-mobile is-4-tablet ' key={project.title}>
+                      <Card title={project.title} image={project.image} description={project.description} links={project.links} />
+                    </div>
+                  );
+                })}
+              </div>
+            </CustomScrollBar>
           </div>
         </div>
       </div>

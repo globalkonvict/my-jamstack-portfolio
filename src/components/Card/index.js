@@ -33,7 +33,7 @@ function Card({ title, description, image, links }) {
       <div className='tags-container columns is-multiline is-mobile'>
         {links.map(link => {
           return (
-            <a className='tag is-medium tech-tag is-primary' href={link.url} key={link.text} target='_blank'>
+            <a className='tag is-medium is-size-7-mobile is-size-6-tablet tech-tag is-primary' href={link.url} key={link.text} target='_blank'>
               {link.text}
             </a>
           );
@@ -47,7 +47,7 @@ function Card({ title, description, image, links }) {
         <div className='box p-4'>
           <div className='columns is-mobile'>
             <div className='column is-10'>
-              <h3 className='title is-3'>{title}</h3>
+              <h3 className='title is-3 '>{title}</h3>
             </div>
             <div className='column is-2'>
               <span className='icon is-large close-icon-modal'>
@@ -71,15 +71,15 @@ function Card({ title, description, image, links }) {
       <div role='presentation' className='project-card__content'>
         <div className='columns is-multiline is-mobile'>
           <div className='column is-11 is-offset-1'>
-            <p className='is-size-2 is-bold project-card__title'>{title}</p>
+            <p className='is-size-3-tablet is-size-4-mobile is-bold project-card__title'>{title}</p>
           </div>
           {links && renderLinks(true)}
           <div className='column is-11 is-offset-1'>
-            <button className='button is-rounded is-danger more-btn' onClick={() => setIsOpen(true)}>
+            <button className='button is-normal is-rounded is-danger more-btn is-responsive' onClick={() => setIsOpen(true)}>
               <span className='icon is-small'>
                 <CgMoreVerticalO className='project-card__btn' />
               </span>
-              <span>More</span>
+              <span className='is-size-6'>More</span>
             </button>
           </div>
         </div>
