@@ -9,6 +9,8 @@ const sass = require('./plugins/sass');
 const sharp = require('./plugins/sharp');
 const gAnalytics = require('./plugins/analytics');
 const tagManager = require('./plugins/tag-manager');
+const disqusComments = require('./plugins/gatsby-plugin-disqus');
+const sitemaps = require('./plugins/gatsby-plugin-sitemap');
 
 /**
  * @description Adds all gatsby plugin by importing them, for plugins with no options are used directly as name string.
@@ -22,6 +24,7 @@ const plugins = [
   'gatsby-transformer-sharp',
   `gatsby-plugin-image`,
   `gatsby-plugin-preload-fonts`,
+  'gatsby-plugin-optimize-svgs',
   sass,
   alias,
   nprogress,
@@ -33,6 +36,8 @@ const plugins = [
   netlifyCMS,
   purgeCssConfig,
   netlifyPlugin,
+  disqusComments,
+  sitemaps,
 ];
 
 /**

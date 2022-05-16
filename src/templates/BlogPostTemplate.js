@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import { GoCalendar } from 'react-icons/go';
 import { AiOutlineTags } from 'react-icons/ai';
+import { Disqus } from 'gatsby-plugin-disqus';
 import Content from '@components/Content';
 import Sidebar from '@components/Sidebar';
 
@@ -36,6 +37,13 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
           </div>
         </div>
       </div>
+      <Disqus
+        config={{
+          url: `${process.env.GATSBY_SITE_BLOG_URL}${title}`,
+          identifier: title,
+          title: title,
+        }}
+      />
     </section>
   );
 };

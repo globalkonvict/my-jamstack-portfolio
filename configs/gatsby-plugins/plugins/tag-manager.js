@@ -9,7 +9,7 @@
 module.exports = {
   resolve: 'gatsby-plugin-google-tagmanager',
   options: {
-    id: process.env.GOOGLE_TAG_MANAGER_ID,
+    id: process.env.GATSBY_GOOGLE_TAG_MANAGER_ID,
     includeInDevelopment: false,
     defaultDataLayer: { platform: 'gatsby' },
     routeChangeEventName: 'gatsby-route-change',
