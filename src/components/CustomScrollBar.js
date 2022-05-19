@@ -8,7 +8,7 @@ const CustomScrollBar = ({ children, props, orientation }) => {
         autoHeight
         autoHeightMin={350}
         autoHeightMax={400}
-        renderThumbHorizontal={({ style, ...props }) => (
+        renderThumbHorizontal={({ style }) => (
           <div
             style={{
               ...style,
@@ -27,7 +27,7 @@ const CustomScrollBar = ({ children, props, orientation }) => {
   return (
     <Scrollbars
       style={{ height: '100vh' }}
-      renderTrackVertical={({ style, ...props }) => (
+      renderTrackVertical={({ style }) => (
         <div
           style={{
             ...style,
@@ -39,7 +39,7 @@ const CustomScrollBar = ({ children, props, orientation }) => {
           }}
         />
       )}
-      renderThumbVertical={({ style, ...props }) => (
+      renderThumbVertical={({ style }) => (
         <div
           style={{
             ...style,
