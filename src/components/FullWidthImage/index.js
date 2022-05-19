@@ -8,7 +8,7 @@ export default function FullWidthImage({ authorData }) {
   return (
     <section className='hero-section'>
       <div className='hero-container'>
-        <GatsbyImage image={getImage(background)} objectFit={'cover'} className='background-img' alt='' formats={['auto', 'webp', 'avif']} />
+        <GatsbyImage image={getImage(background)} objectFit={'cover'} className='background-img' alt='hero-img' formats={['auto', 'webp', 'avif']} />
         <div className='container'>
           <div className=' columns is-vcentered is-centered hero-columns'>
             <div className='column is-one-third-widescreen is-12-mobile author-image'>
@@ -19,6 +19,7 @@ export default function FullWidthImage({ authorData }) {
                 formats={['auto', 'webp', 'avif']}
                 id='profile-img-id'
                 imgClassName='profile-img-class'
+                alt='profile-img'
               />
             </div>
             <div className='column is-12-mobile hero-text-container'>

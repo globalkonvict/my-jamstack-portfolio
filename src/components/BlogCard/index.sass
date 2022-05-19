@@ -2,28 +2,51 @@
 
 .blog-card
     background: theme.$background-alt
+    margin: 1rem 0 1rem 0
     .title
         margin: 0
     .divider
         margin: 1rem 0
-    .excerpt
-        text-align: justify
+
+.blog-card-excerpt
+    text-align: justify
+    margin-top: -0.75rem
+.blog-card-btn
+    position: absolute
+    bottom: 16px
+    border-radius: 0
+    @media(max-width: 1500px)
+        position: relative
+        margin-top: 1rem
 
 .blog-image
-    height: 250px
+    height: 350px
     width: 100%
     margin-left: 0 !important
     margin-right: 0 !important
+    @media(max-width: 1024px)
+        height: 100%
     img
         width: 100%
         height: 100%
         object-fit: cover
         object-position: center
-        border-radius: 1rem
+        border-radius: 0
 
 .excerpt-column
     justify-content: flex-start
     align-items: flex-start
+
+.blog-card-image
+    padding: 0
+.blog-card-title
+    margin-bottom: 0.5rem !important
+
+.blog-card-date
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 0.5rem
 
 .blog-meta
     display: flex
@@ -32,10 +55,10 @@
     flex-wrap: wrap
     .meta-info
         margin-right: 1rem,
-        margin-top: 1rem
     .icon
-        margin-top: 1rem
         margin-right: 0.5rem
+    .tags-container
+        margin-bottom: 0.5rem
 
 .tag-text
     background: theme.$secondary

@@ -8,10 +8,10 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className='columns is-multiline'>
+      <div className='columns is-mobile is-multiline'>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className='is-parent column is-4' key={post.id}>
+            <div className='is-parent column  is-6-tablet is-12-mobile' key={post.id}>
               <BlogCard
                 title={post.frontmatter.title}
                 excerpt={post.excerpt}
@@ -27,15 +27,19 @@ class BlogRollTemplate extends React.Component {
   }
 }
 
-export default function BlogRoll({ numnberOfPosts = Infinity }) {
+export default function BlogRoll() {
   return (
     <StaticQuery
       query={graphql`
         query BlogRollQuery {
-          allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+            limit: 4
+          ) {
             edges {
               node {
-                excerpt(pruneLength: 150)
+                excerpt(pruneLength: 120)
                 id
                 fields {
                   slug

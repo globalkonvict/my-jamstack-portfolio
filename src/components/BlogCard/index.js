@@ -1,49 +1,50 @@
 import { Link } from 'gatsby';
 import { GoCalendar } from 'react-icons/go';
-import { AiOutlineTags } from 'react-icons/ai';
 import PreviewCompatibleImage from '@components/PreviewCompatibleImage';
 
 import './index.sass';
 
 const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
   return (
-    <div className='blog-card card'>
-      <div className='card-content'>
-        <Link to={slug}>
-          <h3 className='title is-size-4'>{title}</h3>
-        </Link>
-        <div className='blog-meta '>
-          <span className='icon  has-text-info'>
-            <GoCalendar />
-          </span>
-          <span className='is-size-7 meta-info'>{date}</span>
-          <span className='icon  has-text-info'>
-            <AiOutlineTags />
-          </span>
-          {tags.map(tag => (
-            <Link className='tag-text is-size-7' to={`/tags/${tag}`} key={`/tags/${tag}`}>
-              {tag}
+    <div className='columns is-mobile is-multiline card blog-card'>
+      <div className='column is-6-desktop is-12-mobile blog-card-image'>
+        {featuredimage && (
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: featuredimage,
+              alt: `featured image thumbnail for post ${title}`,
+              width: featuredimage.childImageSharp.gatsbyImageData.width,
+              height: featuredimage.childImageSharp.gatsbyImageData.height,
+            }}
+            className='blog-image'
+          />
+        )}
+      </div>
+      <div className='column is-6-desktop is-12-mobile blog-card-meta-column'>
+        <div className='columns is-multiline'>
+          <div className='column is-12'>
+            <Link to={slug}>
+              <h3 className='title blog-card-title is-size-3-widescreen is-size-5-desktop'>{title}</h3>
             </Link>
-          ))}
-        </div>
-        <hr className='divider' />
-        <div className='columns blog-card-columns'>
-          {featuredimage && (
-            <div className='column is-12'>
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: featuredimage,
-                  alt: `featured image thumbnail for post ${title}`,
-                  width: featuredimage.childImageSharp.gatsbyImageData.width,
-                  height: featuredimage.childImageSharp.gatsbyImageData.height,
-                }}
-                className='blog-image'
-              />
+            <div className='blog-meta '>
+              <span className='blog-card-date'>
+                <span className='icon has-text-info'>
+                  <GoCalendar />
+                </span>
+                <span className='is-size-7 meta-info'>{date}</span>
+              </span>
+              <div className='tags tags-container'>
+                {tags.slice(0, 5).map(tag => (
+                  <Link className='tag is-primary is-size-7' to={`/tags/${tag}`} key={`/tags/${tag}`}>
+                    {tag}
+                  </Link>
+                ))}
+              </div>
             </div>
-          )}
+          </div>
           <div className='column is-12 excerpt-column'>
-            <p className='is-size-6 excerpt'>{excerpt}</p>
-            <Link className='button is-primary is-outlined' to={slug}>
+            <p className='is-size-7 blog-card-excerpt'>{excerpt}</p>
+            <Link className='button blog-card-btn is-primary is-outlined is-size-7' to={slug}>
               Keep Reading →
             </Link>
           </div>

@@ -14,8 +14,8 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
 
   return (
     <section className='section section__skills'>
-      <div className='container'>
-        <div className='columns'>
+      <div className='columns'>
+        <div className='column is-10 is-offset-1'>
           <div className='column is-12'>
             <div className='skills'>
               <div className='skills__heading'>
@@ -60,19 +60,27 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
               </div>
               <div className='skills__content columns is-multiline is-mobile is-centered'>
                 {skills.map(icon => {
-                  return tabs === 'all' || icon.type === tabs ? (
-                    <div
-                      className='column is-centered is-2-tablet is-4-mobile has-text-centered has-tooltip-arrow has-tooltip-bottom has-tooltip-primary '
-                      key={icon.classNames}
-                      data-tooltip={icon.skillName}
-                    >
-                      {icon?.image ? (
-                        <GatsbyImage image={getImage(icon?.image)} objectFit='contain' className='skills__icons' formats={['auto', 'webp', 'avif']} />
-                      ) : (
-                        <i className={`${icon.classNames} skills__icons`} />
-                      )}
-                    </div>
-                  ) : null;
+                  if (tabs === 'all' || icon.type === tabs) {
+                    return (
+                      <div
+                        className='column is-centered is-2-tablet is-4-mobile has-text-centered has-tooltip-arrow has-tooltip-bottom has-tooltip-primary '
+                        key={icon.classNames}
+                        data-tooltip={icon.skillName}
+                      >
+                        {icon?.image ? (
+                          <GatsbyImage
+                            image={getImage(icon?.image)}
+                            objectFit='contain'
+                            className='skills__icons'
+                            formats={['auto', 'webp', 'avif']}
+                            alt={icon.skillName}
+                          />
+                        ) : (
+                          <i className={`${icon.classNames} skills__icons`} />
+                        )}
+                      </div>
+                    );
+                  }
                 })}
               </div>
               <p className='has-text-weight-light is-size-6 has-text-centered is-underlined'>Hovering on skill icon will show skill name.</p>
