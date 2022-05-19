@@ -4,9 +4,9 @@ import BlogCard from './BlogCard';
 
 class BlogRollTemplate extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
-
+    const { data, total } = this.props;
+    const { edges } = data.allMarkdownRemark;
+    const posts = total ? edges.slice(0, total) : edges;
     return (
       <div className='columns is-mobile is-multiline'>
         {posts &&
@@ -27,16 +27,12 @@ class BlogRollTemplate extends React.Component {
   }
 }
 
-export default function BlogRoll() {
+export default function BlogRoll({ total }) {
   return (
     <StaticQuery
       query={graphql`
         query BlogRollQuery {
-          allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-            limit: 4
-          ) {
+          allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
             edges {
               node {
                 excerpt(pruneLength: 120)
@@ -61,7 +57,7 @@ export default function BlogRoll() {
           }
         }
       `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <BlogRollTemplate data={data} count={count} total={total} />}
     />
   );
 }

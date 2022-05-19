@@ -11,7 +11,7 @@ function LatestStories() {
             <div className='content'>
               <div className='column is-12'>
                 <h3 className='has-text-weight-semibold is-size-3 latest-stories-title'>Latest Articles</h3>
-                <BlogRoll />
+                <BlogRoll total={4} />
                 <div className='column is-12 has-text-centered'>
                   <Link className='button read-more-stories-btn is-primary ' to='/blog'>
                     Read more

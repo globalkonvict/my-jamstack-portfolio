@@ -9,6 +9,7 @@ const Footer = () => {
   return (
     <footer className='footer has-background-black has-text-white-ter'>
       <div className='content has-text-centered'>
+        <img className='image footer-logo' src='/static/c247bbf9c07bc87275067ff22fbb5a43/GK_LOGO.png' alt='Logo' />
         <p className='is-size-1 is-size-3-mobile footer-logo'>GlobalKonvict</p>
       </div>
       <div className='content has-text-centered has-background-black has-text-white-ter'>
