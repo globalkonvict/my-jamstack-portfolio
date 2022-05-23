@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: `Hello, ${name} from Netlify Functions! ${[JSON.parse(event), JSON, parse(context)]}`,
+    body: `Hello, ${JSON.stringify(params, null, 2)} from Netlify Functions!`,
   };
 };
 
