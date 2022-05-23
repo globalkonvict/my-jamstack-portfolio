@@ -23,7 +23,7 @@ export default class Index extends React.Component {
     try {
       const { email: to, message } = e.target;
       console.log(e.target.name.value);
-      const send = await sendEMail({ to, message });
+      const send = await sendEMail({ to: to.value, message: messsage.value });
       if (send) {
         navigate('/contact/success');
       }
