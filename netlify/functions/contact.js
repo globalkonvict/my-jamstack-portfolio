@@ -1,6 +1,5 @@
 'use strict';
 const nodemailer = require('nodemailer');
-
 const querystring = require('querystring');
 
 exports.handler = async (event, context) => {
@@ -17,7 +16,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: `Hello, ${name}`,
+    body: `Hello, ${name} from Netlify Functions! ${[event, context]}`,
   };
 };
 

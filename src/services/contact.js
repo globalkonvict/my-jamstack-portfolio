@@ -1,6 +1,6 @@
-import request from './request';
+import sendContactMai from './request';
 
-const sendContactMail = async ({ from, message }) => {
+const sendContactMailService = async ({ from, message }) => {
   try {
     return await request.post('/contact', {
       from,
@@ -14,4 +14,4 @@ const sendContactMail = async ({ from, message }) => {
   }
 };
 
-export default sendContactMail;
+export default sendContactMailService;
