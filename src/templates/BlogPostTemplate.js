@@ -5,7 +5,7 @@ import { Disqus } from 'gatsby-plugin-disqus';
 import Content from '@components/Content';
 import Sidebar from '@components/Sidebar';
 
-const BlogPostTemplate = ({ content, contentComponent, description, tags, title, helmet, date }) => {
+const BlogPostTemplate = ({ content, contentComponent, tags, title, helmet, date }) => {
   const PostContent = contentComponent || Content;
 
   return (
@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
       {helmet || ''}
       <div className='container content blog-post'>
         <div className='columns is-mobile is-multiline'>
-          <div className='column card is-8-desktop is-12-mobile '>
+          <div className='column card column is-8-desktop is-offset-1-mobile is-10-mobile '>
             <h1 className='title is-size-2 is-bold-light'>{title}</h1>
             <div className='blog-meta'>
               <span className='icon  has-text-info'>
@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ content, contentComponent, description, tags, title,
               }}
             />
           </div>
-          <div className='column is-3-desktop is-6-tablet is-offset-3-tablet is-offset-1-desktop is-12-mobile has-margin-top-24'>
+          <div className='column is-4-desktop is-offset-1-mobile is-10-mobile has-margin-top-24'>
             <Sidebar />
           </div>
         </div>

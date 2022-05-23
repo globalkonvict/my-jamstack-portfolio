@@ -41,7 +41,7 @@ const Footer = () => {
                 <ul className='menu-list'>
                   <li>
                     <Link className='navbar-item' to='/blog'>
-                      Latest Stories
+                      Latest Articles
                     </Link>
                   </li>
                   <li>
