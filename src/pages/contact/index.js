@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { navigate } from 'gatsby';
+import sendEMail from '@src/services/contact';
 
 function encode(data) {
   return Object.keys(data)
@@ -17,19 +18,20 @@ export default class Index extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error));
+    try {
+      const { email: to, message } = e.target;
+      console.log(e.target.name.value);
+      const send = await sendEMail({ to, message });
+      if (send) {
+        navigate('/contact/success');
+      }
+    } catch (err) {
+      if (err) {
+        return console.error(err);
+      }
+    }
   };
 
   render() {
