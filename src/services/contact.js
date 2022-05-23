@@ -2,7 +2,7 @@ import sendContactMai from './request';
 
 const sendContactMailService = async ({ from, message }) => {
   try {
-    return await request.post('/contact', {
+    return await sendContactMai.post('/contact', {
       from,
       message,
       recipients: process.env.GATSBY_TO_EMAIL,
