@@ -48,7 +48,7 @@ export default function BlogRoll({ total }) {
                   featuredpost
                   featuredimage {
                     childImageSharp {
-                      gatsbyImageData(quality: 60, layout: FULL_WIDTH)
+                      gatsbyImageData(quality: 30, layout: FULL_WIDTH)
                     }
                   }
                 }
