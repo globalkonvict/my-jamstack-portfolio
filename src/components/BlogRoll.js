@@ -44,11 +44,11 @@ export default function BlogRoll({ total }) {
                   title
                   tags
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
+                  date(formatString: "MMMM DD, YYYY hh:mm A")
                   featuredpost
                   featuredimage {
                     childImageSharp {
-                      gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                      gatsbyImageData(quality: 60, layout: FULL_WIDTH)
                     }
                   }
                 }

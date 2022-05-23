@@ -17,12 +17,12 @@ export const pageQuery = graphql`
         authorData {
           background {
             childImageSharp {
-              gatsbyImageData(quality: 50, layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
+              gatsbyImageData(quality: 40, layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
           image {
             childImageSharp {
-              gatsbyImageData(width: 350, quality: 80, layout: CONSTRAINED, placeholder: BLURRED)
+              gatsbyImageData(width: 350, quality: 40, layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
           introduction
@@ -41,7 +41,7 @@ export const pageQuery = graphql`
             image {
               publicURL
               childImageSharp {
-                gatsbyImageData(quality: 10, layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(quality: 5, layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
             classNames
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(quality: 20, layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(quality: 10, layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
             links {
