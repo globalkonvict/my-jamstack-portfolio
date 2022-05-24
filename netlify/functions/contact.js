@@ -3,12 +3,11 @@ const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
   // Only allow POST
-  const params = JSON.parse(event.body);
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-  const { from, message, email, subject } = params;
-  const recipients = process.env.GATSBY_TO_EMAIL;
+  const params = JSON.parse(event.body);
+  const { from, message, email, subject, recipients } = params;
 
   const mailObj = {
     from: `${from} <${email}>`,
@@ -23,7 +22,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(params),
+    body: 'email sent successfully',
   };
 };
 
@@ -52,7 +51,7 @@ const sendEmail = async mailObj => {
     // send mail with defined transport object
     let mailStatus = await transporter.sendMail({
       from: from, // sender address
-      to: recipients, // list of recipients
+      to: [recipients], // list of recipients
       subject: subject, // Subject line
       text: message, // plain text
     });

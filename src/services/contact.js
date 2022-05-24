@@ -1,13 +1,13 @@
-import sendContactMai from './request';
+import request from './request';
 
-const sendContactMailService = async ({ from, message, email, body }) => {
+const sendContactMailService = async ({ from, message, email }) => {
   try {
-    return await sendContactMai.post('/contact', {
+    return await request('/contact', {
+      method: 'post',
       data: {
         from,
         message,
         email,
-        body,
         recipients: process.env.GATSBY_TO_EMAIL,
         subject: 'A Message from GlobalKonvict site',
       },
