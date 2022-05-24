@@ -21,12 +21,11 @@ export default class Index extends React.Component {
   handleSubmit = async e => {
     e.preventDefault();
     try {
-      const { email, message } = e.target;
-      const send = await sendEMail({ from: email.value, message: message.value });
+      const { from, message, email } = e.target;
+      const send = await sendEMail({ from: from.value, message: message.value, email: email.value, senderName: from.value });
       console.log(send);
       if (send) {
         navigate('/contact/success');
-        s;
       }
     } catch (err) {
       if (err) {

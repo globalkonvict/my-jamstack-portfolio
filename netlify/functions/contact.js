@@ -4,15 +4,21 @@ const querystring = require('querystring');
 
 exports.handler = async (event, context) => {
   // Only allow POST
+  const params = querystring.parse(event.body);
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-  console.log(event, context);
-
+  const emailObject = {
+    message: params.message.value,
+    sender: {
+      name: params.name.value,
+      email: params.email.value,
+    },
+    senderName: from.value,
+  };
+  console.log(event.body);
   // When the method is POST, the name will no longer be in the event’s
-  // queryStringParameters – it’ll be in the event body encoded as a query string
-  const params = querystring.parse(event.body);
-  const name = params.name || 'World';
+  // queryStringParameters – it’ll be in the event body encoded as a query string.
 
   return {
     statusCode: 200,
