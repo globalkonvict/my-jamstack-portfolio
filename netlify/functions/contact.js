@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: `Hello, \n ${params} \nfrom Netlify Functions!} `,
+    body: params,
   };
 };
 
