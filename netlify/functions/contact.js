@@ -10,16 +10,16 @@ exports.handler = async (event, context) => {
   const { from, message, email, subject } = params;
   const recipients = process.env.GATSBY_TO_EMAIL;
 
-  // const mailObj = {
-  //   from: `${from} <${email}>`,
-  //   recipients: [recipients],
-  //   subject: subject,
-  //   message: message,
-  // };
+  const mailObj = {
+    from: `${from} <${email}>`,
+    recipients: [recipients],
+    subject: subject,
+    message: message,
+  };
 
-  // sendEmail(mailObj).then(res => {
-  //   console.log(res);
-  // });
+  sendEmail(mailObj).then(res => {
+    console.log(res);
+  });
 
   return {
     statusCode: 200,
