@@ -8,21 +8,21 @@ exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-  // const emailObject = {
-  //   message: params.message.value,
-  //   sender: {
-  //     name: params.name.value,
-  //     email: params.email.value,
-  //   },
-  //   senderName: from.value,
-  // };
-  console.log(event.body);
-  // When the method is POST, the name will no longer be in the event’s
-  // queryStringParameters – it’ll be in the event body encoded as a query string.
+  const { from, message, email, subject } = params;
+  const mailObj = {
+    from: `${from} <${email}>`,
+    recipients: ['sarthakwarlock@gmail.com'],
+    subject: subject,
+    message: message,
+  };
+
+  sendEmail(mailObj).then(res => {
+    console.log(res);
+  });
 
   return {
     statusCode: 200,
-    body: `Hello, ${JSON.stringify(params, null, 2)} from Netlify Functions!`,
+    body: `Hello, ${params} from Netlify Functions!`,
   };
 };
 
@@ -63,14 +63,3 @@ const sendEmail = async mailObj => {
     throw new Error(`Something went wrong in the sendmail method. Error: ${error.message}`);
   }
 };
-
-const mailObj = {
-  from: 'hello@schadokar.dev',
-  recipients: ['sarthakwarlock@gmail.com'],
-  subject: 'Sending email by nodejs',
-  message: 'Hello World;',
-};
-
-sendEmail(mailObj).then(res => {
-  console.log(res);
-});
