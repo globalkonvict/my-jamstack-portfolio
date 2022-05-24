@@ -1,7 +1,7 @@
 'use strict';
 const nodemailer = require('nodemailer');
 
-exports.handler = async (event, context) => {
+exports.handler = async (event, _context) => {
   // Only allow POST
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -16,13 +16,10 @@ exports.handler = async (event, context) => {
     message: message,
   };
 
-  sendEmail(mailObj).then(res => {
-    console.log(res);
-    return {
-      statusCode: 200,
-      body: 'email sent successfully' + res,
-    };
-  });
+  const res = await sendEmail(mailObj);
+  if (res) {
+    return { statusCode: 200, body: res };
+  }
 
   return {
     statusCode: 200,
