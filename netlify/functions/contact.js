@@ -18,6 +18,10 @@ exports.handler = async (event, context) => {
 
   sendEmail(mailObj).then(res => {
     console.log(res);
+    return {
+      statusCode: 200,
+      body: 'email sent successfully' + res,
+    };
   });
 
   return {
