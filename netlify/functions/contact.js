@@ -8,14 +8,14 @@ exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-  const emailObject = {
-    message: params.message.value,
-    sender: {
-      name: params.name.value,
-      email: params.email.value,
-    },
-    senderName: from.value,
-  };
+  // const emailObject = {
+  //   message: params.message.value,
+  //   sender: {
+  //     name: params.name.value,
+  //     email: params.email.value,
+  //   },
+  //   senderName: from.value,
+  // };
   console.log(event.body);
   // When the method is POST, the name will no longer be in the event’s
   // queryStringParameters – it’ll be in the event body encoded as a query string.
