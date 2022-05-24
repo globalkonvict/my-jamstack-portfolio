@@ -9,7 +9,7 @@ const ContactPage = () => {
       <div className='container'>
         <div className='content'>
           <h1>Contact</h1>
-          <form name='contact' action='https://formsubmit.co/sarthakwarlock@gmail.com' method='POST'>
+          <form name='contact' action='https://formsubmit.co/355b99fbaea3b5e971592be8bde14b2f' method='POST'>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type='hidden' name='form-name' value='contact' />
             <input type='hidden' name='_next' value={`${origin}/contact/thanks`} />
