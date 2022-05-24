@@ -9,20 +9,22 @@ exports.handler = async (event, context) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
   const { from, message, email, subject } = params;
-  const mailObj = {
-    from: `${from} <${email}>`,
-    recipients: ['sarthakwarlock@gmail.com'],
-    subject: subject,
-    message: message,
-  };
+  const recipients = process.env.GATSBY_TO_EMAIL;
 
-  sendEmail(mailObj).then(res => {
-    console.log(res);
-  });
+  // const mailObj = {
+  //   from: `${from} <${email}>`,
+  //   recipients: [recipients],
+  //   subject: subject,
+  //   message: message,
+  // };
+
+  // sendEmail(mailObj).then(res => {
+  //   console.log(res);
+  // });
 
   return {
     statusCode: 200,
-    body: `Hello, ${params} from Netlify Functions!`,
+    body: `Hello, \n ${params} \nfrom Netlify Functions! \n${JSON.stringify(params)} \n${JSON.stringify(event.body)} `,
   };
 };
 
@@ -63,3 +65,14 @@ const sendEmail = async mailObj => {
     throw new Error(`Something went wrong in the sendmail method. Error: ${error.message}`);
   }
 };
+
+// const mailObj = {
+//   from: `${'from'} <${'email@gmail.com'}>`,
+//   recipients: ['sarthakwarlock@gmail.com'],
+//   subject: 'subject',
+//   message: 'message',
+// };
+
+// sendEmail(mailObj).then(res => {
+//   console.log(res);
+// });
