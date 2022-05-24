@@ -13,7 +13,11 @@ const NotFoundPage = () => (
         <div className='column is-10 is-offset-1'>
           <Lottie loop animationData={notFoundAnimation} play style={{ width: '100%', height: '100%' }} />
         </div>
-        <Link className='button is-primary go-nack-to-home-btn'>GO back to home</Link>
+        <div className='center-content'>
+          <Link className='button is-primary go-nack-to-home-btn ' to='/'>
+            GO back to home
+          </Link>
+        </div>
       </div>
     </div>
   </section>
