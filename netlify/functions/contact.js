@@ -1,10 +1,9 @@
 'use strict';
 const nodemailer = require('nodemailer');
-const querystring = require('querystring');
 
 exports.handler = async (event, context) => {
   // Only allow POST
-  const params = querystring.parse(event.body);
+  const params = JSON.parse(event.body);
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -24,7 +23,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: `Hello, \n ${params} \nfrom Netlify Functions! \n${JSON.stringify(params)} \n${JSON.stringify(event.body)} `,
+    body: `Hello, \n ${params} \nfrom Netlify Functions!} `,
   };
 };
 
