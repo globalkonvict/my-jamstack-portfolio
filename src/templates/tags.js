@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
+import { BlogRollTemplate } from '@components/BlogRoll';
 
 const TagRoute = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -14,19 +15,25 @@ const TagRoute = ({ data, pageContext }) => {
   const tag = pageContext.tag;
   const title = data.site.siteMetadata.title;
   const totalCount = data.allMarkdownRemark.totalCount;
-  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with “${tag}”`;
-
+  const tagCapitalized = `${tag[0].toUpperCase()}${tag.slice(1)}`;
+  console.log(data);
   return (
-    <section className='section'>
-      <Helmet title={`${tag} | ${title}`} />
-      <div className='container content'>
-        <div className='columns'>
-          <div className='column is-10 is-offset-1' style={{ marginBottom: '6rem' }}>
-            <h3 className='title is-size-4 is-bold-light'>{tagHeader}</h3>
-            <ul className='taglist'>{postLinks}</ul>
-            <p>
-              <Link to='/tags/'>Browse all tags</Link>
-            </p>
+    <section className='section latest-stories section--gradient'>
+      <Helmet title={`${tagCapitalized} | ${title}`} />
+      <div className='columns'>
+        <div className='column is-10 is-offset-1'>
+          <div className='column is-12'>
+            <div className='content'>
+              <div className='column is-12'>
+                <h3 className='has-text-weight-semibold is-size-3 latest-stories-title'>{`Latest Articles in ${tagCapitalized}`}</h3>
+                <BlogRollTemplate data={data} total={totalCount} />
+                <div className='column is-12 has-text-centered'>
+                  <Link className='button read-more-stories-btn is-primary go-nack-to-home-btn' to='/tags/'>
+                    Browse all tags
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,11 +54,22 @@ export const tagPageQuery = graphql`
       totalCount
       edges {
         node {
+          id
+          excerpt(pruneLength: 120)
           fields {
             slug
           }
           frontmatter {
             title
+            tags
+            templateKey
+            date(formatString: "MMMM DD, YYYY hh:mm A")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                gatsbyImageData(quality: 30, layout: FULL_WIDTH)
+              }
+            }
           }
         }
       }

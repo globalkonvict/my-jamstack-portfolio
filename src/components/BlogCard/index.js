@@ -5,6 +5,7 @@ import PreviewCompatibleImage from '@components/PreviewCompatibleImage';
 import './index.sass';
 
 const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
+  const tagsSlice = tags.length > 4 ? tags.slice(0, 5) : tags;
   return (
     <div className='columns is-mobile is-multiline card blog-card'>
       <div className='column is-6-desktop is-12-mobile blog-card-image'>
@@ -34,7 +35,7 @@ const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
                 <span className='is-size-7 meta-info'>{date}</span>
               </span>
               <div className='tags tags-container'>
-                {tags.slice(0, 5).map(tag => (
+                {tagsSlice.map(tag => (
                   <Link className='tag is-primary is-size-7' to={`/tags/${tag}`} key={`/tags/${tag}`}>
                     {tag}
                   </Link>

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Lottie from 'react-lottie-player';
+import developerAnimation from '@src/img/lottie/developer-skills.json';
 import './index.sass';
 
 const FullWidthNavigationMenu = () => {
@@ -22,6 +24,7 @@ const FullWidthNavigationMenu = () => {
         </span>
       </div>
       <div className='nav'>
+        <Lottie loop animationData={developerAnimation} play style={{ width: '100%', height: '100%' }} />
         <div className='nav__content'>
           <ul className='nav__list'>
             <li className='nav__item'>

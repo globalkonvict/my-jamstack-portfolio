@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import BlogRoll from '../BlogRoll';
+import BlogRoll from '@components/BlogRoll';
 import './index.sass';
 
 function LatestStories() {

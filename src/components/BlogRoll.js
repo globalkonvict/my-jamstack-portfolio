@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import BlogCard from './BlogCard';
+import BlogCard from '@components/BlogCard';
 
-class BlogRollTemplate extends React.Component {
+export class BlogRollTemplate extends React.Component {
   render() {
     const { data, total } = this.props;
     const { edges } = data.allMarkdownRemark;

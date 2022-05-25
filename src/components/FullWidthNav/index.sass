@@ -20,7 +20,7 @@ $nav-button-radius: 36% 64% 45% 55% / 68% 28% 72% 32%
     height: $size
     width: $size
     position: absolute
-    z-index: 999
+    z-index: 8001
     right: 20px
     top: 24px
     cursor: pointer
@@ -54,7 +54,9 @@ $nav-button-radius: 36% 64% 45% 55% / 68% 28% 72% 32%
     $font--size--calc: calc(2vw + 10px)
     $transition--easing: cubic-bezier(.77,0,.175,1)
     position: fixed
-    z-index: 998
+    z-index: 8000
+    width: 100vw
+    height: 100vh
     display: none
     &:before,&:after
         content: ""
@@ -139,16 +141,18 @@ body.nav-active
             &:after
                 background-color: $color-primary-dark
     &__link
+        background: $color-black
+        border: 3px solid $color-primary
         &:link,
         &:visited
             display: inline-block
             font-size: 3rem
             font-weight: 300
             padding: .1rem 2rem
-            color: $color-black
+            color: $color-white
             text-decoration: none
             text-transform: uppercase
-            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary-light 50%)
+            background-image: linear-gradient(100deg, transparent 0%, transparent 50%, $color-primary 50%)
             background-size: 220%
             transition: all .4s
             span
