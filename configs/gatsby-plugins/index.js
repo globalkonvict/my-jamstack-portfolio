@@ -1,6 +1,6 @@
-const alias = require('./plugins/alias');
 const netlifyCMS = require('./plugins/cms');
 const filesystem = require('./plugins/filesystem');
+const alias = require('./plugins/alias');
 const netlifyPlugin = require('./plugins/netlify');
 const nprogress = require('./plugins/nprogress');
 const purgeCssConfig = require('./plugins/purge-css');
@@ -40,11 +40,23 @@ const plugins = [
   sitemaps,
 ];
 
+/** @description Helpers to shorten plugins array construction */
+// This maps plugins to correctly identifying that plugin is object or string.
+const pluginsMapper = (plugin, dir) => (typeof plugin === 'function' ? plugin({ dir }) : plugin);
+// This only keeps allowed  plugins
+const disablePluginsModifier = disablePlugins => plugin => !disablePlugins.includes(typeof plugin === 'Object' ? plugin.resolve : plugin);
+
 /**
- * @description Processes and returns plugins in gatsby supported format
- * @param {{dir: string}}  Object with the correct {dir: __dirname} name
- * @returns
+ * @description Processes and returns plugins in gatsby supported format, often config less plugins are of string type while
+ * @param {{dir: string, disablePlugins: [String]}}
+ *  @description {{dir: string}} - path to the directory where the gatsby config is located
+ *  @description {{disablePlugins: [String]}} - plugins to disable by their name.
+ * @returns [String && Object] - array of plugins can be strings or objects containing plugin name and options.
  */
-const patchPlugins = ({ dir }) => plugins.map(plugin => (typeof plugin === 'function' ? plugin({ dir }) : plugin)).flat();
+const patchPlugins = ({ dir, disablePlugins = [] }) =>
+  plugins
+    .map(plugin => pluginsMapper(plugin, dir))
+    .flat(Infinity)
+    .filter(disablePluginsModifier(disablePlugins));
 
 module.exports = patchPlugins;
