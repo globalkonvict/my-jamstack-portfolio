@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
-import { HTMLContent } from '../components/Content';
-import AboutPageTemplate from './AboutPageTemplate';
+import { HTMLContent } from '@components/Content';
+import AboutPageTemplate from '@templates/AboutPageTemplate';
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;

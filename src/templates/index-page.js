@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import IndexPageTemplate from './IndexPageTemplate';
+import IndexPageTemplate from '@templates/IndexPageTemplate';
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;

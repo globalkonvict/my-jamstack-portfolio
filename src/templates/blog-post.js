@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import { HTMLContent } from '../components/Content';
-import BlogPostTemplate from './BlogPostTemplate';
+import { HTMLContent } from '@components/Content';
+import BlogPostTemplate from '@templates/BlogPostTemplate';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;

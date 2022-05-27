@@ -1,5 +1,5 @@
-import useSiteSettings from './SiteSettings';
-import useSiteMetadata from './SiteMetadata';
+import useSiteSettings from '@utils/SiteSettings';
+import useSiteMetadata from '@utils/SiteMetadata';
 
 const allUtils = { useSiteSettings, useSiteMetadata };
 
