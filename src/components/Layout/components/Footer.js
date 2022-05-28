@@ -1,15 +1,25 @@
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa';
 import useSiteSettings from '@utils/SiteSettings';
 
 const Footer = () => {
   const { social } = useSiteSettings();
+  const { file } = useStaticQuery(graphql`
+    query SITE_LOGO {
+      file(name: { eq: "GK_LOGO" }) {
+        childImageSharp {
+          gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+  `);
+  const logoImage = getImage(file.childImageSharp.gatsbyImageData);
 
   return (
     <footer className='footer has-background-black has-text-white-ter'>
       <div className='content has-text-centered'>
-        <img className='image footer-logo' src='/static/c247bbf9c07bc87275067ff22fbb5a43/GK_LOGO.png' alt='Logo' />
+        <GatsbyImage className='image footer-logo' image={logoImage} alt='Logo' />
         <p className='is-size-1 is-size-3-mobile footer-logo'>GlobalKonvict</p>
       </div>
       <div className='content has-text-centered has-background-black has-text-white-ter'>

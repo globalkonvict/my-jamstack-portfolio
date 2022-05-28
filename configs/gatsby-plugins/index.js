@@ -25,6 +25,7 @@ const plugins = [
   `gatsby-plugin-image`,
   `gatsby-plugin-preload-fonts`,
   'gatsby-plugin-optimize-svgs',
+  'gatsby-plugin-brotli',
   sass,
   alias,
   nprogress,
