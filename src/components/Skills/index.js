@@ -1,16 +1,16 @@
-import classNames from 'classnames';
-import { useState } from 'react';
-import MarkdownContent from '../Content';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import classNames from 'classnames'
+import { useState } from 'react'
+import MarkdownContent from '../Content'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-import './index.sass';
+import './index.sass'
 
-function Skills({ skills = [], title, subtitle, extra = '' }) {
-  const [tabs, setTabs] = useState('all');
+function Skills ({ skills = [], title, subtitle, extra = '' }) {
+  const [tabs, setTabs] = useState('all')
 
   const onTabChange = tab => {
-    setTabs(tab);
-  };
+    setTabs(tab)
+  }
 
   return (
     <section className='section section__skills'>
@@ -67,34 +67,38 @@ function Skills({ skills = [], title, subtitle, extra = '' }) {
                         key={icon.classNames}
                         data-tooltip={icon.skillName}
                       >
-                        {icon?.image ? (
-                          <GatsbyImage
-                            image={getImage(icon?.image)}
-                            objectFit='contain'
-                            className='skills__icons'
-                            formats={['auto', 'webp', 'avif']}
-                            alt={icon.skillName}
-                          />
-                        ) : (
-                          <i className={`${icon.classNames} skills__icons`} />
-                        )}
+                        {icon?.image
+                          ? (
+                            <GatsbyImage
+                              image={getImage(icon?.image)}
+                              objectFit='contain'
+                              className='skills__icons'
+                              formats={['auto', 'webp', 'avif']}
+                              alt={icon.skillName}
+                            />
+                            )
+                          : (
+                            <i className={`${icon.classNames} skills__icons`} />
+                            )}
                       </div>
-                    );
+                    )
                   }
                 })}
               </div>
               <p className='has-text-weight-light is-size-6 has-text-centered is-underlined'>Hovering on skill icon will show skill name.</p>
-              {extra ? (
-                <div className='skills__footer'>
-                  <MarkdownContent content={extra ?? null} />
-                </div>
-              ) : null}
+              {extra
+                ? (
+                  <div className='skills__footer'>
+                    <MarkdownContent content={extra ?? null} />
+                  </div>
+                  )
+                : null}
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Skills;
+export default Skills

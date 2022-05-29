@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
-import { BlogRollTemplate } from '@components/BlogRoll';
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+import { Link, graphql } from 'gatsby'
+import { BlogRollTemplate } from '@components/BlogRoll'
 
 const TagRoute = ({ data, pageContext }) => {
-  const tag = pageContext.tag;
-  const title = data.site.siteMetadata.title;
-  const totalCount = data.allMarkdownRemark.totalCount;
-  const tagCapitalized = `${tag[0].toUpperCase()}${tag.slice(1)}`;
+  const tag = pageContext.tag
+  const title = data.site.siteMetadata.title
+  const totalCount = data.allMarkdownRemark.totalCount
+  const tagCapitalized = `${tag[0].toUpperCase()}${tag.slice(1)}`
   return (
     <section className='section latest-stories section--gradient'>
       <Helmet title={`${tagCapitalized} | ${title}`} />
@@ -29,10 +29,10 @@ const TagRoute = ({ data, pageContext }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TagRoute;
+export default TagRoute
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
@@ -66,4 +66,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`;
+`

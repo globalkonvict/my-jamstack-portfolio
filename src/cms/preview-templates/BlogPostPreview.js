@@ -1,7 +1,7 @@
-import BlogPostTemplate from '../../templates/BlogPostTemplate';
+import BlogPostTemplate from '../../templates/BlogPostTemplate'
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
-  const tags = entry.getIn(['data', 'tags']);
+  const tags = entry.getIn(['data', 'tags'])
   return (
     <BlogPostTemplate
       content={widgetFor('body')}
@@ -9,7 +9,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
       tags={tags && tags.toJS()}
       title={entry.getIn(['data', 'title'])}
     />
-  );
-};
+  )
+}
 
-export default BlogPostPreview;
+export default BlogPostPreview

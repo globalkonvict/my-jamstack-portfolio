@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 
 const useSiteSettings = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -20,9 +20,9 @@ const useSiteSettings = () => {
           }
         }
       }
-    `,
-  );
-  return allMarkdownRemark.nodes[0].frontmatter;
-};
+    `
+  )
+  return allMarkdownRemark.nodes[0].frontmatter
+}
 
-export default useSiteSettings;
+export default useSiteSettings

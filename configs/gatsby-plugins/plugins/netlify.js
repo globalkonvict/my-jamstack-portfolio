@@ -4,14 +4,14 @@
  * @link https://www.gatsbyjs.org/packages/gatsby-plugin-netlify/
  */
 const netlifyConfig = {
-  resolve: `gatsby-plugin-netlify`,
+  resolve: 'gatsby-plugin-netlify',
   options: {
     headers: {},
     allPageHeaders: [],
     mergeSecurityHeaders: true,
     mergeLinkHeaders: true,
-    mergeCachingHeaders: true,
-  },
-};
+    mergeCachingHeaders: true
+  }
+}
 
-module.exports = netlifyConfig;
+module.exports = netlifyConfig

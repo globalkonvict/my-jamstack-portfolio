@@ -1,12 +1,12 @@
-import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import BlogCard from '@components/BlogCard';
+import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
+import BlogCard from '@components/BlogCard'
 
 export class BlogRollTemplate extends React.Component {
-  render() {
-    const { data, total } = this.props;
-    const { edges } = data.allMarkdownRemark;
-    const posts = total ? edges.slice(0, total) : edges;
+  render () {
+    const { data, total } = this.props
+    const { edges } = data.allMarkdownRemark
+    const posts = total ? edges.slice(0, total) : edges
     return (
       <div className='columns is-mobile is-multiline'>
         {posts &&
@@ -23,11 +23,11 @@ export class BlogRollTemplate extends React.Component {
             </div>
           ))}
       </div>
-    );
+    )
   }
 }
 
-export default function BlogRoll({ total }) {
+export default function BlogRoll ({ total }) {
   return (
     <StaticQuery
       query={graphql`
@@ -59,5 +59,5 @@ export default function BlogRoll({ total }) {
       `}
       render={(data, count) => <BlogRollTemplate data={data} count={count} total={total} />}
     />
-  );
+  )
 }

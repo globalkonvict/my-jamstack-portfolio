@@ -7,8 +7,8 @@
 const netlifyCMS = ({ dir }) => ({
   resolve: 'gatsby-plugin-netlify-cms',
   options: {
-    modulePath: `${dir}/src/cms/cms.js`,
-  },
-});
+    modulePath: `${dir}/src/cms/cms.js`
+  }
+})
 
-module.exports = netlifyCMS;
+module.exports = netlifyCMS

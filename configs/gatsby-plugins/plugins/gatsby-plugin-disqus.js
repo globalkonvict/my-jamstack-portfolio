@@ -6,10 +6,10 @@
  */
 
 const purgeCssConfig = {
-  resolve: `gatsby-plugin-disqus`,
+  resolve: 'gatsby-plugin-disqus',
   options: {
-    shortname: `globalkonvict`,
-  },
-};
+    shortname: 'globalkonvict'
+  }
+}
 
-module.exports = purgeCssConfig;
+module.exports = purgeCssConfig

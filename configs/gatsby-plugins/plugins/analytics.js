@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-  resolve: `gatsby-plugin-google-analytics`,
+  resolve: 'gatsby-plugin-google-analytics',
   options: {
     trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
     head: false,
@@ -17,6 +17,6 @@ module.exports = {
     pageTransitionDelay: 0,
     defer: false,
     siteSpeedSampleRate: 10,
-    enableWebVitalsTracking: true,
-  },
-};
+    enableWebVitalsTracking: true
+  }
+}

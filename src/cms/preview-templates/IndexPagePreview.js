@@ -1,7 +1,7 @@
-import IndexPage from '../../templates/IndexPageTemplate';
+import IndexPage from '../../templates/IndexPageTemplate'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(['data']).toJS();
+  const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
@@ -10,10 +10,10 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         authorData={{ ...data.authorData, image: getAsset(data.authorData.image) } || {}}
         projects={data.projects || {}}
       />
-    );
+    )
   } else {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
-};
+}
 
-export default IndexPagePreview;
+export default IndexPagePreview

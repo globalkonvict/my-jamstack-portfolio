@@ -13,10 +13,10 @@ const alias = {
       '@pages': 'src/pages',
       '@styles': 'src/styles',
       '@templates': 'src/templates',
-      '@utils': 'src/utils',
+      '@utils': 'src/utils'
     },
-    extensions: ['js', 'jsx', 'sass', 'css'],
-  },
-};
+    extensions: ['js', 'jsx', 'sass', 'css']
+  }
+}
 
-module.exports = alias;
+module.exports = alias

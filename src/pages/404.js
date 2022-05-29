@@ -1,6 +1,6 @@
-import { Link } from 'gatsby';
-import Lottie from 'react-lottie-player';
-import notFoundAnimation from '@src/img/lottie/page-not-found-404.json';
+import { Link } from 'gatsby'
+import Lottie from 'react-lottie-player'
+import notFoundAnimation from '@src/img/lottie/page-not-found-404.json'
 
 const NotFoundPage = () => (
   <section className='section'>
@@ -21,6 +21,6 @@ const NotFoundPage = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default NotFoundPage;
+export default NotFoundPage

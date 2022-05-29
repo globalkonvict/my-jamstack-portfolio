@@ -1,17 +1,17 @@
-import Modal from 'react-modal';
-import { withPrefix } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import Footer from '@layout/components/Footer';
-import Navbar from '@layout/components/Navbar';
-import CustomScrollBar from '@components/CustomScrollBar';
-import useSiteMetadata from '@utils/SiteMetadata';
-import 'synthwave-vscode/synthwave84.css';
-import './index.sass';
+import Modal from 'react-modal'
+import { withPrefix } from 'gatsby'
+import { Helmet } from 'react-helmet'
+import Footer from '@layout/components/Footer'
+import Navbar from '@layout/components/Navbar'
+import CustomScrollBar from '@components/CustomScrollBar'
+import useSiteMetadata from '@utils/SiteMetadata'
+import 'synthwave-vscode/synthwave84.css'
+import './index.sass'
 
 // Mount Modal
-Modal.setAppElement('#___gatsby');
+Modal.setAppElement('#___gatsby')
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { title, description } = useSiteMetadata()
   return (
     <div className='layout'>
       <CustomScrollBar>
@@ -34,7 +34,7 @@ const TemplateWrapper = ({ children }) => {
         <Footer />
       </CustomScrollBar>
     </div>
-  );
-};
+  )
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper

@@ -6,13 +6,13 @@
  */
 
 const purgeCssConfig = {
-  resolve: `gatsby-plugin-purgecss`,
+  resolve: 'gatsby-plugin-purgecss',
   options: {
     develop: false,
     printRejected: true,
     ignore: [],
-    purgeCSSOptions: {},
-  },
-};
+    purgeCSSOptions: {}
+  }
+}
 
-module.exports = purgeCssConfig;
+module.exports = purgeCssConfig

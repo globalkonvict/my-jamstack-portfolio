@@ -1,9 +1,9 @@
-const plugins = require(`${__dirname}/configs/gatsby-plugins/`)({ dir: __dirname });
-const siteMetadata = require(`${__dirname}/configs/gatsby-config/siteMetadata`);
-const flags = require(`${__dirname}/configs/gatsby-config/flags.js`);
+const plugins = require(`${__dirname}/configs/gatsby-plugins/`)({ dir: __dirname })
+const siteMetadata = require(`${__dirname}/configs/gatsby-config/siteMetadata`)
+const flags = require(`${__dirname}/configs/gatsby-config/flags.js`)
 
 // Make available all the environment variables in the process.env object
-require('dotenv').config();
+require('dotenv').config()
 
 /**
  * @description This exports all your gatsby configuration
@@ -19,5 +19,5 @@ module.exports = {
   siteMetadata,
   flags,
   plugins,
-  jsxRuntime: 'automatic',
-};
+  jsxRuntime: 'automatic'
+}

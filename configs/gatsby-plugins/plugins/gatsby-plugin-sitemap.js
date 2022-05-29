@@ -6,7 +6,7 @@
  */
 
 const purgeCssConfig = {
-  resolve: `gatsby-plugin-sitemap`,
-};
+  resolve: 'gatsby-plugin-sitemap'
+}
 
-module.exports = purgeCssConfig;
+module.exports = purgeCssConfig

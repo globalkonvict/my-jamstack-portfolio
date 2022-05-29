@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import Modal from 'react-modal';
-import classNames from 'classnames';
-import { FaTimes } from 'react-icons/fa';
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-import { CgMoreVerticalO } from 'react-icons/cg';
-import { MarkdownContent } from '@components/Content';
+import { useState } from 'react'
+import Modal from 'react-modal'
+import classNames from 'classnames'
+import { FaTimes } from 'react-icons/fa'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
+import { CgMoreVerticalO } from 'react-icons/cg'
+import { MarkdownContent } from '@components/Content'
 
-import './index.sass';
+import './index.sass'
 
 const modalStyles = {
   content: {
@@ -21,26 +21,32 @@ const modalStyles = {
     boxShadow: '0 0 30px rgb(0 0 0 / 30%)',
     border: 0,
     borderRadius: '10px',
-    padding: 0,
-  },
-};
+    padding: 0
+  }
+}
 
-function Card({ title, description, image, links }) {
-  const [modalIsOpen, setIsOpen] = useState(false);
+function Card ({ title, description, image, links }) {
+  const [modalIsOpen, setIsOpen] = useState(false)
 
   const renderLinks = (offset = false) => (
     <div className={classNames('column is-11', { 'is-offset-1': offset })}>
       <div className='tags-container columns is-multiline is-mobile'>
         {links.map(link => {
           return (
-            <a className='tag is-medium is-size-7-mobile is-size-6-tablet tech-tag is-primary' href={link.url} key={link.text} target='_blank'>
+            <a
+              className='tag is-medium is-size-7-mobile is-size-6-tablet tech-tag is-primary'
+              href={link.url}
+              key={link.text}
+              target='_blank'
+              rel='noreferrer'
+            >
               {link.text}
             </a>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
   return (
     <div className='card project-card'>
       <Modal isOpen={modalIsOpen} style={modalStyles} onRequestClose={() => setIsOpen(false)}>
@@ -63,7 +69,7 @@ function Card({ title, description, image, links }) {
       </Modal>
       <GatsbyImage
         image={getImage(image)}
-        objectFit={'cover'}
+        objectFit='cover'
         alt={title}
         formats={['auto', 'webp', 'avif']}
         className={classNames('project-card__image')}
@@ -79,7 +85,7 @@ function Card({ title, description, image, links }) {
               <span className='icon is-small'>
                 <CgMoreVerticalO className='project-card__btn' />
               </span>
-              <span className='is-size-6' data-tooltip={'See more details'}>
+              <span className='is-size-6' data-tooltip='See more details'>
                 More
               </span>
             </button>
@@ -87,7 +93,7 @@ function Card({ title, description, image, links }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Card;
+export default Card

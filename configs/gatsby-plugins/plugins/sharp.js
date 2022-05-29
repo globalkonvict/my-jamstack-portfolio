@@ -3,16 +3,16 @@
  */
 
 const configSharp = {
-  resolve: `gatsby-plugin-sharp`,
+  resolve: 'gatsby-plugin-sharp',
   options: {
     defaults: {
-      formats: [`auto`, `avif`, `webp`, 'png'],
-      placeholder: `dominantColor`,
+      formats: ['auto', 'avif', 'webp', 'png'],
+      placeholder: 'dominantColor',
       quality: 50,
       breakpoints: [320, 750, 1080, 1366, 1920],
-      backgroundColor: `transparent`,
-    },
-  },
-};
+      backgroundColor: 'transparent'
+    }
+  }
+}
 
-module.exports = configSharp;
+module.exports = configSharp

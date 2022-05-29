@@ -1,11 +1,11 @@
-import { Link } from 'gatsby';
-import { GoCalendar } from 'react-icons/go';
-import PreviewCompatibleImage from '@components/PreviewCompatibleImage';
+import { Link } from 'gatsby'
+import { GoCalendar } from 'react-icons/go'
+import PreviewCompatibleImage from '@components/PreviewCompatibleImage'
 
-import './index.sass';
+import './index.sass'
 
 const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
-  const tagsSlice = tags.length > 4 ? tags.slice(0, 5) : tags;
+  const tagsSlice = tags.length > 4 ? tags.slice(0, 5) : tags
   return (
     <div className='columns is-mobile is-multiline card blog-card'>
       <div className='column is-6-desktop is-12-mobile blog-card-image'>
@@ -15,7 +15,7 @@ const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
               image: featuredimage,
               alt: `featured image thumbnail for post ${title}`,
               width: featuredimage.childImageSharp.gatsbyImageData.width,
-              height: featuredimage.childImageSharp.gatsbyImageData.height,
+              height: featuredimage.childImageSharp.gatsbyImageData.height
             }}
             className='blog-image'
           />
@@ -52,7 +52,7 @@ const BlogCard = ({ title, date, excerpt, featuredimage, slug, tags }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogCard;
+export default BlogCard

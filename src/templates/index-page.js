@@ -1,14 +1,14 @@
-import { graphql } from 'gatsby';
-import IndexPageTemplate from '@templates/IndexPageTemplate';
+import { graphql } from 'gatsby'
+import IndexPageTemplate from '@templates/IndexPageTemplate'
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-  return <IndexPageTemplate projects={frontmatter.projects} skills={frontmatter.skills} authorData={frontmatter.authorData} />;
-};
+  const { frontmatter } = data.markdownRemark
+  return <IndexPageTemplate projects={frontmatter.projects} skills={frontmatter.skills} authorData={frontmatter.authorData} />
+}
 
-IndexPage.Template = IndexPageTemplate;
+IndexPage.Template = IndexPageTemplate
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -68,4 +68,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

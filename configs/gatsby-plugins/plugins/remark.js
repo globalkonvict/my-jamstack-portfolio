@@ -19,30 +19,30 @@ const remarkConfig = {
       {
         resolve: 'gatsby-remark-relative-images',
         options: {
-          name: 'uploads',
-        },
+          name: 'uploads'
+        }
       },
       {
         resolve: 'gatsby-remark-images',
         options: {
-          maxWidth: 2040,
-        },
+          maxWidth: 2040
+        }
       },
       {
         resolve: 'gatsby-remark-copy-linked-files',
         options: {
-          destinationDir: 'static',
-        },
+          destinationDir: 'static'
+        }
       },
       {
-        resolve: `gatsby-remark-vscode`,
+        resolve: 'gatsby-remark-vscode',
         options: {
           theme: "SynthWave '84",
-          extensions: ['synthwave-vscode'],
-        },
-      },
-    ],
-  },
-};
+          extensions: ['synthwave-vscode']
+        }
+      }
+    ]
+  }
+}
 
-module.exports = remarkConfig;
+module.exports = remarkConfig

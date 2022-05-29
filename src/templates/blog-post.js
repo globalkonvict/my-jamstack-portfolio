@@ -1,10 +1,10 @@
-import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
-import { HTMLContent } from '@components/Content';
-import BlogPostTemplate from '@templates/BlogPostTemplate';
+import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
+import { HTMLContent } from '@components/Content'
+import BlogPostTemplate from '@templates/BlogPostTemplate'
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
   return (
     <BlogPostTemplate
       content={post.html}
@@ -20,10 +20,10 @@ const BlogPost = ({ data }) => {
       title={post.frontmatter.title}
       date={post.frontmatter.date}
     />
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -38,4 +38,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
