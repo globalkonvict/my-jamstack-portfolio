@@ -21,5 +21,5 @@ enabled = true
     ]
   environment = ["nodejs","browser","jest"]
 [[transformers]]
-name = ["standardjs", "prettier"]
+name = "standardjs"
 enabled = true
