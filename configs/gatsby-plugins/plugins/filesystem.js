@@ -8,23 +8,23 @@ const fileSystem = ({ dir }) => [
     resolve: 'gatsby-source-filesystem',
     options: {
       path: `${dir}/static/img`,
-      name: 'uploads',
-    },
+      name: 'uploads'
+    }
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
       path: `${dir}/src/pages`,
-      name: 'pages',
-    },
+      name: 'pages'
+    }
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
       path: `${dir}/src/img`,
-      name: 'images',
-    },
-  },
-];
+      name: 'images'
+    }
+  }
+]
 
-module.exports = fileSystem;
+module.exports = fileSystem

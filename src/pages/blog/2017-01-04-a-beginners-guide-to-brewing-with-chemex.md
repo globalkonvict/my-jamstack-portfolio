@@ -13,6 +13,7 @@ tags:
   - tech
   - informative
 ---
+
 Recently, almost every organization want their online presence to know through their apps and websites.
 
 These [organizations](https://www.anythingprogramming.com/2022/01/top-5-web-development-tools-in-2022.html?m=1) now focus on frontend developers and UX/UI specialists in order to make sure that the user experience and feel of their website are smooth and easy to navigate.

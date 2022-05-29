@@ -8,4 +8,4 @@ module.exports = {
   // FAST_DEV: true,
   // PARALLEL_QUERY_RUNNING: true,
   // PARALLEL_SOURCING: true,
-};
+}

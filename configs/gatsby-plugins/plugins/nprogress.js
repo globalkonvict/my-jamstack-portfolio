@@ -3,11 +3,11 @@
  * @link https://www.gatsbyjs.com/plugins/gatsby-plugin-nprogress
  */
 const nprogress = {
-  resolve: `gatsby-plugin-nprogress`,
+  resolve: 'gatsby-plugin-nprogress',
   options: {
-    color: `tomato`,
-    showSpinner: true,
-  },
-};
+    color: 'tomato',
+    showSpinner: true
+  }
+}
 
-module.exports = nprogress;
+module.exports = nprogress

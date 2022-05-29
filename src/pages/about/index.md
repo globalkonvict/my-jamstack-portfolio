@@ -3,6 +3,7 @@ templateKey: about-page
 path: /about
 title: About Me
 ---
+
 Hi There,
 
 I am Sarthak. I am an Engineer. I spent my time developing and creating helpful software, and when I am not, I am reading or listening to an audiobook. I pay attention to a wide variety of topics, giving me a creative edge and the ability to talk about almost anything. My preferred areas of interest are; Beauty, Peace, Technology, Science, Spirituality, and Philosophy.

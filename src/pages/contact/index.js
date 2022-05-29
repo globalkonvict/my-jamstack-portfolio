@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { useLocation } from 'react-use';
+import * as React from 'react'
+import { useLocation } from 'react-use'
 
 const ContactPage = () => {
-  const { origin } = useLocation();
+  const { origin } = useLocation()
 
   return (
     <section className='section'>
@@ -14,30 +14,30 @@ const ContactPage = () => {
             <input type='hidden' name='form-name' value='contact' />
             <input type='hidden' name='_next' value={`${origin}/contact/thanks`} />
             <input type='hidden' name='_captcha' value='false' />
-            <input type='hidden' name='_subject' value='Message from Global Konvict'></input>
-            <input type='hidden' name='_url' value={`${origin}/contact`}></input>
+            <input type='hidden' name='_subject' value='Message from Global Konvict' />
+            <input type='hidden' name='_url' value={`${origin}/contact`} />
             <div className='field'>
-              <label className='label' htmlFor={'name'}>
+              <label className='label' htmlFor='name'>
                 Your name
               </label>
               <div className='control'>
-                <input className='input' type={'text'} name={'name'} id={'name'} required={true} />
+                <input className='input' type='text' name='name' id='name' required />
               </div>
             </div>
             <div className='field'>
-              <label className='label' htmlFor={'email'}>
+              <label className='label' htmlFor='email'>
                 Email
               </label>
               <div className='control'>
-                <input className='input' type={'email'} name={'email'} id={'email'} required={true} />
+                <input className='input' type='email' name='email' id='email' required />
               </div>
             </div>
             <div className='field'>
-              <label className='label' htmlFor={'message'}>
+              <label className='label' htmlFor='message'>
                 Message
               </label>
               <div className='control'>
-                <textarea className='textarea' name={'message'} id={'message'} required={true} />
+                <textarea className='textarea' name='message' id='message' required />
               </div>
             </div>
             <div className='field'>
@@ -49,7 +49,7 @@ const ContactPage = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage

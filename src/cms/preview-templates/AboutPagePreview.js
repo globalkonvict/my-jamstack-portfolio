@@ -1,5 +1,5 @@
-import AboutPageTemplate from '../../templates/AboutPageTemplate';
+import AboutPageTemplate from '../../templates/AboutPageTemplate'
 
-const AboutPagePreview = ({ entry, widgetFor }) => <AboutPageTemplate title={entry.getIn(['data', 'title'])} content={widgetFor('body')} />;
+const AboutPagePreview = ({ entry, widgetFor }) => <AboutPageTemplate title={entry.getIn(['data', 'title'])} content={widgetFor('body')} />
 
-export default AboutPagePreview;
+export default AboutPagePreview

@@ -1,12 +1,12 @@
-import { Link } from 'gatsby';
-import { GoCalendar } from 'react-icons/go';
-import { AiOutlineTags } from 'react-icons/ai';
-import { Disqus } from 'gatsby-plugin-disqus';
-import Content from '@components/Content';
-import Sidebar from '@components/Sidebar';
+import { Link } from 'gatsby'
+import { GoCalendar } from 'react-icons/go'
+import { AiOutlineTags } from 'react-icons/ai'
+import { Disqus } from 'gatsby-plugin-disqus'
+import Content from '@components/Content'
+import Sidebar from '@components/Sidebar'
 
 const BlogPostTemplate = ({ content, contentComponent, tags, title, helmet, date }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <section className='section'>
@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ content, contentComponent, tags, title, helmet, date
               config={{
                 url: `${process.env.GATSBY_SITE_BLOG_URL}${title}`,
                 identifier: title,
-                title: title,
+                title
               }}
             />
           </div>
@@ -48,7 +48,7 @@ const BlogPostTemplate = ({ content, contentComponent, tags, title, helmet, date
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default BlogPostTemplate;
+export default BlogPostTemplate

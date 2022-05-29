@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
-import BlogRoll from '@components/BlogRoll';
-import './index.sass';
+import { Link } from 'gatsby'
+import BlogRoll from '@components/BlogRoll'
+import './index.sass'
 
-function LatestStories() {
+function LatestStories () {
   return (
     <section className='section latest-stories section--gradient'>
       <div className='columns'>
@@ -23,7 +23,7 @@ function LatestStories() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default LatestStories;
+export default LatestStories

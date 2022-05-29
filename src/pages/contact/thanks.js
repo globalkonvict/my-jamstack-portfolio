@@ -1,5 +1,5 @@
-import Lottie from 'react-lottie-player';
-import ThankYouAnimated from '@src/img/lottie/thank-you.json';
+import Lottie from 'react-lottie-player'
+import ThankYouAnimated from '@src/img/lottie/thank-you.json'
 
 const ThankYou = () => (
   <section className='section'>
@@ -13,6 +13,6 @@ const ThankYou = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default ThankYou;
+export default ThankYou

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import React from 'react'
+import { Scrollbars } from 'react-custom-scrollbars-2'
 
 const CustomScrollBar = ({ children, props, orientation }) => {
   if (orientation === 'horizontal') {
@@ -14,14 +14,14 @@ const CustomScrollBar = ({ children, props, orientation }) => {
               ...style,
               backgroundColor: 'rgba(10, 129, 255)',
               width: 8,
-              borderRadius: 4,
+              borderRadius: 4
             }}
           />
         )}
       >
         {children}
       </Scrollbars>
-    );
+    )
   }
 
   return (
@@ -35,7 +35,7 @@ const CustomScrollBar = ({ children, props, orientation }) => {
             bottom: 0,
             top: 0,
             width: 14,
-            zIndex: 3000,
+            zIndex: 3000
           }}
         />
       )}
@@ -46,7 +46,7 @@ const CustomScrollBar = ({ children, props, orientation }) => {
             backgroundColor: 'rgba(10, 129, 255)',
             width: 8,
             marginLeft: 6,
-            borderRadius: 4,
+            borderRadius: 4
           }}
         />
       )}
@@ -54,7 +54,7 @@ const CustomScrollBar = ({ children, props, orientation }) => {
     >
       {children}
     </Scrollbars>
-  );
-};
+  )
+}
 
-export default CustomScrollBar;
+export default CustomScrollBar

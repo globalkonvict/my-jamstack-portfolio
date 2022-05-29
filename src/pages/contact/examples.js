@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Link } from 'gatsby';
+import * as React from 'react'
+import { Link } from 'gatsby'
 
 export default class Index extends React.Component {
-  render() {
+  render () {
     return (
       <section className='section'>
         <div className='container'>
@@ -32,6 +32,6 @@ export default class Index extends React.Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }

@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 
 const useSiteLogo = () => {
   const { allFile } = useStaticQuery(
@@ -13,9 +13,9 @@ const useSiteLogo = () => {
           }
         }
       }
-    `,
-  );
-  return allFile.nodes[0];
-};
+    `
+  )
+  return allFile.nodes[0]
+}
 
-export default useSiteMetadata;
+export default useSiteMetadata

@@ -1,10 +1,10 @@
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa';
-import useSiteSettings from '@utils/SiteSettings';
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa'
+import useSiteSettings from '@utils/SiteSettings'
 
 const Footer = () => {
-  const { social } = useSiteSettings();
+  const { social } = useSiteSettings()
   const { file } = useStaticQuery(graphql`
     query SITE_LOGO {
       file(name: { eq: "GK_LOGO" }) {
@@ -13,8 +13,8 @@ const Footer = () => {
         }
       }
     }
-  `);
-  const logoImage = getImage(file.childImageSharp.gatsbyImageData);
+  `)
+  const logoImage = getImage(file.childImageSharp.gatsbyImageData)
 
   return (
     <footer className='footer has-background-black has-text-white-ter'>
@@ -64,35 +64,35 @@ const Footer = () => {
             </div>
             <div className='column is-4 social'>
               {social.github && (
-                <a title='github' href={social.github} target='_blank'>
+                <a title='github' href={social.github} target='_blank' rel='noreferrer'>
                   <span className='icon'>
                     <FaGithubSquare />
                   </span>
                 </a>
               )}
               {social.stackoverflow && (
-                <a title='stackoverflow' href={social.stackoverflow} target='_blank'>
+                <a title='stackoverflow' href={social.stackoverflow} target='_blank' rel='noreferrer'>
                   <span className='icon'>
                     <FaStackOverflow />
                   </span>
                 </a>
               )}
               {social.linkedin && (
-                <a title='linkedin' href={social.linkedin} target='_blank'>
+                <a title='linkedin' href={social.linkedin} target='_blank' rel='noreferrer'>
                   <span className='icon'>
                     <FaLinkedinIn />
                   </span>
                 </a>
               )}
               {social.twitter && (
-                <a title='twitter' href={social.twitter} target='_blank'>
+                <a title='twitter' href={social.twitter} target='_blank' rel='noreferrer'>
                   <span className='icon'>
                     <FaTwitter />
                   </span>
                 </a>
               )}
               {social.instagram && (
-                <a title='instagram' href={social.instagram} target='_blank'>
+                <a title='instagram' href={social.instagram} target='_blank' rel='noreferrer'>
                   <span className='icon'>
                     <FaInstagramSquare />
                   </span>
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

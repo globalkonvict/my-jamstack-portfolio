@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Sidebar from '@components/Sidebar';
-import BlogRoll from '@components/BlogRoll';
+import * as React from 'react'
+import Sidebar from '@components/Sidebar'
+import BlogRoll from '@components/BlogRoll'
 
 const BlogIndexPage = () => {
   return (
@@ -16,7 +16,7 @@ const BlogIndexPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogIndexPage;
+export default BlogIndexPage

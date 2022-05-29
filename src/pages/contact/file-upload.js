@@ -1,45 +1,45 @@
-import * as React from 'react';
-import { navigate } from 'gatsby-link';
+import * as React from 'react'
+import { navigate } from 'gatsby-link'
 
-function encode(data) {
-  const formData = new FormData();
+function encode (data) {
+  const formData = new FormData()
 
   for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
+    formData.append(key, data[key])
   }
 
-  return formData;
+  return formData
 }
 
 export default class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+    this.setState({ [e.target.name]: e.target.value })
+  }
 
   handleAttachment = e => {
-    this.setState({ [e.target.name]: e.target.files[0] });
-  };
+    this.setState({ [e.target.name]: e.target.files[0] })
+  }
 
   handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
+    e.preventDefault()
+    const form = e.target
     fetch('/', {
       method: 'POST',
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
+        ...this.state
+      })
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error));
-  };
+      .catch(error => alert(error))
+  }
 
-  render() {
+  render () {
     return (
       <section className='section'>
         <div className='container'>
@@ -61,11 +61,11 @@ export default class Contact extends React.Component {
                 </label>
               </div>
               <div className='field'>
-                <label className='label' htmlFor={'name'}>
+                <label className='label' htmlFor='name'>
                   Your name
                 </label>
                 <div className='control'>
-                  <input className='input' type={'text'} name={'name'} onChange={this.handleChange} id={'name'} required={true} />
+                  <input className='input' type='text' name='name' onChange={this.handleChange} id='name' required />
                 </div>
               </div>
               <div className='field'>
@@ -87,6 +87,6 @@ export default class Contact extends React.Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }

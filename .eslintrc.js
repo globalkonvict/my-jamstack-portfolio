@@ -1,16 +1,16 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:import/recommended'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
-    ecmaVersion: 'latest',
+    ecmaVersion: 'latest'
   },
   plugins: ['react', 'import'],
   rules: {
@@ -18,7 +18,7 @@ module.exports = {
     'import/named': 2,
     'import/namespace': 2,
     'import/default': 2,
-    'import/export': 2,
+    'import/export': 2
   },
   resolve: {
     alias: {
@@ -28,7 +28,7 @@ module.exports = {
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@templates': path.resolve(__dirname, 'src/templates'),
-      '@utils': path.resolve(__dirname, 'src/utils'),
-    },
-  },
-};
+      '@utils': path.resolve(__dirname, 'src/utils')
+    }
+  }
+}

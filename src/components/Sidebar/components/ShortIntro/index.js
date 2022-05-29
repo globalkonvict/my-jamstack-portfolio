@@ -1,13 +1,13 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare } from 'react-icons/fa';
-import { useSiteSettings } from '@utils';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare } from 'react-icons/fa'
+import { useSiteSettings } from '@utils'
 
-import './index.sass';
+import './index.sass'
 
 const BioHome = () => {
-  const { social, authorName, aboutAuthor } = useSiteSettings();
+  const { social, authorName, aboutAuthor } = useSiteSettings()
   const { avatar } = useStaticQuery(graphql`
     query HomeBioQuery {
       avatar: file(absolutePath: { regex: "/cap_profile_img.jpg/" }) {
@@ -16,7 +16,7 @@ const BioHome = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <div className='card has-text-centered author-card'>
@@ -24,7 +24,7 @@ const BioHome = () => {
         <p className='card-header-title is-centered is-size-5'>Author</p>
       </header>
       <div className='card-image has-padding-20'>
-        <GatsbyImage image={getImage(avatar)} objectFit={'cover'} className='author-image' />
+        <GatsbyImage image={getImage(avatar)} objectFit='cover' className='author-image' />
       </div>
       <div className='card-content'>
         <div className='content'>
@@ -60,7 +60,7 @@ const BioHome = () => {
         </a>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default BioHome;
+export default BioHome

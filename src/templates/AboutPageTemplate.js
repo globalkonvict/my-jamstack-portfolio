@@ -1,7 +1,7 @@
-import Content from '@components/Content';
+import Content from '@components/Content'
 
 const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content
 
   return (
     <section className='section section--gradient'>
@@ -16,7 +16,7 @@ const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutPageTemplate;
+export default AboutPageTemplate

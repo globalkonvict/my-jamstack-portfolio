@@ -6,9 +6,9 @@ const sass = {
   resolve: 'gatsby-plugin-sass',
   options: {
     sassOptions: {
-      indentedSyntax: true,
-    },
-  },
-};
+      indentedSyntax: true
+    }
+  }
+}
 
-module.exports = sass;
+module.exports = sass

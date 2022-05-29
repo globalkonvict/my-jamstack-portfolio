@@ -1,8 +1,8 @@
-import Card from '../Card';
-import CustomScrollBar from '@components/CustomScrollBar';
-import './index.sass';
+import Card from '../Card'
+import CustomScrollBar from '@components/CustomScrollBar'
+import './index.sass'
 
-function Projects({ title, subtitle, projects = [] }) {
+function Projects ({ title, subtitle, projects = [] }) {
   return (
     <section className='section section__projects'>
       <div className='columns'>
@@ -19,7 +19,7 @@ function Projects({ title, subtitle, projects = [] }) {
                     <div className='column is-12-mobile is-4-tablet ' key={project.title}>
                       <Card title={project.title} image={project.image} description={project.description} links={project.links} />
                     </div>
-                  );
+                  )
                 })}
               </div>
             </CustomScrollBar>
@@ -28,7 +28,7 @@ function Projects({ title, subtitle, projects = [] }) {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Projects;
+export default Projects

@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import Lottie from 'react-lottie-player';
-import developerAnimation from '@src/img/lottie/developer-skills.json';
-import './index.sass';
+import { useState } from 'react'
+import Helmet from 'react-helmet'
+import { Link } from 'gatsby'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import Lottie from 'react-lottie-player'
+import developerAnimation from '@src/img/lottie/developer-skills.json'
+import './index.sass'
 
 const FullWidthNavigationMenu = () => {
-  const [navActive, setNavActive] = useState('');
+  const [navActive, setNavActive] = useState('')
 
   const toggleNav = e => {
-    setNavActive(navActive === '' ? 'nav-active' : '');
-  };
+    setNavActive(navActive === '' ? 'nav-active' : '')
+  }
 
   return (
     <>
@@ -56,7 +56,7 @@ const FullWidthNavigationMenu = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default FullWidthNavigationMenu;
+export default FullWidthNavigationMenu

@@ -13,6 +13,6 @@ module.exports = {
     includeInDevelopment: false,
     defaultDataLayer: { platform: 'gatsby' },
     routeChangeEventName: 'gatsby-route-change',
-    enableWebVitalsTracking: true,
-  },
-};
+    enableWebVitalsTracking: true
+  }
+}

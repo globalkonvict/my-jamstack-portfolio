@@ -100,10 +100,10 @@ skills:
       classNames: .vscode
   title: Skills
   subtitle: Some of the skills I have worked on
-  extra: ""
+  extra: ''
 projects:
   list:
-    - title: " Amplio"
+    - title: ' Amplio'
       description: >-
         **Tech Stack:** ReactJs, CSS, Bootstrap
 
@@ -120,11 +120,11 @@ projects:
         * Eventually, the project was put under hold, and I and the whole team were assigned to different projects.
       links:
         - text: Professional Project
-          url: "#"
+          url: '#'
       image: /img/gears-g3d9906cf6_1280.png
     - links:
         - text: Professional Project
-          url: "#"
+          url: '#'
       image: /img/gears-g3d9906cf6_1280.png
       title: Pubble SDK
       description: >-
@@ -138,9 +138,9 @@ projects:
         **Tech Stack:** NodeJs, Socket.Io, Redis, Redis Sentinel, WebSockets, Javascript, OOP
     - links:
         - text: Professional Project
-          url: "#"
+          url: '#'
       image: /img/gears-g3d9906cf6_1280.png
-      title: " Engagement Hero (Admin Panel & Android/iOS App)"
+      title: ' Engagement Hero (Admin Panel & Android/iOS App)'
       description: >-
         Engagement Hero is a platform to help people get leads & close deals by
         proving you with steps you need to execute to turn a lead into a
@@ -162,7 +162,7 @@ projects:
         * Stack for Mobile App included React Native, Firebase & Redux Toolkit.
     - links:
         - text: Professional Project
-          url: "#"
+          url: '#'
       image: /img/gears-g3d9906cf6_1280.png
       title: Pubble Web
       description: >-
@@ -179,7 +179,7 @@ projects:
         * Worked with team lead to break down bigger tasks into manageable work targets for each day.
           Implementing & Writing business logic to accomplish assigned tasks, which included porting features from an already existing backboneJs App to React Js.
         * Using Ant Design and Less for redesigning UI, replacing the already existing UI with an improved one.
-    - title: " Pubble SDK Statistics Admin Panel/Backend"
+    - title: ' Pubble SDK Statistics Admin Panel/Backend'
       description: >-
         **Technology Stack:**  
 
@@ -200,8 +200,8 @@ projects:
       image: /img/gears-g3d9906cf6_1280.png
       links:
         - text: Professional Project
-          url: "#"
-    - title: " BlitzChain (Product Website)"
+          url: '#'
+    - title: ' BlitzChain (Product Website)'
       description: >-
         BlitzChain was an SDK to create real-time applications. I was involved
         with creating the Product Detail, Pricing, Documentation, Support,
@@ -220,7 +220,7 @@ projects:
       image: /img/gears-g3d9906cf6_1280.png
       links:
         - text: Professional Project
-          url: "#"
+          url: '#'
     - title: ObtainCare Admin/User Portal
       description: >-
         * Obtaincare is a service provider platform created using industry
@@ -248,7 +248,7 @@ projects:
       image: /img/gears-g3d9906cf6_1280.png
       links:
         - text: Professional Project
-          url: "#"
+          url: '#'
         - url: https://www.obtaincare.com/
           text: Obtaincare
     - title: Imget
@@ -292,7 +292,7 @@ projects:
           url: https://github.com/globalkonvict/contact-keeper
         - text: Live App
           url: https://contactskeepr.herokuapp.com/login
-    - title: " OKASHI"
+    - title: ' OKASHI'
       image: /img/okashi.png
       description: >-
         ***Okashi*** is a Joke App, It fetches jokes from internet and displays

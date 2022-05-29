@@ -1,7 +1,7 @@
-import Skills from '@components/Skills';
-import Projects from '@components/Projects';
-import LatestStories from '@components/LatestStories';
-import FullWidthImage from '@components/FullWidthImage';
+import Skills from '@components/Skills'
+import Projects from '@components/Projects'
+import LatestStories from '@components/LatestStories'
+import FullWidthImage from '@components/FullWidthImage'
 
 /**
  * @description This is index page template, partially separated from main layout. This allows using partial templates for CMS Previews.
@@ -16,7 +16,7 @@ const IndexPageTemplate = ({ authorData, skills, projects }) => {
       <Projects title={projects.title} projects={projects.list} subtitle={projects.subtitle} />
       <LatestStories />
     </>
-  );
-};
+  )
+}
 
-export default IndexPageTemplate;
+export default IndexPageTemplate

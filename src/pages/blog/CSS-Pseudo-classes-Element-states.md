@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "CSS Pseudo-classes: Element states"
+title: 'CSS Pseudo-classes: Element states'
 date: 2022-01-25T07:23:40.430Z
 description: >
   So far, we have already had a look at links and form pseudo-classes. In this
@@ -15,6 +15,7 @@ tags:
   - tips
   - tutorial
 ---
+
 So far, we have already had a look at links and form pseudo-classes. In this article, we'll dive into element states.
 
 Element states reflect on a specific condition an element could have. This can, for instance, be `first-of-type` or the `last-child`.
@@ -23,10 +24,10 @@ I've split this up into a series of four, where this is the third part about for
 
 The other parts:
 
-* [Link pseudo-states](https://daily-dev-tips.com/posts/css-pseudo-classes-links/)
-* [Form pseudo-states](https://daily-dev-tips.com/posts/css-pseudo-classes-forms/)
-* *Element state selectors* (this one 💖)
-* Other pseudo states (coming soon)
+- [Link pseudo-states](https://daily-dev-tips.com/posts/css-pseudo-classes-links/)
+- [Form pseudo-states](https://daily-dev-tips.com/posts/css-pseudo-classes-forms/)
+- *Element state selectors* (this one 💖)
+- Other pseudo states (coming soon)
 
 ## [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#element-state-selectors)Element state selectors
 
@@ -35,15 +36,15 @@ They are a great way to select a particular matching element and apply specific 
 
 We get the following options:
 
-* `:first-child`
-* `:last-child`
-* `:only-child`
-* `:first-of-type`
-* `:last-of-type`
-* `:nth-child`
-* `:nth-of-type`
-* `:only-of-type`
-* `:empty`
+- `:first-child`
+- `:last-child`
+- `:only-child`
+- `:first-of-type`
+- `:last-of-type`
+- `:nth-child`
+- `:nth-of-type`
+- `:only-of-type`
+- `:empty`
 
 ### [](https://dev.to/dailydevtips1/css-pseudo-classes-element-states-1gim#-raw-firstchild-endraw-raw-lastchild-endraw-amp-raw-onlychild-endraw-)`:first-child`, `:last-child`, & `:only-child`
 
@@ -138,8 +139,8 @@ li:nth-child(2) {
 
 The cool part with this selector is that it doesn't just have one static value. You can use values like:
 
-* `odd`/`even`: Select odd or even numbers
-* `2n+2`: Select every 2nd item
+- `odd`/`even`: Select odd or even numbers
+- `2n+2`: Select every 2nd item
 
 > Note: [CSS-tricks has this cool nth-tester tool](https://css-tricks.com/examples/nth-child-tester/)
 

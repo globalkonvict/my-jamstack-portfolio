@@ -1,11 +1,11 @@
-const Layout = require('./src/components/Layout').default;
+const Layout = require('./src/components/Layout').default
 
 // Wraps every page in a component
 exports.wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>;
-};
+  return <Layout {...props}>{element}</Layout>
+}
 
-//wraps the root element
+// wraps the root element
 exports.wrapRootElement = ({ element }) => {
-  return element;
-};
+  return element
+}
