@@ -1,25 +1,16 @@
 version = 1
-exclude_patterns = [
-  "bin/**",
-  "**/node_modules/",
-  "js/**/*.min.js"
-]
+
 [[analyzers]]
 name = "javascript"
 enabled = true
-[analyzers.meta]
+
+  [analyzers.meta]
   plugins = ["react"]
-  environment = ["mongo", "jquery"]
-  module_system = "es-modules"
-  dialect = "typescript"
-  skip_doc_coverage = ["class-expression", "method-definition"]
-  style_guide = "airbnb"
-  dependency_file_paths = [
-    "src/",
-    "config/",
-    "netlify/"
-    ]
-  environment = ["nodejs","browser","jest"]
+
+[[transformers]]
+name = "prettier"
+enabled = true
+
 [[transformers]]
 name = "standardjs"
 enabled = true
