@@ -18,12 +18,12 @@ const TagsPage = ({
           <h1 className='title is-size-2 is-bold-light'>Tags</h1>
           <div className='field is-grouped is-grouped-multiline'>
             {group.map(tag => (
-              <div class='control'>
-                <div class='tags has-addons'>
+              <div className='control'>
+                <div className='tags has-addons'>
                   <Link className='tag is-primary is-large' key={tag.fieldValue} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                     {tag.fieldValue}
                   </Link>
-                  <span class='tag is-warning is-large'>{tag.totalCount}</span>
+                  <span className='tag is-warning is-large'>{tag.totalCount}</span>
                 </div>
               </div>
             ))}
