@@ -1,5 +1,10 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
+/**
+ * The useSiteMetadata function returns the site metadata from the GraphQL query.
+ * @return A siteMetadata object
+ *
+ */
 const useSiteMetadata = () => {
   const { site } = useStaticQuery(
     graphql`
@@ -14,9 +19,9 @@ const useSiteMetadata = () => {
           }
         }
       }
-    `
-  )
-  return site.siteMetadata
-}
+    `,
+  );
+  return site.siteMetadata;
+};
 
-export default useSiteMetadata
+export default useSiteMetadata;

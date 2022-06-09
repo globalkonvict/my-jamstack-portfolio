@@ -6,12 +6,3 @@ publish = "public"
 NODE_VERSION = "14.15.0"
 YARN_FLAGS = "--no-ignore-optional"
 YARN_VERSION = "1.22.4"
-
-[[plugins]]
-package = "netlify-deployment-hours-plugin"
-
-[plugins.inputs]
-# A cron-like expression that expresses when a deployment can occur
-expression = "* * * * 6"
-# tz database value that expresses the timezone of the expression
-timezone = "Asia/Calcutta"

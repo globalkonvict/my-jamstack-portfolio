@@ -1,5 +1,9 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
+/**
+ * The useSiteSettings function returns the site settings from the Markdown files from the src/pages/settings/index.md.
+ * @return A collection of settings that are stored in the site's markdown files
+ */
 const useSiteSettings = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
@@ -20,9 +24,9 @@ const useSiteSettings = () => {
           }
         }
       }
-    `
-  )
-  return allMarkdownRemark.nodes[0].frontmatter
-}
+    `,
+  );
+  return allMarkdownRemark.nodes[0].frontmatter;
+};
 
-export default useSiteSettings
+export default useSiteSettings;

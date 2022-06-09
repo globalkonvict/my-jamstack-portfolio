@@ -1,20 +1,12 @@
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { FaStackOverflow, FaTwitter, FaLinkedin, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa'
-import useSiteSettings from '@utils/SiteSettings'
+import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { FaStackOverflow, FaTwitter, FaGithubSquare, FaInstagramSquare, FaLinkedinIn } from 'react-icons/fa';
+import { useSiteSettings, useSiteLogo } from '@utils';
 
 const Footer = () => {
-  const { social } = useSiteSettings()
-  const { file } = useStaticQuery(graphql`
-    query SITE_LOGO {
-      file(name: { eq: "GK_LOGO" }) {
-        childImageSharp {
-          gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-        }
-      }
-    }
-  `)
-  const logoImage = getImage(file.childImageSharp.gatsbyImageData)
+  const { social } = useSiteSettings();
+  const logoImageData = useSiteLogo();
+  const logoImage = getImage(logoImageData);
 
   return (
     <footer className='footer has-background-black has-text-white-ter'>
@@ -103,7 +95,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
